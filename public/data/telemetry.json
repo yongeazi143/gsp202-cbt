@@ -1,0 +1,22 @@
+{
+  "totalVisitors": 1,
+  "totalPageViews": 3,
+  "totalExamsStarted": 0,
+  "totalExamsCompleted": 0,
+  "totalQuestionsAnswered": 0,
+  "totalFlashcardsReviewed": 1,
+  "totalSummariesRead": 0,
+  "visitorIds": [
+    "vis_pdw2lgc3muvofvs8"
+  ],
+  "recentEvents": [
+    {
+      "type": "page_view",
+      "timestamp": "2026-10-05T20:03:03.491Z"
+    },
+    {
+      "type": "flashcard_reviewed",
+      "timestamp": "2026-10-05T20:10:21.729Z"
+    }
+  ]
+}

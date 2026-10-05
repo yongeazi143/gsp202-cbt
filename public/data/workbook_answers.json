@@ -1,0 +1,588 @@
+{
+  "title": "GSP 202 Continuous Assessment (CA) Workbook — Official Solutions & Study Guide",
+  "course": "GSP 202: Peace and Conflict Resolution",
+  "total_chapters": 13,
+  "chapters": [
+    {
+      "chapter": 1,
+      "chapter_title": "The State, Conflict Resolution, and Development in Africa",
+      "pages": "1-15",
+      "questions": [
+        {
+          "q_num": 1,
+          "question": "The State is synonymous with such other concepts as ________, ________, and ________.",
+          "answer": "Country, Nation, and Government",
+          "textbook_ref": "Page 1",
+          "notes": "Often used interchangeably in everyday political discourse, though technically distinct political and sociological concepts."
+        },
+        {
+          "q_num": 2,
+          "question": "The concept, nature and functions of state have undergone considerable changes due to numerous ________.",
+          "answer": "socio-political and economic transformations (and competing philosophical traditions)",
+          "textbook_ref": "Pages 1-2",
+          "notes": "From ancient city-states to Westphalian nation-states and modern post-colonial states."
+        },
+        {
+          "q_num": 3,
+          "question": "According to R. M. MacIver (1926), the State performs the special function of maintaining social order through an agency called ________.",
+          "answer": "Government",
+          "textbook_ref": "Page 1",
+          "notes": "Government is the administrative apparatus/machinery through which the state's will is formulated and executed."
+        },
+        {
+          "q_num": 4,
+          "question": "________ defined the state as 'a human community that successfully claims the monopoly of the legitimate use of physical force within a given territory'.",
+          "answer": "Max Weber (1919)",
+          "textbook_ref": "Page 2",
+          "notes": "Foundational sociological definition of the modern state in 'Politics as a Vocation'."
+        },
+        {
+          "q_num": 5,
+          "question": "________ in his book titled ________ expressed the idea of the state as 'the power which has authority over men'.",
+          "answer": "Niccolò Machiavelli, The Prince (1513)",
+          "textbook_ref": "Page 3",
+          "notes": "Machiavelli decoupled political statecraft from classical theological morality."
+        },
+        {
+          "q_num": 6,
+          "question": "According to Locke, the three natural rights that are encapsulated in the principles of liberalism are ________, ________, and ________.",
+          "answer": "Life, Liberty, and Property (Estate)",
+          "textbook_ref": "Pages 3-4",
+          "notes": "John Locke argued governments exist solely to protect these inalienable natural rights under social contract."
+        },
+        {
+          "q_num": 7,
+          "question": "________ refers to the entities that operate independently of the state and serve as platform for individuals to express their views, engage in collective action, and hold the state accountable.",
+          "answer": "Civil Society (NGOs, community unions, professional bodies)",
+          "textbook_ref": "Page 4",
+          "notes": "Acts as a watchdog and intermediary between citizens and state institutions."
+        },
+        {
+          "q_num": 8,
+          "question": "According to the Liberals, the system of checks and balances ensures that power is shared among the three arms of government namely ________, ________, and ________ to check abuse of power.",
+          "answer": "Legislature, Executive, and Judiciary",
+          "textbook_ref": "Pages 4-5",
+          "notes": "Doctrine of Separation of Powers formulated by Baron de Montesquieu (1748)."
+        },
+        {
+          "q_num": 9,
+          "question": "________ viewed the state as a tool used by the ruling class to suppress the working class and prevent them from achieving class consciousness.",
+          "answer": "Karl Marx / Marxism",
+          "textbook_ref": "Pages 4-5",
+          "notes": "The Communist Manifesto: 'The executive of the modern state is but a committee for managing the common affairs of the whole bourgeoisie.'"
+        },
+        {
+          "q_num": 10,
+          "question": "Africa as a continent was partitioned by Colonial powers in a German city called ________ in the year ________.",
+          "answer": "Berlin, 1884–1885 (Berlin West Africa Conference)",
+          "textbook_ref": "Pages 5-6",
+          "notes": "Convened by Otto von Bismarck; partitioned Africa into arbitrary colonial borders without African representation."
+        },
+        {
+          "q_num": 11,
+          "question": "The inevitable class struggle that will lead to the eventual overthrow of the ruling class by the exploited class to achieve a more just and equitable society is called ________.",
+          "answer": "Proletarian / Socialist Revolution",
+          "textbook_ref": "Pages 4-5",
+          "notes": "Marxist historical materialism predicting the rise of a classless, stateless communist society."
+        },
+        {
+          "q_num": 12,
+          "question": "The exclusive authority and autonomy of a state to govern itself without external interference is called ________. It was established as international law through the ________ in the year ________.",
+          "answer": "Sovereignty; Treaty of Westphalia; 1648",
+          "textbook_ref": "Pages 6-7",
+          "notes": "The 1648 Peace of Westphalia ended the Thirty Years' War and instituted modern sovereign statehood."
+        },
+        {
+          "q_num": 13,
+          "question": "Sovereignty has two dimensions namely ________ and ________.",
+          "answer": "Internal Sovereignty and External Sovereignty",
+          "textbook_ref": "Page 7",
+          "notes": "Internal: supreme legal authority over subjects within borders. External: independence from foreign overlordship and international recognition."
+        },
+        {
+          "q_num": 14,
+          "question": "According to Loshkariov (2024), the sovereignty of African States have been constrained by a number of factors including ________, ________, and ________.",
+          "answer": "Weak institutional capacity, economic dependency/foreign debt, and external geopolitical interference / porous borders",
+          "textbook_ref": "Pages 7-8",
+          "notes": "Limits the empirical capacity of post-colonial African states to exercise total sovereign control."
+        },
+        {
+          "q_num": 15,
+          "question": "In the Middle Belt, farmer-herder clashes are exacerbated by ________, ________, and ________.",
+          "answer": "Climate change/desertification, resource competition (land and water), and ethnic/religious polarization",
+          "textbook_ref": "Pages 8-9",
+          "notes": "Migration of pastoralists southward into agrarian host communities sparks violent resource clashes."
+        },
+        {
+          "q_num": 16,
+          "question": "The Nigerian civil war lasted from ________ to ________.",
+          "answer": "6th July 1967 to 15th January 1970",
+          "textbook_ref": "Page 9",
+          "notes": "Sparked by the secession of the Republic of Biafra following pogroms and breakdown of the Aburi Accord."
+        },
+        {
+          "q_num": 17,
+          "question": "The major achievement of the South African Truth and Reconciliation Commission (TRC) is ________.",
+          "answer": "Fostering restorative justice, public confession, and national healing without plunging into retributive vengeance",
+          "textbook_ref": "Pages 10-11",
+          "notes": "Chaired by Archbishop Desmond Tutu under President Nelson Mandela after the fall of apartheid."
+        },
+        {
+          "q_num": 18,
+          "question": "The two major classes in every society identified by Karl Marx who are ever embroiled in antagonistic relationship are ________ and ________.",
+          "answer": "The Bourgeoisie (owners of capital/means of production) and the Proletariat (wage labourers)",
+          "textbook_ref": "Pages 4-5",
+          "notes": "Fundamental dichotomy of industrial capitalist social structure in Marxist sociology."
+        },
+        {
+          "q_num": 19,
+          "question": "What is class consciousness?",
+          "answer": "The self-awareness of a social class regarding its collective economic interests, systemic exploitation, and political power to organize and transform society.",
+          "textbook_ref": "Page 5",
+          "notes": "Transition from a 'class-in-itself' (objective grouping) to a 'class-for-itself' (politically conscious actors)."
+        },
+        {
+          "q_num": 20,
+          "question": "According to Karl Marx, what is the major disadvantage of the laissez-faire and free market economy?",
+          "answer": "Widening inequality, exploitation of the working class, and the alienation of labour (estrangement from product, process, self, and fellow workers).",
+          "textbook_ref": "Pages 4-5",
+          "notes": "Capitalists extract surplus value from workers' unpaid labor to accumulate private wealth."
+        },
+        {
+          "q_num": 21,
+          "question": "The liberal philosophy is based on the principles of ________, ________, and ________.",
+          "answer": "Individual liberty, the rule of law, consent of the governed, private property rights, and free market competition",
+          "textbook_ref": "Pages 3-4",
+          "notes": "Champions limited government, human rights, and institutional constitutionalism."
+        },
+        {
+          "q_num": 22,
+          "question": "The state, acting as a primary mediator and arbiter in conflict resolution, uses the following three mechanisms namely ________, ________, and ________ to manage violence and promote stability.",
+          "answer": "Judicial adjudication (courts), Administrative negotiation/mediation (commissions of inquiry), and Law enforcement / coercive peacekeeping (police and military)",
+          "textbook_ref": "Pages 11-12",
+          "notes": "The state's institutional tools to deter violence and enforce binding conflict settlements."
+        },
+        {
+          "q_num": 23,
+          "question": "According to the former UN Secretary-General, Kofi Annan, ________, ________, and ________ make up the building blocks of human and national security.",
+          "answer": "Peace, Development, and Human Rights",
+          "textbook_ref": "Pages 12-13",
+          "notes": "'We will not enjoy development without security, we will not enjoy security without development, and we will not enjoy either without respect for human rights.'"
+        },
+        {
+          "q_num": 24,
+          "question": "The 1994 UNDP landmark report on human security identified the characteristics of human security namely ________, ________, ________, and ________. And factors hindering Nigeria's fight against terrorism include ________ and ________.",
+          "answer": "Characteristics: Universal, People-centred, Interdependent, and Early prevention. Terror hindering factors: Corruption, porous borders, and weak state intelligence coordination.",
+          "textbook_ref": "Pages 13-14",
+          "notes": "Shifted security paradigm from state territory defense to human dignity, safety, and freedom from want/fear."
+        }
+      ]
+    },
+    {
+      "chapter": 2,
+      "chapter_title": "Ethnic and Communal Conflicts in Africa",
+      "pages": "16-33",
+      "questions": [
+        {
+          "q_num": 1,
+          "question": "________ refers to the use of a people's collective identity to successfully get more than their fair share of the social benefits in society.",
+          "answer": "Ethnicity / Ethnic Politics",
+          "textbook_ref": "Page 16",
+          "notes": "Ethnicity becomes politically salient when mobilized for resource competition."
+        },
+        {
+          "q_num": 2,
+          "question": "________ is a community of people who possess a common identity based on common origin, kinship ties, historical experiences, traditions, cultures, and language.",
+          "answer": "Ethnic Group",
+          "textbook_ref": "Page 16",
+          "notes": "Shared myth of common descent and cultural distinctiveness."
+        },
+        {
+          "q_num": 3,
+          "question": "According to Ojiezele & Ojo (2024), the social phenomenon that drives the dynamics in society and traverses the entire spectrum of African life is called ________.",
+          "answer": "Ethnic Identity / Ethnicity",
+          "textbook_ref": "Pages 16-17",
+          "notes": "Influences party politics, appointments, resource allocation, and interpersonal relationships."
+        },
+        {
+          "q_num": 4,
+          "question": "The three major theories of ethnicity are ________, ________, and ________.",
+          "answer": "Primordialism, Instrumentalism, and Constructivism",
+          "textbook_ref": "Pages 17-19",
+          "notes": "Primordialism (innate/ancient), Instrumentalism (elite political tool), Constructivism (socially imagined and dynamic)."
+        },
+        {
+          "q_num": 5,
+          "question": "The use of local chiefs by the colonial power to access and control resources through patronizing relationship and reward for loyalty is called ________.",
+          "answer": "Indirect Rule / Divide and Rule",
+          "textbook_ref": "Pages 20-21",
+          "notes": "Formalized by Lord Lugard in Nigeria, hardening ethnic and regional fault lines."
+        },
+        {
+          "q_num": 6,
+          "question": "The Stockholm International Peace Research Institute (SIPRI, 2022) identified the major causes of conflict among major ethnic groups in Nigeria as ________, ________, and ________.",
+          "answer": "Political marginalization, competition for scarce economic resources, and mutual religious/cultural distrust",
+          "textbook_ref": "Pages 21-23",
+          "notes": "Exacerbated by youth unemployment and inflammatory rhetoric."
+        },
+        {
+          "q_num": 7,
+          "question": "Three major examples of protracted ethnic-related conflicts in Nigeria are ________, ________, and ________.",
+          "answer": "Ife-Modakeke conflict (Osun State), Aguleri-Umuleri conflict (Anambra State), and Tiv-Jukun conflict (Taraba/Benue State)",
+          "textbook_ref": "Pages 24-28",
+          "notes": "Deep-seated historical land ownership and political hegemony disputes."
+        },
+        {
+          "q_num": 8,
+          "question": "The two major ethnic groups involved in the 1994 Rwanda genocide are ________ and ________.",
+          "answer": "Hutus and Tutsis",
+          "textbook_ref": "Pages 26-27",
+          "notes": "Over 800,000 Tutsis and moderate Hutus were systematically murdered in approximately 100 days."
+        },
+        {
+          "q_num": 9,
+          "question": "In the Democratic Republic of Congo (DRC), the major ethnic groups that fought over resources are ________ and ________.",
+          "answer": "Hema and Lendu (Ituri conflict)",
+          "textbook_ref": "Pages 25-26",
+          "notes": "Violent conflict exacerbated by control over lucrative gold and coltan mining."
+        },
+        {
+          "q_num": 10,
+          "question": "What key constitutional principle is enshrined in Section 14(3) of the 1999 Constitution to address ethnic domination in federal appointments?",
+          "answer": "The Federal Character Principle",
+          "textbook_ref": "Pages 29-30",
+          "notes": "Guarantees equitable distribution of public appointments among states and ethnic groups."
+        }
+      ]
+    },
+    {
+      "chapter": 3,
+      "chapter_title": "Climate Change, Resource Conflict and Environmental Security",
+      "pages": "34-50",
+      "questions": [
+        {
+          "q_num": 1,
+          "question": "________ is defined as the prevailing state of the climate on all temporal and spatial scales beyond that of individual weather events.",
+          "answer": "Climate",
+          "textbook_ref": "Page 34",
+          "notes": "Distinct from weather (short-term atmospheric conditions)."
+        },
+        {
+          "q_num": 2,
+          "question": "________ refers to the measurable increase in the earth's average temperature caused by rising concentrations of greenhouse gases.",
+          "answer": "Global Warming",
+          "textbook_ref": "Pages 34-35",
+          "notes": "Driven primarily by anthropogenic carbon dioxide emissions from industrialization."
+        },
+        {
+          "q_num": 3,
+          "question": "What are the primary greenhouse gases in Earth's atmosphere?",
+          "answer": "Carbon dioxide (CO2), Methane (CH4), Nitrous oxide (N2O), Water vapor, and Ozone (O3)",
+          "textbook_ref": "Pages 35-36",
+          "notes": "Trap infrared heat escaping from the earth surface, causing global warming."
+        },
+        {
+          "q_num": 4,
+          "question": "What is an urban heat island?",
+          "answer": "An urban area that is significantly warmer than surrounding rural areas due to human activity, dense concrete/asphalt, and limited vegetation.",
+          "textbook_ref": "Pages 37-38",
+          "notes": "Concrete and dark roofs absorb solar radiation, releasing it slowly at night."
+        },
+        {
+          "q_num": 5,
+          "question": "Why is it said that climate change acts as a 'threat multiplier'?",
+          "answer": "Because it does not create conflicts in isolation, but exacerbates existing social tensions, poverty, resource scarcity, and governance failures.",
+          "textbook_ref": "Pages 39-40",
+          "notes": "Accelerates desertification, driving pastoralist-farmer clashes in the Sahel and West Africa."
+        },
+        {
+          "q_num": 6,
+          "question": "What are the three sources of environmental scarcity identified in Thomas Homer-Dixon's model?",
+          "answer": "Supply-induced scarcity, Demand-induced scarcity, and Structural scarcity",
+          "textbook_ref": "Pages 36-37",
+          "notes": "Supply: resource depletion; Demand: population surge; Structural: unequal distribution by elites."
+        },
+        {
+          "q_num": 7,
+          "question": "What is the derivation formula in Nigerian fiscal federalism regarding natural resources?",
+          "answer": "The constitutional provision under Section 162(2) that not less than 13% of revenue from natural resources be allocated directly to producing states.",
+          "textbook_ref": "Pages 43-44",
+          "notes": "Aimed at compensating oil-producing Niger Delta states for environmental degradation."
+        }
+      ]
+    },
+    {
+      "chapter": 4,
+      "chapter_title": "Technology and Digital Threats to Peace and Security",
+      "pages": "51-69",
+      "questions": [
+        {
+          "q_num": 1,
+          "question": "________ refers to the protection of individuals and communities from harms caused by the misuse of digital technologies that threaten peace, stability, and trust.",
+          "answer": "Digital Human Security",
+          "textbook_ref": "Page 52",
+          "notes": "Focuses on safeguarding civil liberties, privacy, and online safety against surveillance and harassment."
+        },
+        {
+          "q_num": 2,
+          "question": "________ refers to the protection of countries and the international system from digital threats that can disrupt stability, sovereignty, and peace.",
+          "answer": "Cybersecurity / National Cyber Defense",
+          "textbook_ref": "Pages 52-53",
+          "notes": "Shields critical national infrastructure (power grids, banking, defense networks) from state-sponsored attacks."
+        },
+        {
+          "q_num": 3,
+          "question": "What is an Autonomous Weapon System (AWS)?",
+          "answer": "Weapons systems that, once activated, can select and engage targets without human intervention (also called killer robots).",
+          "textbook_ref": "Pages 56-57",
+          "notes": "Raises severe moral and legal dilemmas under International Humanitarian Law regarding accountability."
+        },
+        {
+          "q_num": 4,
+          "question": "The term 'Internet of Things' (IoT) was coined in 1999 by which British technology pioneer?",
+          "answer": "Kevin Ashton",
+          "textbook_ref": "Page 55",
+          "notes": "Refers to interconnected physical devices communicating data via the internet."
+        },
+        {
+          "q_num": 5,
+          "question": "What is a Distributed Denial of Service (DDoS) attack?",
+          "answer": "A malicious cyberattack where a network of compromised machines (botnet) overwhelms a target server with traffic, causing service outage.",
+          "textbook_ref": "Pages 59-60",
+          "notes": "Frequently deployed in cyber warfare and state sabotage."
+        }
+      ]
+    },
+    {
+      "chapter": 5,
+      "chapter_title": "Gender, Peace and Conflict Resolution",
+      "pages": "70-87",
+      "questions": [
+        {
+          "q_num": 1,
+          "question": "What landmark United Nations Security Council Resolution passed in October 2000 formally acknowledged the vital role of women in peace processes?",
+          "answer": "UNSCR 1325 (Women, Peace and Security)",
+          "textbook_ref": "Page 74",
+          "notes": "Built on 4 pillars: Participation, Protection, Prevention, and Relief & Recovery."
+        },
+        {
+          "q_num": 2,
+          "question": "What is the key sociological difference between 'Sex' and 'Gender'?",
+          "answer": "Sex is biological/physiological (male/female chromosomes and anatomy), while Gender is the socially constructed roles, behaviors, and expectations assigned by culture.",
+          "textbook_ref": "Pages 70-71",
+          "notes": "Sex is universal and biological; Gender varies across cultures and historical eras."
+        },
+        {
+          "q_num": 3,
+          "question": "What was the historical Aba Women's War of 1929 in Eastern Nigeria?",
+          "answer": "A mass anti-colonial protest by Igbo women against British indirect rule taxation, warrant chiefs, and cultural disruption.",
+          "textbook_ref": "Pages 77-78",
+          "notes": "Pivotal proof of women's historical leadership in anti-oppression peace action in Nigeria."
+        }
+      ]
+    },
+    {
+      "chapter": 6,
+      "chapter_title": "Health and Conflict",
+      "pages": "88-98",
+      "questions": [
+        {
+          "q_num": 1,
+          "question": "The World Health Organization (1946) defines health as ________.",
+          "answer": "A state of complete physical, mental and social well-being, and not merely the absence of disease or infirmity",
+          "textbook_ref": "Page 88",
+          "notes": "Holistic definition adopted in the WHO Constitution preamble."
+        },
+        {
+          "q_num": 2,
+          "question": "Who defined health as 'the state of optimum capacity of an individual for the effective performance of the roles and tasks for which he has been socialized'?",
+          "answer": "Talcott Parsons (1951)",
+          "textbook_ref": "Page 89",
+          "notes": "Functionalist sociological perspective on the 'sick role'."
+        },
+        {
+          "q_num": 3,
+          "question": "What are the four universal principles of bioethics in healthcare provision?",
+          "answer": "Autonomy, Beneficence, Non-maleficence, and Justice",
+          "textbook_ref": "Pages 93-94",
+          "notes": "Formulated by Beauchamp and Childress; guides medical dispute resolution."
+        },
+        {
+          "q_num": 4,
+          "question": "Why did members of the Hausa-Fulani ethnic group in northern Nigeria oppose the polio immunization campaign in 2003?",
+          "answer": "Suspicions that the vaccine contained anti-fertility agents or HIV contamination intended to depopulate Muslim communities.",
+          "textbook_ref": "Pages 94-95",
+          "notes": "Highlights the danger of politicized medical mistrust in public health governance."
+        }
+      ]
+    },
+    {
+      "chapter": 7,
+      "chapter_title": "Conflict Analysis and Framework Assessment",
+      "pages": "99-115",
+      "questions": [
+        {
+          "q_num": 1,
+          "question": "Best (2006) defined ________ as 'the meticulous examination of any situation utilizing specific frameworks, paradigms, and methodologies'.",
+          "answer": "Conflict Analysis",
+          "textbook_ref": "Page 99",
+          "notes": "The diagnostic phase of conflict intervention that determines peace strategy."
+        },
+        {
+          "q_num": 2,
+          "question": "The acronym EWS in peace practice stands for ________.",
+          "answer": "Early Warning System",
+          "textbook_ref": "Page 101",
+          "notes": "Monitors indicators and triggers to detect impending conflict escalations."
+        },
+        {
+          "q_num": 3,
+          "question": "In the Onion-Doughnut conflict analysis model, what do the three concentric layers represent from outside to inside?",
+          "answer": "Positions (outer), Interests (middle), and Needs (core)",
+          "textbook_ref": "Pages 105-106",
+          "notes": "Positions: what parties say they want; Interests: what they really want; Needs: non-negotiable basic human essentials."
+        },
+        {
+          "q_num": 4,
+          "question": "The ABC Triangle framework of conflict analysis was formulated by which renowned peace scholar?",
+          "answer": "Johan Galtung",
+          "textbook_ref": "Pages 107-108",
+          "notes": "A = Attitudes (cognitive), B = Behavior (actions), C = Contradiction (structural incompatibilities)."
+        }
+      ]
+    },
+    {
+      "chapter": 8,
+      "chapter_title": "Peace Education and Peace Practice",
+      "pages": "116-134",
+      "questions": [
+        {
+          "q_num": 1,
+          "question": "What is the difference between Negative Peace and Positive Peace according to Johan Galtung?",
+          "answer": "Negative Peace is merely the absence of direct physical violence/war; Positive Peace is the presence of social justice, equity, human rights, and the elimination of structural violence.",
+          "textbook_ref": "Pages 118-119",
+          "notes": "Fundamental cornerstone of modern Peace and Conflict Studies."
+        },
+        {
+          "q_num": 2,
+          "question": "What are the three core pillars of the Peace Practice continuum (the 3 Ps)?",
+          "answer": "Peacemaking, Peacekeeping, and Peacebuilding",
+          "textbook_ref": "Pages 122-123",
+          "notes": "Formalized by UN Secretary-General Boutros Boutros-Ghali in 'An Agenda for Peace' (1992)."
+        }
+      ]
+    },
+    {
+      "chapter": 9,
+      "chapter_title": "Conflict Handling Style and Non-Violent Resistance",
+      "pages": "135-150",
+      "questions": [
+        {
+          "q_num": 1,
+          "question": "What are the five conflict handling styles identified in the Thomas-Kilmann Conflict Mode Instrument (TKI)?",
+          "answer": "Competing, Collaborating, Compromising, Avoiding, and Accommodating",
+          "textbook_ref": "Pages 136-138",
+          "notes": "Evaluated along two dimensions: Assertiveness and Cooperativeness."
+        },
+        {
+          "q_num": 2,
+          "question": "Who was the foremost American political scientist known as the 'Machiavelli of Nonviolence' who catalogued 198 methods of non-violent action?",
+          "answer": "Gene Sharp",
+          "textbook_ref": "Pages 144-145",
+          "notes": "Author of 'From Dictatorship to Democracy' and 'The Politics of Nonviolent Action'."
+        }
+      ]
+    },
+    {
+      "chapter": 10,
+      "chapter_title": "Peace Psychology",
+      "pages": "151-161",
+      "questions": [
+        {
+          "q_num": 1,
+          "question": "What is Cognitive Dissonance in psychological conflict studies?",
+          "answer": "The mental discomfort experienced by a person who holds two or more contradictory beliefs, ideas, or values simultaneously.",
+          "textbook_ref": "Page 152",
+          "notes": "Theorized by Leon Festinger (1957)."
+        },
+        {
+          "q_num": 2,
+          "question": "What is the 'Fundamental Attribution Error' often observed during inter-group conflicts?",
+          "answer": "The tendency to attribute our own bad behavior to external circumstances, while attributing the other group's bad behavior to their inherent malicious character.",
+          "textbook_ref": "Pages 154-155",
+          "notes": "Drives mutual demonization and escalates conflict."
+        }
+      ]
+    },
+    {
+      "chapter": 11,
+      "chapter_title": "Legal Framework for Social Justice and Conflict Resolution",
+      "pages": "162-179",
+      "questions": [
+        {
+          "q_num": 1,
+          "question": "What are the primary mechanisms of Alternative Dispute Resolution (ADR)?",
+          "answer": "Negotiation, Mediation, Conciliation, and Arbitration",
+          "textbook_ref": "Pages 164-166",
+          "notes": "Non-adversarial, cost-effective alternatives to formal litigation in regular courts."
+        },
+        {
+          "q_num": 2,
+          "question": "What was the landmark International Court of Justice (ICJ) judgment delivered on 10 October 2002 regarding Nigeria and Cameroon?",
+          "answer": "The Bakassi Peninsula Judgment, which ceded sovereignty over the oil-rich territory to Cameroon based on the 1913 Anglo-German agreement.",
+          "textbook_ref": "Pages 171-172",
+          "notes": "Peacefully implemented via the 2006 Green Tree Agreement signed by President Olusegun Obasanjo."
+        }
+      ]
+    },
+    {
+      "chapter": 12,
+      "chapter_title": "Community Policing",
+      "pages": "180-185",
+      "questions": [
+        {
+          "q_num": 1,
+          "question": "What is the core philosophy of Community Policing?",
+          "answer": "A proactive partnership between the police and local communities to identify, prioritize, and solve safety problems jointly.",
+          "textbook_ref": "Pages 180-181",
+          "notes": "Sir Robert Peel: 'The police are the public and the public are the police.'"
+        },
+        {
+          "q_num": 2,
+          "question": "What is the 'Broken Windows Theory' in community security?",
+          "answer": "The criminological theory that visible signs of disorder and petty crime (like broken windows or loitering) encourage further serious crime and decay if left unchecked.",
+          "textbook_ref": "Pages 182-183",
+          "notes": "Introduced by James Q. Wilson and George L. Kelling (1982)."
+        }
+      ]
+    },
+    {
+      "chapter": 13,
+      "chapter_title": "Conflict Early Warning and Early Response Systems",
+      "pages": "186-209",
+      "questions": [
+        {
+          "q_num": 1,
+          "question": "What is the Continental Early Warning System (CEWS) of the African Union?",
+          "answer": "The African Union's institutional intelligence and monitoring mechanism established to facilitate the early detection and prevention of armed conflicts across Africa.",
+          "textbook_ref": "Pages 188-190",
+          "notes": "Core pillar of the African Peace and Security Architecture (APSA)."
+        },
+        {
+          "q_num": 2,
+          "question": "What is ECOWARN in West African regional conflict management?",
+          "answer": "The ECOWAS Early Warning and Response Network, an observation and monitoring tool for real-time reporting of human security threats.",
+          "textbook_ref": "Pages 192-194",
+          "notes": "Operates under the ECOWAS Commission in Abuja."
+        },
+        {
+          "q_num": 3,
+          "question": "What is the 'Warning-Response Gap' in Early Warning Systems?",
+          "answer": "The failure or delay of political and military decision-makers to take concrete preventive action even when accurate, timely early warnings have been provided.",
+          "textbook_ref": "Pages 207-208",
+          "notes": "Example: Rwandan genocide in 1994, where early warnings by General Roméo Dallaire went unheeded by the UN."
+        }
+      ]
+    }
+  ]
+}

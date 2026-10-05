@@ -1,7 +1,7 @@
 {
   "meta": {
     "course": "GSP 202 - Peace and Conflict Resolution",
-    "total_questions": 228,
+    "total_questions": 252,
     "chapters": 13,
     "has_workbook_ca": true
   },
@@ -4138,6 +4138,462 @@
       "explanation": "ECOWARN (ECOWAS Early Warning and Response Network) is the regional observational security mechanism.",
       "source_pages": "196-198",
       "difficulty": "easy",
+      "prediction_weight": "high",
+      "type": "workbook_ca",
+      "is_workbook": true
+    },
+    {
+      "id": "wb01_q01",
+      "chapter": 1,
+      "chapter_title": "The State, Conflict Resolution, and Development in Africa",
+      "question": "[Workbook CA Q1] In political science and international relations, the term 'State' is frequently used as synonymous with which other concepts?",
+      "options": {
+        "A": "Country, Nation, and Government",
+        "B": "Empire, Colony, and Municipality",
+        "C": "Corporation, Syndicate, and Trust",
+        "D": "Federation, Confederacy, and Canton"
+      },
+      "answer": "A",
+      "explanation": "Workbook Q1: The State is synonymous with such other concepts as Country, Nation, and Government, although each represents distinct sociological and constitutional nuances.",
+      "source_pages": "1",
+      "difficulty": "easy",
+      "prediction_weight": "high",
+      "type": "workbook_ca",
+      "is_workbook": true
+    },
+    {
+      "id": "wb01_q02",
+      "chapter": 1,
+      "chapter_title": "The State, Conflict Resolution, and Development in Africa",
+      "question": "[Workbook CA Q2] The concept, nature, and functions of the modern state have undergone considerable changes due to what historical factor?",
+      "options": {
+        "A": "Extinction of prehistoric wildlife",
+        "B": "Socio-political and economic transformations alongside competing philosophical traditions",
+        "C": "Annual calendar adjustments by astronomers",
+        "D": "Permanent global peace accords signed in antiquity"
+      },
+      "answer": "B",
+      "explanation": "Workbook Q2: The concept, nature, and functions of the state have undergone considerable changes due to numerous socio-political and economic transformations (from feudalism to industrial capitalism).",
+      "source_pages": "1-2",
+      "difficulty": "medium",
+      "prediction_weight": "high",
+      "type": "workbook_ca",
+      "is_workbook": true
+    },
+    {
+      "id": "wb01_q03",
+      "chapter": 1,
+      "chapter_title": "The State, Conflict Resolution, and Development in Africa",
+      "question": "[Workbook CA Q3] According to R. M. MacIver (1926), the State performs the special function of maintaining social order through which specific agency?",
+      "options": {
+        "A": "Military tribunals exclusively",
+        "B": "Government",
+        "C": "Religious priesthood",
+        "D": "Independent trade unions"
+      },
+      "answer": "B",
+      "explanation": "Workbook Q3: According to R. M. MacIver (1926), the state performs the special function of maintaining social order through an agency called Government.",
+      "source_pages": "1",
+      "difficulty": "easy",
+      "prediction_weight": "high",
+      "type": "workbook_ca",
+      "is_workbook": true
+    },
+    {
+      "id": "wb01_q04",
+      "chapter": 1,
+      "chapter_title": "The State, Conflict Resolution, and Development in Africa",
+      "question": "[Workbook CA Q4] Which classical sociologist defined the state as 'a human community that successfully claims the monopoly of the legitimate use of physical force within a given territory'?",
+      "options": {
+        "A": "Émile Durkheim",
+        "B": "Max Weber",
+        "C": "Auguste Comte",
+        "D": "Karl Marx"
+      },
+      "answer": "B",
+      "explanation": "Workbook Q4: Max Weber famously defined the modern state by its monopoly of the legitimate use of physical force (coercion) within a defined territory.",
+      "source_pages": "2",
+      "difficulty": "easy",
+      "prediction_weight": "high",
+      "type": "workbook_ca",
+      "is_workbook": true
+    },
+    {
+      "id": "wb01_q05",
+      "chapter": 1,
+      "chapter_title": "The State, Conflict Resolution, and Development in Africa",
+      "question": "[Workbook CA Q5] In his renowned treatise 'The Prince' (1513), which political theorist conceptualized the state as 'the power which has authority over men'?",
+      "options": {
+        "A": "Thomas Hobbes",
+        "B": "Niccolò Machiavelli",
+        "C": "Baron de Montesquieu",
+        "D": "Jean Bodin"
+      },
+      "answer": "B",
+      "explanation": "Workbook Q5: Niccolò Machiavelli in 'The Prince' (1513) expressed the idea of the state as 'the power which has authority over men', divorcing statecraft from religious morality.",
+      "source_pages": "3",
+      "difficulty": "medium",
+      "prediction_weight": "high",
+      "type": "workbook_ca",
+      "is_workbook": true
+    },
+    {
+      "id": "wb01_q06",
+      "chapter": 1,
+      "chapter_title": "The State, Conflict Resolution, and Development in Africa",
+      "question": "[Workbook CA Q6] According to John Locke, what are the three fundamental natural rights encapsulated in the principles of liberalism?",
+      "options": {
+        "A": "Faith, Hope, and Charity",
+        "B": "Life, Liberty, and Property",
+        "C": "Equality, Fraternity, and Security",
+        "D": "Voting, Taxation, and Conscription"
+      },
+      "answer": "B",
+      "explanation": "Workbook Q6: Locke's classical liberalism holds that individuals surrender executive power to government solely to protect their natural rights to Life, Liberty, and Property.",
+      "source_pages": "3-4",
+      "difficulty": "easy",
+      "prediction_weight": "high",
+      "type": "workbook_ca",
+      "is_workbook": true
+    },
+    {
+      "id": "wb01_q07",
+      "chapter": 1,
+      "chapter_title": "The State, Conflict Resolution, and Development in Africa",
+      "question": "[Workbook CA Q7] What term refers to the autonomous entities and groups that operate independently of the state to express views, engage in collective action, and hold the state accountable?",
+      "options": {
+        "A": "Privy Council",
+        "B": "Civil Society",
+        "C": "Electoral College",
+        "D": "Feudal Aristocracy"
+      },
+      "answer": "B",
+      "explanation": "Workbook Q7: Civil Society encompasses NGOs, community associations, professional bodies, and unions operating outside direct state control.",
+      "source_pages": "4",
+      "difficulty": "easy",
+      "prediction_weight": "high",
+      "type": "workbook_ca",
+      "is_workbook": true
+    },
+    {
+      "id": "wb01_q08",
+      "chapter": 1,
+      "chapter_title": "The State, Conflict Resolution, and Development in Africa",
+      "question": "[Workbook CA Q8] According to liberal constitutional theory, the system of checks and balances ensures that power is divided among which three arms of government?",
+      "options": {
+        "A": "Monarchy, Nobility, and Clergy",
+        "B": "Legislature, Executive, and Judiciary",
+        "C": "Police, Military, and Secret Service",
+        "D": "Federal, State, and Local Councils"
+      },
+      "answer": "B",
+      "explanation": "Workbook Q8: Separation of powers divides governmental authority across the Legislature (law-making), Executive (law enforcement), and Judiciary (law interpretation).",
+      "source_pages": "4-5",
+      "difficulty": "easy",
+      "prediction_weight": "high",
+      "type": "workbook_ca",
+      "is_workbook": true
+    },
+    {
+      "id": "wb01_q09",
+      "chapter": 1,
+      "chapter_title": "The State, Conflict Resolution, and Development in Africa",
+      "question": "[Workbook CA Q9] Which philosophical perspective views the state as an executive committee and tool of the ruling class to suppress the working class and prevent class consciousness?",
+      "options": {
+        "A": "Liberalism",
+        "B": "Marxism",
+        "C": "Fascism",
+        "D": "Libertarianism"
+      },
+      "answer": "B",
+      "explanation": "Workbook Q9: Marxism views the state as a coercive instrument used by the bourgeoisie to maintain capitalist property relations against the proletariat.",
+      "source_pages": "4-5",
+      "difficulty": "easy",
+      "prediction_weight": "high",
+      "type": "workbook_ca",
+      "is_workbook": true
+    },
+    {
+      "id": "wb01_q10",
+      "chapter": 1,
+      "chapter_title": "The State, Conflict Resolution, and Development in Africa",
+      "question": "[Workbook CA Q10] In which German city was the African continent arbitrarily partitioned among European colonial powers between 1884 and 1885?",
+      "options": {
+        "A": "Munich",
+        "B": "Berlin",
+        "C": "Frankfurt",
+        "D": "Hamburg"
+      },
+      "answer": "B",
+      "explanation": "Workbook Q10: The Berlin West Africa Conference (1884–1885) hosted by Otto von Bismarck divided Africa into arbitrary colonial spheres of influence without African consent.",
+      "source_pages": "5-6",
+      "difficulty": "easy",
+      "prediction_weight": "high",
+      "type": "workbook_ca",
+      "is_workbook": true
+    },
+    {
+      "id": "wb01_q11",
+      "chapter": 1,
+      "chapter_title": "The State, Conflict Resolution, and Development in Africa",
+      "question": "[Workbook CA Q11] What is the term for the inevitable class struggle predicted by Marx that will lead to the overthrow of the ruling class by the working class to establish an egalitarian society?",
+      "options": {
+        "A": "Proletarian / Socialist Revolution",
+        "B": "Bourgeois Counter-Reformation",
+        "C": "Mercantile Transition",
+        "D": "Industrial Strike Wave"
+      },
+      "answer": "A",
+      "explanation": "Workbook Q11: In Marxist theory, the Proletarian Revolution overthrows capitalist domination to establish the dictatorship of the proletariat en route to a classless society.",
+      "source_pages": "4-5",
+      "difficulty": "medium",
+      "prediction_weight": "high",
+      "type": "workbook_ca",
+      "is_workbook": true
+    },
+    {
+      "id": "wb01_q12",
+      "chapter": 1,
+      "chapter_title": "The State, Conflict Resolution, and Development in Africa",
+      "question": "[Workbook CA Q12] What term describes the exclusive authority and autonomy of a state to govern its territory without external interference, and by which 1648 treaty was it established in international law?",
+      "options": {
+        "A": "Hegemony; Treaty of Versailles (1919)",
+        "B": "Sovereignty; Treaty of Westphalia (1648)",
+        "C": "Suzerainty; Treaty of Utrecht (1713)",
+        "D": "Imperialism; Treaty of Paris (1783)"
+      },
+      "answer": "B",
+      "explanation": "Workbook Q12: Sovereignty was established in international law by the Peace of Westphalia in 1648, cementing non-interference in domestic affairs.",
+      "source_pages": "6-7",
+      "difficulty": "easy",
+      "prediction_weight": "high",
+      "type": "workbook_ca",
+      "is_workbook": true
+    },
+    {
+      "id": "wb01_q13",
+      "chapter": 1,
+      "chapter_title": "The State, Conflict Resolution, and Development in Africa",
+      "question": "[Workbook CA Q13] Sovereignty is understood across which two constitutional and international dimensions?",
+      "options": {
+        "A": "Civil and Military Sovereignty",
+        "B": "Internal and External Sovereignty",
+        "C": "Federal and Unitary Sovereignty",
+        "D": "Direct and Representative Sovereignty"
+      },
+      "answer": "B",
+      "explanation": "Workbook Q13: Internal sovereignty (supreme legal authority inside territory) and External sovereignty (independence from external interference and global diplomatic recognition).",
+      "source_pages": "7",
+      "difficulty": "easy",
+      "prediction_weight": "high",
+      "type": "workbook_ca",
+      "is_workbook": true
+    },
+    {
+      "id": "wb01_q14",
+      "chapter": 1,
+      "chapter_title": "The State, Conflict Resolution, and Development in Africa",
+      "question": "[Workbook CA Q14] According to Loshkariov (2024), which combination of factors constrains empirical state sovereignty across contemporary African countries?",
+      "options": {
+        "A": "Excessive agricultural exports and high literacy",
+        "B": "Weak institutional capacity, foreign debt dependency, and porous borders with external interference",
+        "C": "Rapid space exploration budgets",
+        "D": "Absence of mineral resources"
+      },
+      "answer": "B",
+      "explanation": "Workbook Q14: Loshkariov (2024) identifies weak state institutions, heavy foreign debt burdens, porous borders, and external geopolitical manipulation as key sovereign constraints.",
+      "source_pages": "7-8",
+      "difficulty": "medium",
+      "prediction_weight": "high",
+      "type": "workbook_ca",
+      "is_workbook": true
+    },
+    {
+      "id": "wb01_q15",
+      "chapter": 1,
+      "chapter_title": "The State, Conflict Resolution, and Development in Africa",
+      "question": "[Workbook CA Q15] In Nigeria's Middle Belt region, violent farmer-herder clashes are primarily exacerbated by what factors?",
+      "options": {
+        "A": "Industrial automobile manufacturing",
+        "B": "Climate change/desertification southward migration, acute competition for land and water, and ethnic-religious polarization",
+        "C": "Disputes over marine shipping lanes",
+        "D": "High-speed rail construction"
+      },
+      "answer": "B",
+      "explanation": "Workbook Q15: Drought and desertification drive pastoralists southward, colliding with sedentary agrarian communities over arable grazing lands and water points.",
+      "source_pages": "8-9",
+      "difficulty": "easy",
+      "prediction_weight": "high",
+      "type": "workbook_ca",
+      "is_workbook": true
+    },
+    {
+      "id": "wb01_q16",
+      "chapter": 1,
+      "chapter_title": "The State, Conflict Resolution, and Development in Africa",
+      "question": "[Workbook CA Q16] What was the precise duration of the Nigerian Civil War?",
+      "options": {
+        "A": "1960 to 1963",
+        "B": "July 1967 to January 1970",
+        "C": "1975 to 1979",
+        "D": "1983 to 1985"
+      },
+      "answer": "B",
+      "explanation": "Workbook Q16: The Nigerian Civil War raged from 6 July 1967 until 15 January 1970 with General Yakubu Gowon declaring 'No Victor, No Vanquished'.",
+      "source_pages": "9",
+      "difficulty": "easy",
+      "prediction_weight": "high",
+      "type": "workbook_ca",
+      "is_workbook": true
+    },
+    {
+      "id": "wb01_q17",
+      "chapter": 1,
+      "chapter_title": "The State, Conflict Resolution, and Development in Africa",
+      "question": "[Workbook CA Q17] What was the crowning achievement of the post-apartheid Truth and Reconciliation Commission (TRC) in South Africa?",
+      "options": {
+        "A": "Summary executions of all former apartheid generals",
+        "B": "Fostering restorative justice, public confession, and national healing without plunging into retributive vengeance",
+        "C": "Nationalizing all gold mines overnight",
+        "D": "Abolishing constitutional law courts"
+      },
+      "answer": "B",
+      "explanation": "Workbook Q17: The TRC, chaired by Archbishop Desmond Tutu, prioritized restorative justice, truth-telling, and amnesty over bloody vengeance.",
+      "source_pages": "10-11",
+      "difficulty": "easy",
+      "prediction_weight": "high",
+      "type": "workbook_ca",
+      "is_workbook": true
+    },
+    {
+      "id": "wb01_q18",
+      "chapter": 1,
+      "chapter_title": "The State, Conflict Resolution, and Development in Africa",
+      "question": "[Workbook CA Q18] Karl Marx identified which two antagonistic social classes in capitalist society as continually locked in conflict?",
+      "options": {
+        "A": "Feudal Lords and Serfs",
+        "B": "The Bourgeoisie (capitalists) and the Proletariat (working class)",
+        "C": "Clergy and Laity",
+        "D": "Guild Masters and Apprentices"
+      },
+      "answer": "B",
+      "explanation": "Workbook Q18: In Marxist sociology, the Bourgeoisie own the means of production while the Proletariat own only their labour power which they sell for wages.",
+      "source_pages": "4-5",
+      "difficulty": "easy",
+      "prediction_weight": "high",
+      "type": "workbook_ca",
+      "is_workbook": true
+    },
+    {
+      "id": "wb01_q19",
+      "chapter": 1,
+      "chapter_title": "The State, Conflict Resolution, and Development in Africa",
+      "question": "[Workbook CA Q19] In sociological conflict theory, what is 'Class Consciousness'?",
+      "options": {
+        "A": "Attending university lectures on time",
+        "B": "The awareness by workers of their shared exploitation and collective power to organize against capitalist oppression",
+        "C": "Preferring luxury clothing over ordinary garments",
+        "D": "Memorizing corporate tax brackets"
+      },
+      "answer": "B",
+      "explanation": "Workbook Q19: Class consciousness is the transition from a 'class-in-itself' to a 'class-for-itself', uniting workers to fight for structural transformation.",
+      "source_pages": "5",
+      "difficulty": "medium",
+      "prediction_weight": "high",
+      "type": "workbook_ca",
+      "is_workbook": true
+    },
+    {
+      "id": "wb01_q20",
+      "chapter": 1,
+      "chapter_title": "The State, Conflict Resolution, and Development in Africa",
+      "question": "[Workbook CA Q20] According to Karl Marx, what is the grave structural defect of a laissez-faire, unregulated free market economy?",
+      "options": {
+        "A": "Excessive leisure time for factory labourers",
+        "B": "Alienation of labour, concentration of wealth, and ruthless exploitation of the working class",
+        "C": "Rapid deflation making food completely free",
+        "D": "Surplus tax revenue causing government stagnation"
+      },
+      "answer": "B",
+      "explanation": "Workbook Q20: Marx demonstrated that laissez-faire capitalism inevitably produces worker alienation and widens the inequality gulf between rich owners and poor workers.",
+      "source_pages": "4-5",
+      "difficulty": "medium",
+      "prediction_weight": "high",
+      "type": "workbook_ca",
+      "is_workbook": true
+    },
+    {
+      "id": "wb01_q21",
+      "chapter": 1,
+      "chapter_title": "The State, Conflict Resolution, and Development in Africa",
+      "question": "[Workbook CA Q21] To act as a primary mediator and arbiter in conflict resolution, what three institutional mechanisms does the state deploy?",
+      "options": {
+        "A": "Religious rituals, secret societies, and royal decrees",
+        "B": "Judicial adjudication (courts), administrative mediation/inquiry, and law enforcement / coercive peacekeeping",
+        "C": "Corporate mergers, price fixing, and bank bailouts",
+        "D": "Foreign mercenaries, martial law decrees, and trade embargoes"
+      },
+      "answer": "B",
+      "explanation": "Workbook Q21: The state deploys legal courts (adjudication), administrative commissions of inquiry (mediation), and policing agencies (peace enforcement).",
+      "source_pages": "11-12",
+      "difficulty": "medium",
+      "prediction_weight": "high",
+      "type": "workbook_ca",
+      "is_workbook": true
+    },
+    {
+      "id": "wb01_q22",
+      "chapter": 1,
+      "chapter_title": "The State, Conflict Resolution, and Development in Africa",
+      "question": "[Workbook CA Q22] Former UN Secretary-General Kofi Annan famously declared that which three interdependent pillars form the building blocks of human and national security?",
+      "options": {
+        "A": "Land, Labour, and Capital",
+        "B": "Peace, Development, and Human Rights",
+        "C": "Nuclear weapons, Trade surpluses, and Space satellites",
+        "D": "Oil, Gas, and Solid minerals"
+      },
+      "answer": "B",
+      "explanation": "Workbook Q22: Kofi Annan asserted that humanity cannot enjoy development without security, nor security without development, and neither without respect for human rights.",
+      "source_pages": "12-13",
+      "difficulty": "easy",
+      "prediction_weight": "high",
+      "type": "workbook_ca",
+      "is_workbook": true
+    },
+    {
+      "id": "wb01_q23",
+      "chapter": 1,
+      "chapter_title": "The State, Conflict Resolution, and Development in Africa",
+      "question": "[Workbook CA Q23] What are the four core characteristics of Human Security established in the landmark 1994 UNDP Human Development Report?",
+      "options": {
+        "A": "Universal, People-centred, Interdependent, and Early prevention",
+        "B": "Territorial, Militaristic, Bureaucratic, and Centralized",
+        "C": "Bilateral, Retaliatory, Covert, and Offensive",
+        "D": "Commercial, Industrial, Financial, and Monetary"
+      },
+      "answer": "A",
+      "explanation": "Workbook Q23: The 1994 UNDP report defined Human Security as: (1) Universal, (2) People-centred, (3) Interdependent, and (4) Early prevention focused.",
+      "source_pages": "13-14",
+      "difficulty": "medium",
+      "prediction_weight": "high",
+      "type": "workbook_ca",
+      "is_workbook": true
+    },
+    {
+      "id": "wb01_q24",
+      "chapter": 1,
+      "chapter_title": "The State, Conflict Resolution, and Development in Africa",
+      "question": "[Workbook CA Q24] Why did the post-civil war 'No Victor, No Vanquished' declaration and '3Rs' policy (Reconstruction, Rehabilitation, Reconciliation) fall short of durable peace in Nigeria?",
+      "options": {
+        "A": "Because the entire population emigrated overseas",
+        "B": "Continued political and economic marginalization of the eastern region, coupled with corruption, porous borders, and weak state intelligence coordination",
+        "C": "Excessive foreign aid flooding into local markets",
+        "D": "Immediate dissolution of the Nigerian military"
+      },
+      "answer": "B",
+      "explanation": "Workbook Q24: Failure to genuinely implement the 3Rs, perceived marginalization, and weak institutional accountability prevented deep structural reconciliation.",
+      "source_pages": "9, 14",
+      "difficulty": "medium",
       "prediction_weight": "high",
       "type": "workbook_ca",
       "is_workbook": true

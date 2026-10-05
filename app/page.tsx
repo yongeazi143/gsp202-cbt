@@ -18,10 +18,11 @@ import { FlashcardsView } from "@/components/FlashcardsView";
 import { SummariesView } from "@/components/SummariesView";
 import { ConfirmModal } from "@/components/ConfirmModal";
 import { AnalyticsModal } from "@/components/AnalyticsModal";
+import { WorkbookAnswersView } from "@/components/WorkbookAnswersView";
 import { useToast } from "@/context/ToastContext";
 import { trackPlatformEvent } from "@/lib/metrics";
 
-type AppPhase = "intro" | "setup" | "test" | "results" | "review" | "flashcards" | "summaries";
+type AppPhase = "intro" | "setup" | "test" | "results" | "review" | "flashcards" | "summaries" | "workbook";
 
 export default function Home() {
   const { showToast } = useToast();
@@ -242,11 +243,35 @@ export default function Home() {
             setPhase("summaries");
             trackPlatformEvent("summary_read");
           }}
+          onOpenWorkbookAnswers={() => {
+            setPhase("workbook");
+            trackPlatformEvent("summary_read");
+          }}
           onOpenAnalytics={() => setIsAnalyticsOpen(true)}
         />
         <AnalyticsModal
           isOpen={isAnalyticsOpen}
           onClose={() => setIsAnalyticsOpen(false)}
+        />
+      </>
+    );
+  }
+
+  // Render Official CA Workbook Answers View
+  if (phase === "workbook") {
+    return (
+      <>
+        <CustomCursor />
+        <WorkbookAnswersView
+          onBackToDashboard={() => setPhase("setup")}
+          onLaunchChapterDrill={(chNum) => {
+            handleStartExam({
+              mode: "study",
+              selectedChapters: [chNum],
+              questionCount: 24,
+              timeLimitMinutes: 25,
+            });
+          }}
         />
       </>
     );

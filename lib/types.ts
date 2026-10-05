@@ -87,3 +87,26 @@ export const CHAPTER_LIST: ChapterMeta[] = [
   { number: 12, title: "Community Policing", pages: "180-185" },
   { number: 13, title: "Conflict Early Warning and Early Response Systems", pages: "186-209" },
 ];
+
+export interface WorkbookQuestion {
+  q_num: number;
+  question: string;
+  answer: string;
+  textbook_ref: string;
+  notes?: string;
+}
+
+export interface WorkbookChapter {
+  chapter: number;
+  chapter_title: string;
+  pages: string;
+  questions: WorkbookQuestion[];
+}
+
+export interface WorkbookSolutionsData {
+  title: string;
+  course: string;
+  total_chapters: number;
+  chapters: WorkbookChapter[];
+}
+

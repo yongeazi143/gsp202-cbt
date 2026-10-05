@@ -1,10 +1,9 @@
-"use client";
-
 import React, { useState, useMemo } from "react";
 import { CHAPTER_LIST, ExamSessionConfig, TestMode, Question } from "@/lib/types";
-import { BookOpen, Clock, Check, ChevronRight, Award, Sparkles, User, Zap, Flame, Filter, Sliders, Activity } from "lucide-react";
+import { BookOpen, Clock, Check, ChevronRight, Award, Sparkles, User, Zap, Flame, Filter, Sliders, Activity, FileCheck2 } from "lucide-react";
 import { motion } from "framer-motion";
 import { useToast } from "@/context/ToastContext";
+import { Footer } from "@/components/Footer";
 
 interface SetupScreenProps {
   userName: string;
@@ -13,6 +12,7 @@ interface SetupScreenProps {
   onStartExam: (config: ExamSessionConfig) => void;
   onOpenFlashcards: () => void;
   onOpenSummaries: () => void;
+  onOpenWorkbookAnswers: () => void;
   onOpenAnalytics?: () => void;
 }
 
@@ -23,8 +23,10 @@ export function SetupScreen({
   onStartExam,
   onOpenFlashcards,
   onOpenSummaries,
+  onOpenWorkbookAnswers,
   onOpenAnalytics,
 }: SetupScreenProps) {
+
   const { showToast } = useToast();
 
   const [mode, setMode] = useState<TestMode>("exam");
@@ -255,7 +257,7 @@ export function SetupScreen({
                 PRO SUITE
               </span>
             </div>
-            <h1 className="text-3xl md:text-5xl font-black text-white tracking-tight">
+            <h1 className="text-2xl md:text-4xl font-black text-white tracking-tight">
               GSP 202: Peace & Conflict
             </h1>
             <p className="text-xs md:text-sm text-slate-400 pt-0.5 font-medium">
@@ -264,16 +266,15 @@ export function SetupScreen({
           </div>
 
           <div className="flex flex-wrap items-center gap-2 sm:gap-3 w-full sm:w-auto">
-            {onOpenAnalytics && (
-              <button
-                onClick={onOpenAnalytics}
-                className="flex-1 sm:flex-none bg-slate-900/90 hover:bg-slate-800 border border-white/10 text-white font-bold py-2.5 sm:py-3 px-3 sm:px-4 rounded-xl transition text-xs md:text-sm flex items-center justify-center gap-2 cursor-pointer shadow-md"
-                title="View Usage & Deployment Telemetry"
-              >
-                <Activity size={16} className="text-emerald-400" />
-                <span>Analytics</span>
-              </button>
-            )}
+            <button
+              onClick={onOpenWorkbookAnswers}
+              className="flex-1 sm:flex-none bg-purple-950/40 hover:bg-purple-900/60 border border-purple-500/30 hover:border-purple-500/50 text-purple-200 font-bold py-2.5 sm:py-3 px-3 sm:px-4 rounded-xl transition text-xs md:text-sm flex items-center justify-center gap-2 cursor-pointer shadow-md"
+              title="Verified CA Workbook Fill-in Solutions"
+            >
+              <FileCheck2 size={16} className="text-purple-400" />
+              <span className="hidden xs:inline">Workbook </span><span>Answers</span>
+              <span className="px-1.5 py-0.5 rounded text-[10px] bg-purple-500/20 text-purple-300 font-mono font-bold">13 Ch</span>
+            </button>
 
             <button
               onClick={onOpenSummaries}
@@ -582,6 +583,9 @@ export function SetupScreen({
           </div>
         </motion.div>
       </div>
+
+      {/* Developer Feedback, Support & Private Admin Footer */}
+      <Footer onOpenAdmin={onOpenAnalytics || (() => {})} />
     </div>
   );
 }

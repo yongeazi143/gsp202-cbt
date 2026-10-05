@@ -5,12 +5,23 @@
   --font-heading: var(--font-outfit), sans-serif;
 }
 
+html {
+  font-size: 15px;
+}
+
+@media (min-width: 1024px) {
+  html {
+    font-size: 15.5px;
+  }
+}
+
 body {
   font-family: var(--font-sans);
   background-color: #0b0f17;
   color: #f1f5f9;
   overflow-x: hidden;
 }
+
 
 h1, h2, h3, h4, .font-heading {
   font-family: var(--font-heading);
