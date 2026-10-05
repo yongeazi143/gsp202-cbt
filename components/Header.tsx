@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { LogOut, Bookmark, User, Clock, Calculator as CalcIcon, BookOpen, ShieldAlert, LayoutGrid } from "lucide-react";
+import { LogOut, Bookmark, User, Clock, Calculator as CalcIcon, BookOpen, ShieldAlert, LayoutGrid, Menu } from "lucide-react";
 import { TestMode } from "@/lib/types";
 
 interface HeaderProps {
@@ -41,6 +41,18 @@ export function Header({
     <header className="bg-[#0b0f17]/90 backdrop-blur-md border-b border-white/10 text-white px-4 md:px-8 py-3 flex items-center justify-between shadow-lg select-none sticky top-0 z-30">
       {/* Left controls */}
       <div className="flex items-center gap-1.5 sm:gap-2.5">
+        {/* Mobile Left Sidebar Menu Button */}
+        {onOpenNavigator && (
+          <button
+            onClick={onOpenNavigator}
+            className="md:hidden flex items-center gap-1 text-xs font-bold bg-emerald-500/15 hover:bg-emerald-500/25 border border-emerald-500/30 text-emerald-300 px-2.5 py-1.5 rounded-lg transition cursor-pointer active:scale-95"
+            title="Open Navigation Menu"
+          >
+            <Menu size={16} />
+            <span className="font-mono">Menu</span>
+          </button>
+        )}
+
         <button
           onClick={onExit}
           className="flex items-center gap-1.5 text-xs font-semibold bg-white/5 hover:bg-white/10 border border-white/10 px-2.5 sm:px-3 py-1.5 rounded-lg transition cursor-pointer text-slate-300 hover:text-white"
@@ -73,18 +85,6 @@ export function Header({
           <Bookmark size={15} className={isFlagged ? "fill-amber-400" : ""} />
           <span className="hidden xs:inline">{isFlagged ? "Flagged" : "Flag"}</span>
         </button>
-
-        {/* Mobile Palette Button */}
-        {onOpenNavigator && (
-          <button
-            onClick={onOpenNavigator}
-            className="md:hidden flex items-center gap-1.5 text-xs font-semibold bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 px-2.5 py-1.5 rounded-lg transition cursor-pointer"
-            title="View Questions Grid"
-          >
-            <LayoutGrid size={15} />
-            <span className="hidden xs:inline">Questions</span>
-          </button>
-        )}
       </div>
 
       {/* Center Course/Chapter Pill */}

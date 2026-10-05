@@ -29,7 +29,7 @@ export function QuestionCard({
   const hasAnswered = Boolean(selectedOption);
 
   return (
-    <div className="flex-1 flex flex-col overflow-y-auto p-4 md:p-10 w-full max-w-5xl mx-auto custom-scrollbar">
+    <div className="flex-1 flex flex-col overflow-y-auto p-3.5 sm:p-6 md:p-8 w-full max-w-5xl mx-auto custom-scrollbar">
       <AnimatePresence mode="wait">
         <motion.div
           key={question.id}
@@ -41,31 +41,31 @@ export function QuestionCard({
         >
           <div>
             {/* Top Question Metas */}
-            <div className="flex flex-wrap items-center justify-between pb-4 mb-6 border-b border-white/10 gap-3">
-              <div className="flex items-center gap-3">
-                <span className="text-xl md:text-2xl font-black text-white font-mono">
-                  {questionNumber.toString().padStart(2, "0")} <span className="text-slate-500 font-light text-base">/ {totalQuestions}</span>
+            <div className="flex flex-wrap items-center justify-between pb-3.5 mb-5 border-b border-white/10 gap-2.5">
+              <div className="flex items-center gap-2.5">
+                <span className="text-lg sm:text-xl md:text-2xl font-black text-white font-mono">
+                  {questionNumber.toString().padStart(2, "0")} <span className="text-slate-500 font-light text-sm sm:text-base">/ {totalQuestions}</span>
                 </span>
-                <span className="text-xs bg-slate-900 border border-white/10 text-emerald-400 font-mono font-bold px-2.5 py-1 rounded-lg">
+                <span className="text-xs bg-slate-900 border border-white/10 text-emerald-400 font-mono font-bold px-2 py-0.5 rounded-lg">
                   Chapter {question.chapter}
                 </span>
                 {(question.type === "workbook_ca" || (question as any).is_workbook) && (
-                  <span className="text-xs bg-purple-500/20 border border-purple-500/40 text-purple-300 font-bold px-2.5 py-1 rounded-lg flex items-center gap-1">
-                    <span>📝 CA Workbook Question</span>
+                  <span className="text-xs bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 font-bold px-2.5 py-0.5 rounded-lg flex items-center gap-1">
+                    <span>📝 CA Workbook</span>
                   </span>
                 )}
               </div>
 
               {question.prediction_weight && (
                 <div
-                  className={`flex items-center gap-1.5 text-xs px-3 py-1 rounded-full font-semibold border ${
+                  className={`flex items-center gap-1.5 text-xs px-2.5 py-0.5 rounded-full font-semibold border ${
                     question.prediction_weight === "high"
                       ? "bg-amber-500/10 text-amber-300 border-amber-500/30"
                       : "bg-blue-500/10 text-blue-300 border-blue-500/30"
                   }`}
                 >
                   <Sparkles size={13} className={question.prediction_weight === "high" ? "text-amber-400" : "text-blue-400"} />
-                  <span>
+                  <span className="text-[11px] sm:text-xs">
                     {question.prediction_weight === "high" ? "High Exam Frequency" : "Core Concept"}
                   </span>
                 </div>
@@ -73,14 +73,14 @@ export function QuestionCard({
             </div>
 
             {/* Question Text */}
-            <div className="mb-8">
-              <h2 className="text-lg md:text-2xl font-medium text-slate-100 leading-relaxed tracking-normal">
+            <div className="mb-6 sm:mb-8">
+              <h2 className="text-base sm:text-lg md:text-xl font-medium text-slate-100 leading-relaxed tracking-normal">
                 {question.question}
               </h2>
             </div>
 
             {/* Options A, B, C, D */}
-            <div className="grid grid-cols-1 gap-3.5 mb-8">
+            <div className="grid grid-cols-1 gap-2.5 sm:gap-3.5 mb-6 sm:mb-8">
               {optionsKeys.map((key) => {
                 const optionText = question.options[key];
                 if (!optionText) return null;
@@ -121,17 +121,17 @@ export function QuestionCard({
                     whileHover={{ scale: 1.006 }}
                     whileTap={{ scale: 0.995 }}
                     onClick={() => onSelectOption(key)}
-                    className={`flex items-start gap-4 p-4 md:p-5 rounded-xl border cursor-pointer transition-all select-none ${containerStyle}`}
+                    className={`flex items-start gap-3 sm:gap-4 p-3.5 sm:p-4 md:p-5 rounded-xl border cursor-pointer transition-all select-none ${containerStyle}`}
                   >
                     {/* Letter badge */}
                     <div
-                      className={`w-8 h-8 rounded-lg font-mono font-bold text-sm flex items-center justify-center shrink-0 border transition ${badgeStyle}`}
+                      className={`w-7 h-7 sm:w-8 sm:h-8 rounded-lg font-mono font-bold text-xs sm:text-sm flex items-center justify-center shrink-0 border transition ${badgeStyle}`}
                     >
                       {key}
                     </div>
 
                     {/* Option Text */}
-                    <div className="flex-1 text-sm md:text-base leading-relaxed pt-0.5 font-medium">
+                    <div className="flex-1 text-xs sm:text-sm md:text-base leading-relaxed pt-0.5 font-medium">
                       {optionText}
                     </div>
 

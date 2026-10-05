@@ -1,9 +1,10 @@
 import React, { useState, useMemo } from "react";
 import { CHAPTER_LIST, ExamSessionConfig, TestMode, Question } from "@/lib/types";
-import { BookOpen, Clock, Check, ChevronRight, Award, Sparkles, User, Zap, Flame, Filter, Sliders, Activity, FileCheck2 } from "lucide-react";
+import { BookOpen, Clock, Check, ChevronRight, Award, Sparkles, User, Zap, Flame, Filter, Sliders, Activity, FileCheck2, Menu } from "lucide-react";
 import { motion } from "framer-motion";
 import { useToast } from "@/context/ToastContext";
 import { Footer } from "@/components/Footer";
+import { MobileSidebar } from "@/components/MobileSidebar";
 
 interface SetupScreenProps {
   userName: string;
@@ -34,6 +35,7 @@ export function SetupScreen({
   const [timeLimitMinutes, setTimeLimitMinutes] = useState<number>(25);
   const [questionCount, setQuestionCount] = useState<number>(70);
   const [showInstructions, setShowInstructions] = useState<boolean>(false);
+  const [isMobileNavOpen, setIsMobileNavOpen] = useState<boolean>(false);
 
   // Calculate questions available in selected chapters
   const availableQuestionsCount = useMemo(() => {
@@ -194,7 +196,7 @@ export function SetupScreen({
                   </div>
                   <div>
                     <div className="text-xs text-slate-400">Candidate</div>
-                    <div className="text-lg font-bold text-white uppercase">{userName || "ISRAEL"}</div>
+                    <div className="text-lg font-bold text-white uppercase">{userName || "Israel"}</div>
                     <div className="text-[11px] text-emerald-400 font-mono">GSP 202 CBT</div>
                   </div>
                 </div>
@@ -238,53 +240,73 @@ export function SetupScreen({
   }
 
   return (
-    <div className="min-h-screen w-full bg-[#080c14] text-slate-100 flex flex-col justify-between p-6 md:p-10 subtle-grid">
-      <div className="max-w-7xl mx-auto w-full space-y-8 flex-1 flex flex-col justify-center">
-        {/* Header Bar */}
+    <div className="min-h-screen w-full bg-[#080c14] text-slate-100 flex flex-col justify-between p-3.5 sm:p-6 md:p-10 subtle-grid">
+      <div className="max-w-7xl mx-auto w-full space-y-6 sm:space-y-8 flex-1 flex flex-col justify-center">
+        {/* Mobile Header Bar (Screen < 768px) */}
+        <div className="md:hidden flex items-center justify-between pb-3.5 border-b border-white/10 gap-2">
+          <div className="flex items-center gap-2.5">
+            <button
+              onClick={() => setIsMobileNavOpen(true)}
+              className="p-2 sm:p-2.5 rounded-xl bg-slate-900 border border-white/10 text-emerald-400 hover:bg-slate-800 transition cursor-pointer flex items-center gap-1.5 shadow-sm active:scale-95"
+              title="Open Navigation Menu"
+            >
+              <Menu size={18} />
+              <span className="text-xs font-mono font-bold">Menu</span>
+            </button>
+            <div>
+              <h1 className="text-sm sm:text-base font-extrabold text-white tracking-tight flex items-center gap-1.5">
+                <span>GSP 202 CBT</span>
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+              </h1>
+              <span className="text-[10px] text-slate-400 font-mono">493 Qs • 13 Chapters</span>
+            </div>
+          </div>
+
+          <button
+            onClick={() => setShowInstructions(true)}
+            className="bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-black py-2 px-3 sm:px-4 rounded-xl text-xs flex items-center gap-1 shadow-md shadow-emerald-500/20 active:scale-95 cursor-pointer"
+          >
+            <span>Launch ({effectiveCount})</span>
+            <ChevronRight size={14} />
+          </button>
+        </div>
+
+        {/* Desktop Header Bar (Screen >= 768px) */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-white/10"
+          className="hidden md:flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-white/10"
         >
           <div>
-            <div className="flex items-center gap-2 mb-1">
-              <span className="text-xs font-mono uppercase tracking-[0.25em] text-emerald-400 font-bold">
-                UNIVERSITY CBT PLATFORM
-              </span>
-              <span className="px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-[10px] text-emerald-300 font-mono font-bold">
-                PRO SUITE
-              </span>
-            </div>
             <h1 className="text-2xl md:text-4xl font-black text-white tracking-tight">
               GSP 202: Peace & Conflict
             </h1>
-            <p className="text-xs md:text-sm text-slate-400 pt-0.5 font-medium">
-              Textbook & CA Workbook Questions Integrated • Fully Customizable
+            <p className="text-xs md:text-sm text-slate-400 pt-1 font-medium">
+              Textbook & CA Workbook Questions Integrated (493 Questions)
             </p>
           </div>
 
-          <div className="flex flex-wrap items-center gap-2 sm:gap-3 w-full sm:w-auto">
+          <div className="flex flex-wrap items-center gap-2 sm:gap-3">
             <button
               onClick={onOpenWorkbookAnswers}
-              className="flex-1 sm:flex-none bg-emerald-950/40 hover:bg-emerald-900/60 border border-emerald-500/30 hover:border-emerald-500/50 text-emerald-200 font-bold py-2.5 sm:py-3 px-3 sm:px-4 rounded-xl transition text-xs md:text-sm flex items-center justify-center gap-2 cursor-pointer shadow-md"
+              className="bg-emerald-950/40 hover:bg-emerald-900/60 border border-emerald-500/30 hover:border-emerald-500/50 text-emerald-200 font-bold py-2.5 sm:py-3 px-3 sm:px-4 rounded-xl transition text-xs md:text-sm flex items-center justify-center gap-2 cursor-pointer shadow-md"
               title="Verified CA Workbook Fill-in Solutions"
             >
               <FileCheck2 size={16} className="text-emerald-400" />
-              <span className="hidden xs:inline">Workbook </span><span>Answers</span>
-              <span className="px-1.5 py-0.5 rounded text-[10px] bg-emerald-500/20 text-emerald-300 font-mono font-bold">13 Ch</span>
+              <span>Workbook Answers</span>
             </button>
 
             <button
               onClick={onOpenSummaries}
-              className="flex-1 sm:flex-none bg-slate-900/90 hover:bg-slate-800 border border-white/10 text-white font-bold py-2.5 sm:py-3 px-3 sm:px-4 rounded-xl transition text-xs md:text-sm flex items-center justify-center gap-2 cursor-pointer shadow-md"
+              className="bg-slate-900/90 hover:bg-slate-800 border border-white/10 text-white font-bold py-2.5 sm:py-3 px-3 sm:px-4 rounded-xl transition text-xs md:text-sm flex items-center justify-center gap-2 cursor-pointer shadow-md"
             >
               <BookOpen size={16} className="text-emerald-400" />
-              <span className="hidden xs:inline">Chapter </span><span>Summaries</span>
+              <span>Chapter Summaries</span>
             </button>
 
             <button
               onClick={onOpenFlashcards}
-              className="flex-1 sm:flex-none bg-slate-900/90 hover:bg-slate-800 border border-white/10 text-white font-bold py-2.5 sm:py-3 px-3 sm:px-4 rounded-xl transition text-xs md:text-sm flex items-center justify-center gap-2 cursor-pointer shadow-md"
+              className="bg-slate-900/90 hover:bg-slate-800 border border-white/10 text-white font-bold py-2.5 sm:py-3 px-3 sm:px-4 rounded-xl transition text-xs md:text-sm flex items-center justify-center gap-2 cursor-pointer shadow-md"
             >
               <Sparkles size={16} className="text-blue-400" />
               <span>Flashcards</span>
@@ -292,7 +314,7 @@ export function SetupScreen({
 
             <button
               onClick={() => setShowInstructions(true)}
-              className="w-full sm:w-auto bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-black py-3 px-6 rounded-xl shadow-xl shadow-emerald-500/25 transition text-xs md:text-sm flex items-center justify-center gap-2 cursor-pointer transform active:scale-95"
+              className="bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-black py-3 px-6 rounded-xl shadow-xl shadow-emerald-500/25 transition text-xs md:text-sm flex items-center justify-center gap-2 cursor-pointer transform active:scale-95"
             >
               <span>Launch Test ({effectiveCount} Qs)</span>
               <ChevronRight size={18} />
@@ -311,13 +333,13 @@ export function SetupScreen({
           </div>
           <div className="flex-1 min-w-[240px]">
             <label className="block text-[11px] font-mono font-bold uppercase text-slate-400 mb-1">
-              Candidate Name
+              Student Name
             </label>
             <input
               type="text"
               value={userName}
               onChange={(e) => onUpdateUserName(e.target.value)}
-              placeholder="e.g. ISRAEL"
+              placeholder="e.g. Enter Your Full Name"
               className="w-full bg-slate-900/80 border border-white/10 rounded-lg px-4 py-2 text-sm font-bold text-white focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition"
             />
           </div>
@@ -330,11 +352,10 @@ export function SetupScreen({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             onClick={() => handleModeChange("exam")}
-            className={`p-6 rounded-2xl border-2 cursor-pointer transition select-none flex flex-col justify-between relative overflow-hidden ${
-              mode === "exam"
-                ? "border-emerald-500 glass-panel-glow shadow-2xl shadow-emerald-900/30"
-                : "border-white/10 glass-panel hover:border-white/20 opacity-80"
-            }`}
+            className={`p-6 rounded-2xl border-2 cursor-pointer transition select-none flex flex-col justify-between relative overflow-hidden ${mode === "exam"
+              ? "border-emerald-500 glass-panel-glow shadow-2xl shadow-emerald-900/30"
+              : "border-white/10 glass-panel hover:border-white/20 opacity-80"
+              }`}
           >
             {mode === "exam" && (
               <div className="absolute top-0 right-0 bg-emerald-500 text-slate-950 font-black text-[10px] uppercase font-mono px-3 py-1 rounded-bl-xl tracking-wider">
@@ -369,11 +390,10 @@ export function SetupScreen({
                       e.stopPropagation();
                       setTimeLimitMinutes(25);
                     }}
-                    className={`flex-1 py-1.5 px-3 rounded-lg text-xs font-bold transition flex items-center justify-center gap-1.5 cursor-pointer ${
-                      timeLimitMinutes === 25
-                        ? "bg-emerald-500 text-slate-950 font-black shadow-md shadow-emerald-500/20"
-                        : "bg-slate-900/80 border border-white/10 text-slate-300 hover:bg-slate-800"
-                    }`}
+                    className={`flex-1 py-1.5 px-3 rounded-lg text-xs font-bold transition flex items-center justify-center gap-1.5 cursor-pointer ${timeLimitMinutes === 25
+                      ? "bg-emerald-500 text-slate-950 font-black shadow-md shadow-emerald-500/20"
+                      : "bg-slate-900/80 border border-white/10 text-slate-300 hover:bg-slate-800"
+                      }`}
                   >
                     <Clock size={13} />
                     <span>25 Mins (Actual Exam)</span>
@@ -385,11 +405,10 @@ export function SetupScreen({
                       e.stopPropagation();
                       setTimeLimitMinutes(20);
                     }}
-                    className={`flex-1 py-1.5 px-3 rounded-lg text-xs font-bold transition flex items-center justify-center gap-1.5 cursor-pointer ${
-                      timeLimitMinutes === 20
-                        ? "bg-amber-400 text-slate-950 font-black shadow-md shadow-amber-400/20"
-                        : "bg-slate-900/80 border border-white/10 text-slate-300 hover:bg-slate-800"
-                    }`}
+                    className={`flex-1 py-1.5 px-3 rounded-lg text-xs font-bold transition flex items-center justify-center gap-1.5 cursor-pointer ${timeLimitMinutes === 20
+                      ? "bg-amber-400 text-slate-950 font-black shadow-md shadow-amber-400/20"
+                      : "bg-slate-900/80 border border-white/10 text-slate-300 hover:bg-slate-800"
+                      }`}
                   >
                     <Zap size={13} />
                     <span>20 Mins (Speed Drill)</span>
@@ -404,11 +423,10 @@ export function SetupScreen({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             onClick={() => handleModeChange("study")}
-            className={`p-6 rounded-2xl border-2 cursor-pointer transition select-none flex flex-col justify-between relative overflow-hidden ${
-              mode === "study"
-                ? "border-blue-500 glass-panel shadow-2xl shadow-blue-900/30"
-                : "border-white/10 glass-panel hover:border-white/20 opacity-80"
-            }`}
+            className={`p-6 rounded-2xl border-2 cursor-pointer transition select-none flex flex-col justify-between relative overflow-hidden ${mode === "study"
+              ? "border-blue-500 glass-panel shadow-2xl shadow-blue-900/30"
+              : "border-white/10 glass-panel hover:border-white/20 opacity-80"
+              }`}
           >
             {mode === "study" && (
               <div className="absolute top-0 right-0 bg-blue-500 text-white font-black text-[10px] uppercase font-mono px-3 py-1 rounded-bl-xl tracking-wider">
@@ -474,11 +492,10 @@ export function SetupScreen({
               <button
                 key={preset}
                 onClick={() => handleSetPreset(preset)}
-                className={`py-2 px-3.5 sm:px-4 rounded-lg text-xs font-mono font-bold transition cursor-pointer shrink-0 ${
-                  questionCount === preset
-                    ? "bg-emerald-500 text-slate-950 font-black shadow-md shadow-emerald-500/20"
-                    : "bg-slate-900 border border-white/10 text-slate-300 hover:bg-slate-800"
-                }`}
+                className={`py-2 px-3.5 sm:px-4 rounded-lg text-xs font-mono font-bold transition cursor-pointer shrink-0 ${questionCount === preset
+                  ? "bg-emerald-500 text-slate-950 font-black shadow-md shadow-emerald-500/20"
+                  : "bg-slate-900 border border-white/10 text-slate-300 hover:bg-slate-800"
+                  }`}
               >
                 {preset} Questions
               </button>
@@ -488,11 +505,10 @@ export function SetupScreen({
                 setQuestionCount(availableQuestionsCount);
                 showToast(`Loaded all ${availableQuestionsCount} available questions.`, "success");
               }}
-              className={`py-2 px-3.5 sm:px-4 rounded-lg text-xs font-mono font-bold transition cursor-pointer shrink-0 ${
-                questionCount === availableQuestionsCount
-                  ? "bg-teal-400 text-slate-950 font-black"
-                  : "bg-slate-900 border border-white/10 text-teal-300 hover:bg-slate-800"
-              }`}
+              className={`py-2 px-3.5 sm:px-4 rounded-lg text-xs font-mono font-bold transition cursor-pointer shrink-0 ${questionCount === availableQuestionsCount
+                ? "bg-teal-400 text-slate-950 font-black"
+                : "bg-slate-900 border border-white/10 text-teal-300 hover:bg-slate-800"
+                }`}
             >
               All Available ({availableQuestionsCount})
             </button>
@@ -547,18 +563,16 @@ export function SetupScreen({
                 <div
                   key={ch.number}
                   onClick={() => toggleChapter(ch.number)}
-                  className={`p-3 rounded-xl border text-xs transition flex items-start gap-3 cursor-pointer ${
-                    isSelected
-                      ? "bg-emerald-500/15 border-emerald-500/50 text-white shadow-sm"
-                      : "bg-slate-900/40 border-white/5 text-slate-500 hover:border-white/10"
-                  }`}
+                  className={`p-3 rounded-xl border text-xs transition flex items-start gap-3 cursor-pointer ${isSelected
+                    ? "bg-emerald-500/15 border-emerald-500/50 text-white shadow-sm"
+                    : "bg-slate-900/40 border-white/5 text-slate-500 hover:border-white/10"
+                    }`}
                 >
                   <div
-                    className={`w-4 h-4 rounded mt-0.5 flex items-center justify-center shrink-0 border transition ${
-                      isSelected
-                        ? "bg-emerald-500 border-emerald-500 text-slate-950"
-                        : "border-slate-600 bg-slate-800"
-                    }`}
+                    className={`w-4 h-4 rounded mt-0.5 flex items-center justify-center shrink-0 border transition ${isSelected
+                      ? "bg-emerald-500 border-emerald-500 text-slate-950"
+                      : "border-slate-600 bg-slate-800"
+                      }`}
                   >
                     {isSelected && <Check size={11} className="stroke-[3]" />}
                   </div>
@@ -581,6 +595,22 @@ export function SetupScreen({
           </div>
         </motion.div>
       </div>
+
+      {/* Mobile Navigation Left Drawer */}
+      <MobileSidebar
+        isOpen={isMobileNavOpen}
+        onClose={() => setIsMobileNavOpen(false)}
+        activeSection="dashboard"
+        userName={userName}
+        onNavigateDashboard={() => setIsMobileNavOpen(false)}
+        onNavigateWorkbook={onOpenWorkbookAnswers}
+        onNavigateSummaries={onOpenSummaries}
+        onNavigateFlashcards={onOpenFlashcards}
+        onLaunchChapterDrill={(chNum) => {
+          setSelectedChapters([chNum]);
+          setShowInstructions(true);
+        }}
+      />
 
       {/* Developer Feedback & Support Footer */}
       <Footer />

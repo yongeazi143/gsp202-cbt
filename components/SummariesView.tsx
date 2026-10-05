@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { ChapterSummary, CHAPTER_LIST } from "@/lib/types";
-import { ChevronLeft, BookOpen, User, Calendar, Award, Sparkles, Lightbulb, ShieldCheck, ArrowRight, Layers, FileText } from "lucide-react";
+import { ChevronLeft, BookOpen, User, Calendar, Award, Sparkles, Lightbulb, ShieldCheck, ArrowRight, Layers, FileText, Menu, X } from "lucide-react";
 import { motion } from "framer-motion";
 
 interface SummariesViewProps {
@@ -20,6 +20,7 @@ export function SummariesView({
 }: SummariesViewProps) {
   const [summaries, setSummaries] = useState<ChapterSummary[]>([]);
   const [activeChapterNum, setActiveChapterNum] = useState<number>(initialChapter);
+  const [isDrawerOpen, setIsDrawerOpen] = useState<boolean>(false);
 
   useEffect(() => {
     fetch("/data/summaries.json")
@@ -33,23 +34,33 @@ export function SummariesView({
   const activeSummary = summaries.find((s) => s.chapter === activeChapterNum) || summaries[0];
 
   return (
-    <div className="min-h-screen w-full bg-[#080c14] text-slate-100 flex flex-col justify-between p-4 md:p-8 subtle-grid">
+    <div className="min-h-screen w-full bg-[#080c14] text-slate-100 flex flex-col justify-between p-3.5 sm:p-6 md:p-8 subtle-grid">
       {/* Top Header */}
-      <header className="max-w-7xl mx-auto w-full flex flex-wrap items-center justify-between gap-4 pb-4 border-b border-white/10 mb-6">
-        <div className="flex items-center gap-3">
+      <header className="max-w-7xl mx-auto w-full flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-white/10 mb-6">
+        <div className="flex items-center gap-2 sm:gap-3">
+          {/* Mobile Menu Button for Left Sidebar Drawer */}
+          <button
+            onClick={() => setIsDrawerOpen(true)}
+            className="lg:hidden flex items-center gap-1.5 bg-emerald-500/15 hover:bg-emerald-500/25 border border-emerald-500/30 text-emerald-300 px-2.5 py-1.5 rounded-xl text-xs font-bold transition cursor-pointer active:scale-95"
+            title="Open Chapter Selection Sidebar"
+          >
+            <Menu size={16} />
+            <span className="font-mono">Chapters</span>
+          </button>
+
           <button
             onClick={onBackToDashboard}
-            className="flex items-center gap-1.5 bg-slate-900 hover:bg-slate-800 border border-white/10 px-3.5 py-1.5 rounded-xl text-xs md:text-sm font-semibold text-slate-300 hover:text-white transition cursor-pointer"
+            className="flex items-center gap-1.5 bg-slate-900 hover:bg-slate-800 border border-white/10 px-3 py-1.5 rounded-xl text-xs md:text-sm font-semibold text-slate-300 hover:text-white transition cursor-pointer"
           >
             <ChevronLeft size={16} />
             <span>Dashboard</span>
           </button>
           <div>
-            <h1 className="text-xl md:text-2xl font-black text-white flex items-center gap-2">
-              <BookOpen size={20} className="text-emerald-400" />
+            <h1 className="text-base sm:text-xl md:text-2xl font-black text-white flex items-center gap-2">
+              <BookOpen size={18} className="text-emerald-400 shrink-0" />
               <span>Executive Cram Summaries</span>
             </h1>
-            <span className="text-xs text-slate-400 font-mono">
+            <span className="text-[10px] sm:text-xs text-slate-400 font-mono">
               High-Yield Revision Notes across all 13 Chapters
             </span>
           </div>
@@ -270,6 +281,73 @@ export function SummariesView({
           )}
         </div>
       </div>
+
+      {/* Mobile Chapter Selector Left Sidebar */}
+      {isDrawerOpen && (
+        <div
+          className="fixed inset-0 z-50 lg:hidden bg-black/80 backdrop-blur-sm flex justify-start animate-in fade-in duration-200"
+          onClick={() => setIsDrawerOpen(false)}
+        >
+          <div
+            className="w-[85%] max-w-xs h-full bg-[#0a0e17] border-r border-white/10 shadow-2xl flex flex-col justify-between overflow-hidden animate-in slide-in-from-left duration-250"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="p-4 bg-slate-950/80 border-b border-white/10 flex items-center justify-between">
+              <div>
+                <div className="text-xs font-mono uppercase tracking-wider text-emerald-400 font-bold">
+                  CHAPTER DIRECTORY
+                </div>
+                <div className="text-[11px] text-slate-400 font-mono">13 Executive Summaries</div>
+              </div>
+              <button
+                onClick={() => setIsDrawerOpen(false)}
+                className="p-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-slate-400 hover:text-white transition cursor-pointer"
+              >
+                <X size={18} />
+              </button>
+            </div>
+
+            <div className="flex-1 overflow-y-auto p-3 space-y-1.5 custom-scrollbar">
+              {CHAPTER_LIST.map((ch) => {
+                const isActive = ch.number === activeChapterNum;
+                return (
+                  <button
+                    key={ch.number}
+                    onClick={() => {
+                      setActiveChapterNum(ch.number);
+                      setIsDrawerOpen(false);
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}
+                    className={`w-full text-left p-3 rounded-xl transition cursor-pointer flex items-start gap-2.5 ${
+                      isActive
+                        ? "bg-emerald-500 text-slate-950 font-bold shadow-md shadow-emerald-500/20"
+                        : "text-slate-300 hover:bg-slate-900/80 hover:text-white"
+                    }`}
+                  >
+                    <span
+                      className={`font-mono text-xs font-extrabold px-1.5 py-0.5 rounded shrink-0 ${
+                        isActive ? "bg-slate-950 text-emerald-400" : "bg-slate-800 text-slate-400"
+                      }`}
+                    >
+                      {ch.number.toString().padStart(2, "0")}
+                    </span>
+                    <span className="text-xs leading-snug line-clamp-2">{ch.title}</span>
+                  </button>
+                );
+              })}
+            </div>
+
+            <div className="p-3 border-t border-white/10 bg-slate-950/60">
+              <button
+                onClick={() => setIsDrawerOpen(false)}
+                className="w-full py-2 rounded-xl bg-slate-800 text-slate-300 text-xs font-semibold hover:text-white"
+              >
+                Close Drawer
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

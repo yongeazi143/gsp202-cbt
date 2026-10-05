@@ -14,6 +14,8 @@ import {
   BookMarked,
   Layers,
   ChevronRight,
+  Menu,
+  X,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useToast } from "@/context/ToastContext";
@@ -34,6 +36,7 @@ export function WorkbookAnswersView({
   const [activeChapterNum, setActiveChapterNum] = useState<number>(initialChapter);
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [copiedId, setCopiedId] = useState<string | null>(null);
+  const [isDrawerOpen, setIsDrawerOpen] = useState<boolean>(false);
 
   useEffect(() => {
     fetch("/data/workbook_answers.json")
@@ -90,10 +93,20 @@ export function WorkbookAnswersView({
     <div className="min-h-screen w-full bg-[#080c14] text-slate-100 flex flex-col justify-between p-3.5 sm:p-6 md:p-8 subtle-grid">
       {/* Top Header */}
       <header className="max-w-7xl mx-auto w-full flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-white/10 mb-6">
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 sm:gap-3">
+          {/* Mobile Menu Button for Left Sidebar Drawer */}
+          <button
+            onClick={() => setIsDrawerOpen(true)}
+            className="lg:hidden flex items-center gap-1.5 bg-emerald-500/15 hover:bg-emerald-500/25 border border-emerald-500/30 text-emerald-300 px-2.5 py-1.5 rounded-xl text-xs font-bold transition cursor-pointer active:scale-95"
+            title="Open Chapter Selection Sidebar"
+          >
+            <Menu size={16} />
+            <span className="font-mono">Chapters</span>
+          </button>
+
           <button
             onClick={onBackToDashboard}
-            className="flex items-center gap-1.5 bg-slate-900 hover:bg-slate-800 border border-white/10 px-3.5 py-1.5 rounded-xl text-xs md:text-sm font-semibold text-slate-300 hover:text-white transition cursor-pointer"
+            className="flex items-center gap-1.5 bg-slate-900 hover:bg-slate-800 border border-white/10 px-3 py-1.5 rounded-xl text-xs md:text-sm font-semibold text-slate-300 hover:text-white transition cursor-pointer"
           >
             <ChevronLeft size={16} />
             <span>Dashboard</span>
@@ -104,12 +117,12 @@ export function WorkbookAnswersView({
                 PHYSICAL CA WORKBOOK
               </span>
               <span className="px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-[10px] text-emerald-300 font-mono font-bold">
-                OFFICIAL SOLUTIONS
+                265 SOLVED
               </span>
             </div>
-            <h1 className="text-lg sm:text-xl md:text-2xl font-black text-white flex items-center gap-2">
-              <FileCheck2 size={20} className="text-emerald-400" />
-              <span>CA Workbook Solutions & Fill-Ins</span>
+            <h1 className="text-base sm:text-xl md:text-2xl font-black text-white flex items-center gap-2">
+              <FileCheck2 size={18} className="text-emerald-400 shrink-0" />
+              <span>CA Workbook Solutions</span>
             </h1>
           </div>
         </div>
@@ -370,6 +383,80 @@ export function WorkbookAnswersView({
           )}
         </div>
       </div>
+
+      {/* Mobile Chapter Selector Left Sidebar */}
+      {isDrawerOpen && (
+        <div
+          className="fixed inset-0 z-50 lg:hidden bg-black/80 backdrop-blur-sm flex justify-start animate-in fade-in duration-200"
+          onClick={() => setIsDrawerOpen(false)}
+        >
+          <div
+            className="w-[85%] max-w-xs h-full bg-[#0a0e17] border-r border-white/10 shadow-2xl flex flex-col justify-between overflow-hidden animate-in slide-in-from-left duration-250"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="p-4 bg-slate-950/80 border-b border-white/10 flex items-center justify-between">
+              <div>
+                <div className="text-xs font-mono uppercase tracking-wider text-emerald-400 font-bold">
+                  WORKBOOK CHAPTERS
+                </div>
+                <div className="text-[11px] text-slate-400 font-mono">265 Solved Questions</div>
+              </div>
+              <button
+                onClick={() => setIsDrawerOpen(false)}
+                className="p-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-slate-400 hover:text-white transition cursor-pointer"
+              >
+                <X size={18} />
+              </button>
+            </div>
+
+            <div className="flex-1 overflow-y-auto p-3 space-y-1.5 custom-scrollbar">
+              {CHAPTER_LIST.map((ch) => {
+                const isActive = ch.number === activeChapterNum;
+                const qCount = chapters.find((c) => c.chapter === ch.number)?.questions.length || 0;
+                return (
+                  <button
+                    key={ch.number}
+                    onClick={() => {
+                      setActiveChapterNum(ch.number);
+                      setIsDrawerOpen(false);
+                      setSearchQuery("");
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}
+                    className={`w-full text-left p-3 rounded-xl transition cursor-pointer flex items-start gap-2.5 ${
+                      isActive
+                        ? "bg-emerald-500 text-slate-950 font-bold shadow-md shadow-emerald-500/20"
+                        : "text-slate-300 hover:bg-slate-900/80 hover:text-white"
+                    }`}
+                  >
+                    <span
+                      className={`font-mono text-xs font-extrabold px-1.5 py-0.5 rounded shrink-0 ${
+                        isActive ? "bg-slate-950 text-emerald-400" : "bg-slate-800 text-slate-400"
+                      }`}
+                    >
+                      {ch.number.toString().padStart(2, "0")}
+                    </span>
+                    <div className="truncate">
+                      <div className="text-xs leading-snug truncate font-semibold">{ch.title}</div>
+                      <div className={`text-[10px] font-mono ${isActive ? "text-slate-900" : "text-emerald-400"}`}>
+                        {qCount} Questions
+                      </div>
+                    </div>
+                  </button>
+                );
+              })}
+            </div>
+
+            <div className="p-3 border-t border-white/10 bg-slate-950/60">
+              <button
+                onClick={() => setIsDrawerOpen(false)}
+                className="w-full py-2 rounded-xl bg-slate-800 text-slate-300 text-xs font-semibold hover:text-white"
+              >
+                Close Drawer
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

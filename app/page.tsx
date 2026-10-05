@@ -401,14 +401,14 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Mobile Question Navigator Drawer */}
+      {/* Mobile Question Navigator Drawer (Left Sidebar) */}
       {isMobileNavOpen && (
         <div
-          className="fixed inset-0 z-50 md:hidden bg-black/80 backdrop-blur-sm flex justify-end"
+          className="fixed inset-0 z-50 md:hidden bg-black/80 backdrop-blur-sm flex justify-start animate-in fade-in duration-200"
           onClick={() => setIsMobileNavOpen(false)}
         >
           <div
-            className="w-4/5 max-w-xs h-full bg-[#0a0e17] shadow-2xl overflow-hidden"
+            className="w-[85%] max-w-xs h-full bg-[#0a0e17] shadow-2xl overflow-hidden border-r border-white/10 animate-in slide-in-from-left duration-250"
             onClick={(e) => e.stopPropagation()}
           >
             <QuestionNavigator
