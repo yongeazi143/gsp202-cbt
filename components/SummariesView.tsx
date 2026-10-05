@@ -77,8 +77,28 @@ export function SummariesView({
 
       {/* Main Grid: Left Chapter Selector + Right Summary Content */}
       <div className="max-w-7xl mx-auto w-full flex-1 grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-        {/* Left Chapter Selector */}
-        <div className="lg:col-span-3 glass-panel rounded-2xl p-3 max-h-[750px] overflow-y-auto custom-scrollbar space-y-1.5">
+        {/* Mobile Horizontal Chapter Selector */}
+        <div className="lg:hidden w-full flex overflow-x-auto no-scrollbar gap-2 p-2 bg-slate-900/90 rounded-xl border border-white/10 sticky top-2 z-10 backdrop-blur-md shadow-lg">
+          {CHAPTER_LIST.map((ch) => {
+            const isActive = ch.number === activeChapterNum;
+            return (
+              <button
+                key={ch.number}
+                onClick={() => setActiveChapterNum(ch.number)}
+                className={`px-3 py-1.5 rounded-lg text-xs font-mono font-bold transition whitespace-nowrap cursor-pointer shrink-0 ${
+                  isActive
+                    ? "bg-emerald-500 text-slate-950 font-black shadow-md shadow-emerald-500/20"
+                    : "bg-slate-800 text-slate-300 hover:text-white border border-white/5"
+                }`}
+              >
+                Ch {ch.number}
+              </button>
+            );
+          })}
+        </div>
+
+        {/* Desktop Left Chapter Selector */}
+        <div className="hidden lg:block lg:col-span-3 glass-panel rounded-2xl p-3 max-h-[750px] overflow-y-auto custom-scrollbar space-y-1.5">
           <div className="px-3 py-2 text-[11px] font-mono font-bold uppercase tracking-wider text-slate-400 border-b border-white/5 mb-1">
             SELECT CHAPTER
           </div>

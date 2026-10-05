@@ -4,6 +4,7 @@ import React, { useState, useEffect, useMemo } from "react";
 import { Flashcard, CHAPTER_LIST } from "@/lib/types";
 import { motion, AnimatePresence } from "framer-motion";
 import { RotateCw, CheckCircle2, RefreshCcw, ChevronLeft, ChevronRight, Shuffle, BookOpen, Sparkles, Filter, Award } from "lucide-react";
+import { useToast } from "@/context/ToastContext";
 
 interface FlashcardsViewProps {
   onBackToDashboard: () => void;
@@ -11,6 +12,8 @@ interface FlashcardsViewProps {
 }
 
 export function FlashcardsView({ onBackToDashboard, initialChapter }: FlashcardsViewProps) {
+  const { showToast } = useToast();
+
   const [flashcards, setFlashcards] = useState<Flashcard[]>([]);
   const [selectedChapter, setSelectedChapter] = useState<number | "all">(initialChapter || "all");
   const [currentIndex, setCurrentIndex] = useState<number>(0);
@@ -90,6 +93,7 @@ export function FlashcardsView({ onBackToDashboard, initialChapter }: Flashcards
     setIsFlipped(false);
     setFlashcards((prev) => [...prev].sort(() => Math.random() - 0.5));
     setCurrentIndex(0);
+    showToast("Deck shuffled for randomized recall.", "info", 1500);
   };
 
   const handleMarkMastered = () => {
@@ -98,6 +102,7 @@ export function FlashcardsView({ onBackToDashboard, initialChapter }: Flashcards
     setMasteredIds(newMastered);
     setNeedsReviewIds((prev) => prev.filter((id) => id !== currentCard.id));
     localStorage.setItem("gsp202_flashcards_mastered", JSON.stringify(newMastered));
+    showToast("Card marked as Mastered! 🌟", "success", 1200);
     handleNext();
   };
 
@@ -105,6 +110,7 @@ export function FlashcardsView({ onBackToDashboard, initialChapter }: Flashcards
     if (!currentCard) return;
     setNeedsReviewIds((prev) => Array.from(new Set([...prev, currentCard.id])));
     setMasteredIds((prev) => prev.filter((id) => id !== currentCard.id));
+    showToast("Card marked for review.", "warning", 1200);
     handleNext();
   };
 
@@ -297,46 +303,59 @@ export function FlashcardsView({ onBackToDashboard, initialChapter }: Flashcards
         )}
 
         {/* Action Controls & Spaced Repetition Buttons */}
-        <div className="mt-6 flex flex-wrap items-center justify-between gap-4">
+        <div className="mt-6 grid grid-cols-2 sm:flex sm:flex-wrap items-center justify-between gap-2.5 sm:gap-4">
           <button
             onClick={handlePrev}
             disabled={currentIndex === 0}
-            className={`flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-xs md:text-sm transition cursor-pointer ${
+            className={`col-span-1 sm:flex-none flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition cursor-pointer ${
               currentIndex === 0
                 ? "bg-slate-900 border border-white/5 text-slate-600 cursor-not-allowed"
-                : "bg-slate-900 hover:bg-slate-800 border border-white/10 text-white"
+                : "bg-slate-900 hover:bg-slate-800 border border-white/10 text-white active:scale-95"
             }`}
           >
             <ChevronLeft size={16} />
-            <span>Previous [←]</span>
+            <span>Prev<span className="hidden sm:inline">ious [←]</span></span>
+          </button>
+
+          <button
+            onClick={handleNext}
+            disabled={currentIndex === activeDeck.length - 1}
+            className={`col-span-1 sm:hidden flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl font-bold text-xs transition cursor-pointer ${
+              currentIndex === activeDeck.length - 1
+                ? "bg-slate-900 border border-white/5 text-slate-600 cursor-not-allowed"
+                : "bg-slate-900 hover:bg-slate-800 border border-white/10 text-white active:scale-95"
+            }`}
+          >
+            <span>Next</span>
+            <ChevronRight size={16} />
           </button>
 
           {/* Review vs Mastered Toggles */}
-          <div className="flex items-center gap-3">
+          <div className="col-span-2 sm:col-span-1 flex items-center gap-2 sm:gap-3 w-full sm:w-auto">
             <button
               onClick={handleMarkReview}
-              className="flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-xs md:text-sm bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/30 text-amber-300 transition cursor-pointer"
+              className="flex-1 sm:flex-none flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/30 text-amber-300 transition cursor-pointer active:scale-95"
             >
-              <RefreshCcw size={15} />
-              <span>Review Again [1]</span>
+              <RefreshCcw size={14} />
+              <span>Review Again<span className="hidden md:inline"> [1]</span></span>
             </button>
 
             <button
               onClick={handleMarkMastered}
-              className="flex items-center gap-2 px-6 py-2.5 rounded-xl font-black text-xs md:text-sm bg-emerald-500 hover:bg-emerald-400 text-slate-950 shadow-lg shadow-emerald-500/20 transition cursor-pointer active:scale-95"
+              className="flex-1 sm:flex-none flex items-center justify-center gap-1.5 sm:gap-2 px-4 sm:px-6 py-2.5 rounded-xl font-black text-xs sm:text-sm bg-emerald-500 hover:bg-emerald-400 text-slate-950 shadow-lg shadow-emerald-500/20 transition cursor-pointer active:scale-95"
             >
-              <CheckCircle2 size={16} />
-              <span>Mastered [2]</span>
+              <CheckCircle2 size={15} />
+              <span>Mastered<span className="hidden md:inline"> [2]</span></span>
             </button>
           </div>
 
           <button
             onClick={handleNext}
             disabled={currentIndex === activeDeck.length - 1}
-            className={`flex items-center gap-2 px-6 py-2.5 rounded-xl font-bold text-xs md:text-sm transition cursor-pointer ${
+            className={`hidden sm:flex items-center gap-2 px-6 py-2.5 rounded-xl font-bold text-xs md:text-sm transition cursor-pointer ${
               currentIndex === activeDeck.length - 1
                 ? "bg-slate-900 border border-white/5 text-slate-600 cursor-not-allowed"
-                : "bg-slate-900 hover:bg-slate-800 border border-white/10 text-white"
+                : "bg-slate-900 hover:bg-slate-800 border border-white/10 text-white active:scale-95"
             }`}
           >
             <span>Next [→]</span>

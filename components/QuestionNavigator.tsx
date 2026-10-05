@@ -2,6 +2,7 @@
 
 import React from "react";
 import { Question } from "@/lib/types";
+import { X } from "lucide-react";
 
 interface QuestionNavigatorProps {
   questions: Question[];
@@ -9,6 +10,7 @@ interface QuestionNavigatorProps {
   userAnswers: Record<string, "A" | "B" | "C" | "D">;
   flaggedIds: string[];
   onSelectQuestion: (index: number) => void;
+  onClose?: () => void;
 }
 
 export function QuestionNavigator({
@@ -17,19 +19,31 @@ export function QuestionNavigator({
   userAnswers,
   flaggedIds,
   onSelectQuestion,
+  onClose,
 }: QuestionNavigatorProps) {
   const attemptedCount = Object.keys(userAnswers).length;
 
   return (
-    <aside className="w-full md:w-64 bg-[#0a0e17]/80 backdrop-blur-md border-r border-white/10 flex flex-col h-full select-none">
+    <aside className="w-full md:w-64 bg-[#0a0e17]/95 md:bg-[#0a0e17]/80 backdrop-blur-md border-r border-white/10 flex flex-col h-full select-none">
       {/* Attempt counter banner */}
       <div className="p-4 bg-slate-900/60 border-b border-white/10 flex items-center justify-between">
         <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-400">
           ATTEMPTED MATRIX
         </span>
-        <span className="text-xs font-mono font-extrabold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">
-          {attemptedCount} / {questions.length}
-        </span>
+        <div className="flex items-center gap-2">
+          <span className="text-xs font-mono font-extrabold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">
+            {attemptedCount} / {questions.length}
+          </span>
+          {onClose && (
+            <button
+              onClick={onClose}
+              className="md:hidden p-1 text-slate-400 hover:text-white rounded hover:bg-white/10 transition"
+              title="Close Matrix"
+            >
+              <X size={16} />
+            </button>
+          )}
+        </div>
       </div>
 
       {/* Grid container */}

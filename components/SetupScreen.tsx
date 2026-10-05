@@ -2,8 +2,9 @@
 
 import React, { useState, useMemo } from "react";
 import { CHAPTER_LIST, ExamSessionConfig, TestMode, Question } from "@/lib/types";
-import { BookOpen, Clock, Check, ChevronRight, Award, Sparkles, User, Zap, Flame, Filter, Sliders } from "lucide-react";
+import { BookOpen, Clock, Check, ChevronRight, Award, Sparkles, User, Zap, Flame, Filter, Sliders, Activity } from "lucide-react";
 import { motion } from "framer-motion";
+import { useToast } from "@/context/ToastContext";
 
 interface SetupScreenProps {
   userName: string;
@@ -12,6 +13,7 @@ interface SetupScreenProps {
   onStartExam: (config: ExamSessionConfig) => void;
   onOpenFlashcards: () => void;
   onOpenSummaries: () => void;
+  onOpenAnalytics?: () => void;
 }
 
 export function SetupScreen({
@@ -21,7 +23,10 @@ export function SetupScreen({
   onStartExam,
   onOpenFlashcards,
   onOpenSummaries,
+  onOpenAnalytics,
 }: SetupScreenProps) {
+  const { showToast } = useToast();
+
   const [mode, setMode] = useState<TestMode>("exam");
   const [selectedChapters, setSelectedChapters] = useState<number[]>(
     CHAPTER_LIST.map((c) => c.number)
@@ -43,6 +48,8 @@ export function SetupScreen({
     if (selectedChapters.includes(num)) {
       if (selectedChapters.length > 1) {
         setSelectedChapters(selectedChapters.filter((c) => c !== num));
+      } else {
+        showToast("At least one chapter must remain selected.", "warning");
       }
     } else {
       setSelectedChapters([...selectedChapters, num].sort((a, b) => a - b));
@@ -51,10 +58,24 @@ export function SetupScreen({
 
   const selectAllChapters = () => {
     setSelectedChapters(CHAPTER_LIST.map((c) => c.number));
+    showToast("All 13 chapters selected (228 questions available).", "success");
   };
 
   const clearAllChapters = () => {
     setSelectedChapters([1]); // keep at least 1
+    showToast("Scope reset to Chapter 1.", "info");
+  };
+
+  const handleSetPreset = (preset: number) => {
+    if (preset > availableQuestionsCount) {
+      setQuestionCount(availableQuestionsCount);
+      showToast(
+        `Selected chapters contain ${availableQuestionsCount} questions. Adjusted to maximum ${availableQuestionsCount}.`,
+        "info"
+      );
+    } else {
+      setQuestionCount(preset);
+    }
   };
 
   const handleModeChange = (newMode: TestMode) => {
@@ -62,11 +83,14 @@ export function SetupScreen({
     if (newMode === "exam") {
       setTimeLimitMinutes(25);
       setQuestionCount(Math.min(70, availableQuestionsCount));
+      showToast("Switched to Full Exam Mode (25 Mins Max)", "info");
     } else {
       setTimeLimitMinutes(25);
       setQuestionCount(Math.min(25, availableQuestionsCount));
+      showToast("Switched to Study & Practice Mode (Instant Explanations)", "info");
     }
   };
+
 
   const handleConfirmStart = () => {
     onStartExam({
@@ -239,26 +263,37 @@ export function SetupScreen({
             </p>
           </div>
 
-          <div className="flex flex-wrap items-center gap-3">
+          <div className="flex flex-wrap items-center gap-2 sm:gap-3 w-full sm:w-auto">
+            {onOpenAnalytics && (
+              <button
+                onClick={onOpenAnalytics}
+                className="flex-1 sm:flex-none bg-slate-900/90 hover:bg-slate-800 border border-white/10 text-white font-bold py-2.5 sm:py-3 px-3 sm:px-4 rounded-xl transition text-xs md:text-sm flex items-center justify-center gap-2 cursor-pointer shadow-md"
+                title="View Usage & Deployment Telemetry"
+              >
+                <Activity size={16} className="text-emerald-400" />
+                <span>Analytics</span>
+              </button>
+            )}
+
             <button
               onClick={onOpenSummaries}
-              className="bg-slate-900/90 hover:bg-slate-800 border border-white/10 text-white font-bold py-3 px-5 rounded-xl transition text-xs md:text-sm flex items-center gap-2 cursor-pointer shadow-md"
+              className="flex-1 sm:flex-none bg-slate-900/90 hover:bg-slate-800 border border-white/10 text-white font-bold py-2.5 sm:py-3 px-3 sm:px-4 rounded-xl transition text-xs md:text-sm flex items-center justify-center gap-2 cursor-pointer shadow-md"
             >
               <BookOpen size={16} className="text-emerald-400" />
-              <span>Chapter Summaries</span>
+              <span className="hidden xs:inline">Chapter </span><span>Summaries</span>
             </button>
 
             <button
               onClick={onOpenFlashcards}
-              className="bg-slate-900/90 hover:bg-slate-800 border border-white/10 text-white font-bold py-3 px-5 rounded-xl transition text-xs md:text-sm flex items-center gap-2 cursor-pointer shadow-md"
+              className="flex-1 sm:flex-none bg-slate-900/90 hover:bg-slate-800 border border-white/10 text-white font-bold py-2.5 sm:py-3 px-3 sm:px-4 rounded-xl transition text-xs md:text-sm flex items-center justify-center gap-2 cursor-pointer shadow-md"
             >
               <Sparkles size={16} className="text-blue-400" />
-              <span>3D Flashcards</span>
+              <span>Flashcards</span>
             </button>
 
             <button
               onClick={() => setShowInstructions(true)}
-              className="bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-black py-3 px-7 rounded-xl shadow-xl shadow-emerald-500/25 transition text-xs md:text-sm flex items-center gap-2 cursor-pointer transform active:scale-95"
+              className="w-full sm:w-auto bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-black py-3 px-6 rounded-xl shadow-xl shadow-emerald-500/25 transition text-xs md:text-sm flex items-center justify-center gap-2 cursor-pointer transform active:scale-95"
             >
               <span>Launch Test ({effectiveCount} Qs)</span>
               <ChevronRight size={18} />
@@ -435,12 +470,12 @@ export function SetupScreen({
           </div>
 
           {/* Quick presets */}
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap sm:flex-nowrap sm:overflow-x-auto no-scrollbar gap-2 py-1">
             {[15, 25, 35, 50, 70, 100].map((preset) => (
               <button
                 key={preset}
-                onClick={() => setQuestionCount(preset)}
-                className={`py-1.5 px-4 rounded-lg text-xs font-mono font-bold transition cursor-pointer ${
+                onClick={() => handleSetPreset(preset)}
+                className={`py-2 px-3.5 sm:px-4 rounded-lg text-xs font-mono font-bold transition cursor-pointer shrink-0 ${
                   questionCount === preset
                     ? "bg-emerald-500 text-slate-950 font-black shadow-md shadow-emerald-500/20"
                     : "bg-slate-900 border border-white/10 text-slate-300 hover:bg-slate-800"
@@ -450,8 +485,11 @@ export function SetupScreen({
               </button>
             ))}
             <button
-              onClick={() => setQuestionCount(availableQuestionsCount)}
-              className={`py-1.5 px-4 rounded-lg text-xs font-mono font-bold transition cursor-pointer ${
+              onClick={() => {
+                setQuestionCount(availableQuestionsCount);
+                showToast(`Loaded all ${availableQuestionsCount} available questions.`, "success");
+              }}
+              className={`py-2 px-3.5 sm:px-4 rounded-lg text-xs font-mono font-bold transition cursor-pointer shrink-0 ${
                 questionCount === availableQuestionsCount
                   ? "bg-teal-400 text-slate-950 font-black"
                   : "bg-slate-900 border border-white/10 text-teal-300 hover:bg-slate-800"

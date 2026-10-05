@@ -33,26 +33,26 @@ export function ReviewScreen({
   return (
     <div className="min-h-screen w-full bg-[#080c14] text-slate-100 pb-16 subtle-grid">
       {/* Top sticky header */}
-      <header className="bg-[#0b0f17]/90 backdrop-blur-md border-b border-white/10 px-4 md:px-8 py-3 sticky top-0 z-30 shadow-xl flex items-center justify-between">
-        <div className="flex items-center gap-3">
+      <header className="bg-[#0b0f17]/95 backdrop-blur-md border-b border-white/10 px-3 sm:px-6 md:px-8 py-3 sticky top-0 z-30 shadow-xl flex flex-wrap items-center justify-between gap-2.5">
+        <div className="flex items-center gap-2 sm:gap-3">
           <button
             onClick={onBackToScore}
-            className="flex items-center gap-1.5 bg-slate-900 hover:bg-slate-800 border border-white/10 px-3.5 py-1.5 rounded-lg text-xs md:text-sm font-semibold cursor-pointer text-slate-300 hover:text-white transition"
+            className="flex items-center gap-1.5 bg-slate-900 hover:bg-slate-800 border border-white/10 px-3 py-1.5 rounded-lg text-xs md:text-sm font-semibold cursor-pointer text-slate-300 hover:text-white transition"
           >
             <ChevronLeft size={16} />
             <span>Scorecard</span>
           </button>
-          <span className="font-bold text-sm hidden sm:inline text-white">
+          <span className="font-bold text-xs sm:text-sm hidden sm:inline text-white">
             Question-by-Question Solution Review
           </span>
         </div>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 sm:gap-3">
           {/* Filter tabs */}
-          <div className="bg-slate-900/90 border border-white/10 p-1 rounded-xl flex text-xs font-semibold">
+          <div className="bg-slate-900/90 border border-white/10 p-0.5 sm:p-1 rounded-xl flex text-[11px] sm:text-xs font-semibold">
             <button
               onClick={() => setFilter("all")}
-              className={`px-3 py-1 rounded-lg cursor-pointer transition ${
+              className={`px-2 sm:px-3 py-1 rounded-lg cursor-pointer transition ${
                 filter === "all"
                   ? "bg-emerald-500 text-slate-950 font-black shadow"
                   : "text-slate-400 hover:text-white"
@@ -62,17 +62,17 @@ export function ReviewScreen({
             </button>
             <button
               onClick={() => setFilter("wrong")}
-              className={`px-3 py-1 rounded-lg cursor-pointer transition ${
+              className={`px-2 sm:px-3 py-1 rounded-lg cursor-pointer transition ${
                 filter === "wrong"
                   ? "bg-red-500 text-white font-black shadow"
                   : "text-slate-400 hover:text-white"
               }`}
             >
-              Wrong Only ({questions.filter((q) => result.userAnswers[q.id] !== q.answer).length})
+              Wrong ({questions.filter((q) => result.userAnswers[q.id] !== q.answer).length})
             </button>
             <button
               onClick={() => setFilter("flagged")}
-              className={`px-3 py-1 rounded-lg cursor-pointer transition ${
+              className={`px-2 sm:px-3 py-1 rounded-lg cursor-pointer transition ${
                 filter === "flagged"
                   ? "bg-amber-400 text-slate-950 font-black shadow"
                   : "text-slate-400 hover:text-white"
@@ -84,10 +84,10 @@ export function ReviewScreen({
 
           <button
             onClick={onRetake}
-            className="bg-slate-800 hover:bg-slate-700 text-white px-3.5 py-1.5 rounded-lg text-xs font-bold border border-white/10 transition flex items-center gap-1.5 cursor-pointer"
+            className="bg-slate-800 hover:bg-slate-700 text-white px-2.5 sm:px-3.5 py-1.5 rounded-lg text-xs font-bold border border-white/10 transition flex items-center gap-1.5 cursor-pointer"
           >
             <RotateCcw size={13} />
-            <span className="hidden md:inline">New Test</span>
+            <span className="hidden sm:inline">New Test</span>
           </button>
         </div>
       </header>

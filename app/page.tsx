@@ -16,10 +16,15 @@ import { IntroAnimation } from "@/components/IntroAnimation";
 import { CustomCursor } from "@/components/CustomCursor";
 import { FlashcardsView } from "@/components/FlashcardsView";
 import { SummariesView } from "@/components/SummariesView";
+import { ConfirmModal } from "@/components/ConfirmModal";
+import { AnalyticsModal } from "@/components/AnalyticsModal";
+import { useToast } from "@/context/ToastContext";
+import { trackPlatformEvent } from "@/lib/metrics";
 
 type AppPhase = "intro" | "setup" | "test" | "results" | "review" | "flashcards" | "summaries";
 
 export default function Home() {
+  const { showToast } = useToast();
   const [phase, setPhase] = useState<AppPhase>("intro");
   const [studyChapter, setStudyChapter] = useState<number>(1);
   const [allQuestions, setAllQuestions] = useState<Question[]>([]);
@@ -29,6 +34,9 @@ export default function Home() {
   const [flaggedIds, setFlaggedIds] = useState<string[]>([]);
   const [showExplanation, setShowExplanation] = useState<boolean>(true);
   const [isCalcOpen, setIsCalcOpen] = useState<boolean>(false);
+  const [isExitConfirmOpen, setIsExitConfirmOpen] = useState<boolean>(false);
+  const [isMobileNavOpen, setIsMobileNavOpen] = useState<boolean>(false);
+  const [isAnalyticsOpen, setIsAnalyticsOpen] = useState<boolean>(false);
   const [config, setConfig] = useState<ExamSessionConfig>({
     mode: "exam",
     selectedChapters: CHAPTER_LIST.map((c) => c.number),
@@ -40,14 +48,16 @@ export default function Home() {
   const [userName, setUserName] = useState<string>("ISRAEL");
   const [examResult, setExamResult] = useState<UserExamResult | null>(null);
 
-  // Load questions and user on mount
+  // Load questions, user and track page view on mount
   useEffect(() => {
     fetchQuestions().then((qs) => {
       setAllQuestions(qs);
     });
     const u = getStoredUser();
     if (u?.name) setUserName(u.name);
+    trackPlatformEvent("page_view");
   }, []);
+
 
   // Timer effect for exam mode (25 mins or 20 mins)
   useEffect(() => {
@@ -116,6 +126,16 @@ export default function Home() {
 
     setTimeRemaining(safeMinutes * 60);
     setPhase("test");
+
+    trackPlatformEvent("exam_started", {
+      mode: updatedConfig.mode,
+      questionCount: selected.length,
+      chaptersCount: updatedConfig.selectedChapters.length,
+    });
+    showToast(
+      `Started ${updatedConfig.mode === "exam" ? "Full CBT Exam" : "Study Drill"} (${selected.length} Qs)`,
+      "success"
+    );
   };
 
   const handleSelectOption = (opt: "A" | "B" | "C" | "D") => {
@@ -128,9 +148,16 @@ export default function Home() {
   };
 
   const toggleFlag = (id: string) => {
-    setFlaggedIds((prev) =>
-      prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
-    );
+    setFlaggedIds((prev) => {
+      const isFlagged = prev.includes(id);
+      if (isFlagged) {
+        showToast("Question unflagged.", "info", 1500);
+        return prev.filter((item) => item !== id);
+      } else {
+        showToast("Question flagged for review.", "warning", 1500);
+        return [...prev, id];
+      }
+    });
   };
 
   const handleSubmitExam = async () => {
@@ -169,13 +196,24 @@ export default function Home() {
 
     setExamResult(resultObj);
     await saveExamResult(resultObj);
+    trackPlatformEvent("exam_completed", {
+      mode: config.mode,
+      scorePercentage: Math.round(pct),
+      questionsCount: total,
+      timeSpentSeconds: timeSpent,
+    });
+    showToast(`Examination submitted! Score: ${pct.toFixed(1)}%`, pct >= 50 ? "success" : "info");
     setPhase("results");
   };
 
   const handleExit = () => {
-    if (confirm("Are you sure you want to exit the current session? Current exam attempt will be canceled.")) {
-      setPhase("setup");
-    }
+    setIsExitConfirmOpen(true);
+  };
+
+  const confirmExitSession = () => {
+    setIsExitConfirmOpen(false);
+    setPhase("setup");
+    showToast("Exam session ended. Returned to setup.", "info");
   };
 
   // Render Intro Splash
@@ -196,8 +234,19 @@ export default function Home() {
             saveStoredUser(name);
           }}
           onStartExam={handleStartExam}
-          onOpenFlashcards={() => setPhase("flashcards")}
-          onOpenSummaries={() => setPhase("summaries")}
+          onOpenFlashcards={() => {
+            setPhase("flashcards");
+            trackPlatformEvent("flashcard_reviewed");
+          }}
+          onOpenSummaries={() => {
+            setPhase("summaries");
+            trackPlatformEvent("summary_read");
+          }}
+          onOpenAnalytics={() => setIsAnalyticsOpen(true)}
+        />
+        <AnalyticsModal
+          isOpen={isAnalyticsOpen}
+          onClose={() => setIsAnalyticsOpen(false)}
         />
       </>
     );
@@ -285,11 +334,12 @@ export default function Home() {
         onToggleFlag={() => currentQ && toggleFlag(currentQ.id)}
         onExit={handleExit}
         onOpenCalc={() => setIsCalcOpen(true)}
+        onOpenNavigator={() => setIsMobileNavOpen(true)}
       />
 
       {/* Main Full-Screen Layout: Left Question Navigator + Central Exam View */}
       <div className="flex-1 flex overflow-hidden w-full">
-        {/* Left Question Navigator */}
+        {/* Left Question Navigator (Desktop) */}
         <div className="hidden md:block h-full">
           <QuestionNavigator
             questions={sessionQuestions}
@@ -332,6 +382,43 @@ export default function Home() {
           />
         </div>
       </div>
+
+      {/* Mobile Question Navigator Drawer */}
+      {isMobileNavOpen && (
+        <div
+          className="fixed inset-0 z-50 md:hidden bg-black/80 backdrop-blur-sm flex justify-end"
+          onClick={() => setIsMobileNavOpen(false)}
+        >
+          <div
+            className="w-4/5 max-w-xs h-full bg-[#0a0e17] shadow-2xl overflow-hidden"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <QuestionNavigator
+              questions={sessionQuestions}
+              currentIndex={currentIndex}
+              userAnswers={userAnswers}
+              flaggedIds={flaggedIds}
+              onSelectQuestion={(idx) => {
+                setCurrentIndex(idx);
+                setIsMobileNavOpen(false);
+              }}
+              onClose={() => setIsMobileNavOpen(false)}
+            />
+          </div>
+        </div>
+      )}
+
+      {/* Exit Exam Confirmation Modal */}
+      <ConfirmModal
+        isOpen={isExitConfirmOpen}
+        title="Exit Examination?"
+        description="Are you sure you want to end this session? Any unsaved answers and current countdown timer will be reset."
+        confirmLabel="Yes, Exit Exam"
+        cancelLabel="Continue Test"
+        variant="danger"
+        onConfirm={confirmExitSession}
+        onCancel={() => setIsExitConfirmOpen(false)}
+      />
 
       {/* Calculator modal */}
       <CalculatorModal isOpen={isCalcOpen} onClose={() => setIsCalcOpen(false)} />

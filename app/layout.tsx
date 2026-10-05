@@ -14,10 +14,13 @@ const outfit = Outfit({
   display: "swap",
 });
 
+import { ToastProvider } from "@/context/ToastContext";
+import { Analytics } from "@vercel/analytics/react";
+
 export const metadata: Metadata = {
   title: "GSP 202 CBT Terminal | Peace & Conflict Resolution",
   description:
-    "High-speed Computer-Based Test Simulator with 196 verified questions for GSP 202 Peace and Conflict Resolution",
+    "High-speed Computer-Based Test Simulator with 228 verified textbook & workbook questions for GSP 202 Peace and Conflict Resolution",
 };
 
 export default function RootLayout({
@@ -28,8 +31,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={`h-full ${plusJakarta.variable} ${outfit.variable}`}>
       <body className="h-full bg-[#0b0f17] text-slate-100 font-sans antialiased selection:bg-emerald-500 selection:text-white">
-        {children}
+        <ToastProvider>
+          {children}
+        </ToastProvider>
+        <Analytics />
       </body>
     </html>
   );
 }
+
