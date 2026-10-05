@@ -17,7 +17,6 @@ import { CustomCursor } from "@/components/CustomCursor";
 import { FlashcardsView } from "@/components/FlashcardsView";
 import { SummariesView } from "@/components/SummariesView";
 import { ConfirmModal } from "@/components/ConfirmModal";
-import { AnalyticsModal } from "@/components/AnalyticsModal";
 import { WorkbookAnswersView } from "@/components/WorkbookAnswersView";
 import { useToast } from "@/context/ToastContext";
 import { trackPlatformEvent } from "@/lib/metrics";
@@ -37,7 +36,6 @@ export default function Home() {
   const [isCalcOpen, setIsCalcOpen] = useState<boolean>(false);
   const [isExitConfirmOpen, setIsExitConfirmOpen] = useState<boolean>(false);
   const [isMobileNavOpen, setIsMobileNavOpen] = useState<boolean>(false);
-  const [isAnalyticsOpen, setIsAnalyticsOpen] = useState<boolean>(false);
   const [config, setConfig] = useState<ExamSessionConfig>({
     mode: "exam",
     selectedChapters: CHAPTER_LIST.map((c) => c.number),
@@ -247,11 +245,6 @@ export default function Home() {
             setPhase("workbook");
             trackPlatformEvent("summary_read");
           }}
-          onOpenAnalytics={() => setIsAnalyticsOpen(true)}
-        />
-        <AnalyticsModal
-          isOpen={isAnalyticsOpen}
-          onClose={() => setIsAnalyticsOpen(false)}
         />
       </>
     );

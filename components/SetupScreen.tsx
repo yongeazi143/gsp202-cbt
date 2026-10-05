@@ -13,7 +13,6 @@ interface SetupScreenProps {
   onOpenFlashcards: () => void;
   onOpenSummaries: () => void;
   onOpenWorkbookAnswers: () => void;
-  onOpenAnalytics?: () => void;
 }
 
 export function SetupScreen({
@@ -24,7 +23,6 @@ export function SetupScreen({
   onOpenFlashcards,
   onOpenSummaries,
   onOpenWorkbookAnswers,
-  onOpenAnalytics,
 }: SetupScreenProps) {
 
   const { showToast } = useToast();
@@ -584,8 +582,8 @@ export function SetupScreen({
         </motion.div>
       </div>
 
-      {/* Developer Feedback, Support & Private Admin Footer */}
-      <Footer onOpenAdmin={onOpenAnalytics || (() => {})} />
+      {/* Developer Feedback & Support Footer */}
+      <Footer />
     </div>
   );
 }

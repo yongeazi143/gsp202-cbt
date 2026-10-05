@@ -1,39 +1,20 @@
 "use client";
 
 import React, { useState } from "react";
-import { MessageSquare, Heart, Shield, Lock, X, Send, Copy, Check, Coffee } from "lucide-react";
+import { MessageSquare, Heart, X, Send, Copy, Check, Coffee } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useToast } from "@/context/ToastContext";
 
-interface FooterProps {
-  onOpenAdmin: () => void;
-}
-
-export function Footer({ onOpenAdmin }: FooterProps) {
+export function Footer() {
   const { showToast } = useToast();
   const [isFeedbackOpen, setIsFeedbackOpen] = useState(false);
   const [isSupportOpen, setIsSupportOpen] = useState(false);
-  const [isAdminAuthOpen, setIsAdminAuthOpen] = useState(false);
-  const [adminPin, setAdminPin] = useState("");
   const [copiedBank, setCopiedBank] = useState(false);
 
   // Feedback form state
   const [feedbackType, setFeedbackType] = useState<"correction" | "suggestion" | "appreciation">("correction");
   const [feedbackName, setFeedbackName] = useState("");
   const [feedbackText, setFeedbackText] = useState("");
-
-  const handleAdminSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (adminPin === "2024" || adminPin === "admin" || adminPin === "israel") {
-      setIsAdminAuthOpen(false);
-      setAdminPin("");
-      showToast("Admin access granted.", "success");
-      onOpenAdmin();
-    } else {
-      showToast("Invalid admin passkey.", "error");
-      setAdminPin("");
-    }
-  };
 
   const handleFeedbackSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -89,16 +70,6 @@ export function Footer({ onOpenAdmin }: FooterProps) {
             >
               <Heart size={13} className="text-rose-400 fill-rose-400/40" />
               <span>Support the Developer</span>
-            </button>
-
-            {/* Discreet Admin Lock */}
-            <button
-              onClick={() => setIsAdminAuthOpen(true)}
-              className="p-1.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-slate-500 hover:text-slate-300 transition cursor-pointer"
-              title="Developer & Admin Telemetry"
-              aria-label="Admin Portal"
-            >
-              <Lock size={12} />
             </button>
           </div>
         </div>
@@ -280,65 +251,6 @@ export function Footer({ onOpenAdmin }: FooterProps) {
                   </button>
                 </div>
               </div>
-            </motion.div>
-          </div>
-        )}
-      </AnimatePresence>
-
-      {/* ─── ADMIN PASSKEY MODAL ─── */}
-      <AnimatePresence>
-        {isAdminAuthOpen && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95, y: 15 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.95, y: 15 }}
-              className="relative w-full max-w-sm bg-[#0d1424] border border-white/10 rounded-2xl p-6 shadow-2xl text-slate-100"
-            >
-              <div className="flex items-center justify-between pb-3 border-b border-white/10 mb-4">
-                <div className="flex items-center gap-2">
-                  <Shield size={18} className="text-emerald-400" />
-                  <h3 className="font-bold text-sm text-white">Admin & Analytics Access</h3>
-                </div>
-                <button
-                  onClick={() => setIsAdminAuthOpen(false)}
-                  className="text-slate-400 hover:text-white p-1 rounded-lg hover:bg-white/5 transition"
-                >
-                  <X size={16} />
-                </button>
-              </div>
-
-              <form onSubmit={handleAdminSubmit} className="space-y-4">
-                <div>
-                  <label className="block text-[11px] font-mono text-slate-400 uppercase mb-1.5">
-                    Enter Admin Passkey
-                  </label>
-                  <input
-                    type="password"
-                    autoFocus
-                    value={adminPin}
-                    onChange={(e) => setAdminPin(e.target.value)}
-                    placeholder="Passkey..."
-                    className="w-full bg-slate-900 border border-white/10 rounded-xl px-3.5 py-2 text-sm text-center tracking-widest text-white font-mono focus:outline-none focus:border-emerald-500 transition"
-                  />
-                </div>
-
-                <div className="flex justify-end gap-2 pt-2">
-                  <button
-                    type="button"
-                    onClick={() => setIsAdminAuthOpen(false)}
-                    className="px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-white/5 text-slate-400 hover:text-white transition"
-                  >
-                    Cancel
-                  </button>
-                  <button
-                    type="submit"
-                    className="px-5 py-1.5 rounded-xl text-xs font-bold bg-emerald-500 hover:bg-emerald-400 text-slate-950 transition cursor-pointer"
-                  >
-                    Unlock
-                  </button>
-                </div>
-              </form>
             </motion.div>
           </div>
         )}
