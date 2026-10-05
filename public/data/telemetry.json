@@ -1,6 +1,6 @@
 {
   "totalVisitors": 2,
-  "totalPageViews": 32,
+  "totalPageViews": 34,
   "totalExamsStarted": 2,
   "totalExamsCompleted": 2,
   "totalQuestionsAnswered": 115,
@@ -156,6 +156,14 @@
         "questionsCount": 70,
         "timeSpentSeconds": 21
       }
+    },
+    {
+      "type": "page_view",
+      "timestamp": "2026-10-05T22:30:43.038Z"
+    },
+    {
+      "type": "page_view",
+      "timestamp": "2026-10-05T22:30:43.596Z"
     }
   ]
 }
