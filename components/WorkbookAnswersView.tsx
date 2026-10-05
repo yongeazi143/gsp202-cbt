@@ -103,12 +103,12 @@ export function WorkbookAnswersView({
               <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-emerald-400 font-bold">
                 PHYSICAL CA WORKBOOK
               </span>
-              <span className="px-2 py-0.5 rounded-full bg-purple-500/15 border border-purple-500/30 text-[10px] text-purple-300 font-mono font-bold">
+              <span className="px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-[10px] text-emerald-300 font-mono font-bold">
                 OFFICIAL SOLUTIONS
               </span>
             </div>
             <h1 className="text-lg sm:text-xl md:text-2xl font-black text-white flex items-center gap-2">
-              <FileCheck2 size={20} className="text-purple-400" />
+              <FileCheck2 size={20} className="text-emerald-400" />
               <span>CA Workbook Solutions & Fill-Ins</span>
             </h1>
           </div>
@@ -118,7 +118,7 @@ export function WorkbookAnswersView({
           <div className="flex items-center gap-2">
             <button
               onClick={handleCopyAllChapter}
-              className="bg-purple-500/15 hover:bg-purple-500/25 border border-purple-500/30 text-purple-200 text-xs font-bold py-2 px-3.5 rounded-xl transition flex items-center gap-1.5 cursor-pointer shadow-md"
+              className="bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/30 text-emerald-300 text-xs font-bold py-2 px-3.5 rounded-xl transition flex items-center gap-1.5 cursor-pointer shadow-md"
               title="Copy all answers for this chapter"
             >
               <Copy size={14} />
@@ -153,7 +153,7 @@ export function WorkbookAnswersView({
                 }}
                 className={`px-3 py-1.5 rounded-lg text-xs font-mono font-bold transition whitespace-nowrap cursor-pointer shrink-0 ${
                   isActive
-                    ? "bg-purple-600 text-white font-black shadow-md shadow-purple-500/30"
+                    ? "bg-emerald-500 text-slate-950 font-black shadow-md shadow-emerald-500/20"
                     : "bg-slate-800 text-slate-300 hover:text-white border border-white/5"
                 }`}
               >
@@ -167,7 +167,7 @@ export function WorkbookAnswersView({
         <div className="hidden lg:block lg:col-span-3 glass-panel rounded-2xl p-3 max-h-[750px] overflow-y-auto custom-scrollbar space-y-1.5 sticky top-6">
           <div className="px-3 py-2 text-[11px] font-mono font-bold uppercase tracking-wider text-slate-400 border-b border-white/5 mb-1 flex items-center justify-between">
             <span>SELECT CHAPTER</span>
-            <span className="text-[10px] text-purple-400 font-mono">13 Chapters</span>
+            <span className="text-[10px] text-emerald-400 font-mono">13 Chapters</span>
           </div>
           {CHAPTER_LIST.map((ch) => {
             const isActive = ch.number === activeChapterNum;
@@ -181,13 +181,13 @@ export function WorkbookAnswersView({
                 }}
                 className={`w-full text-left p-3 rounded-xl transition cursor-pointer flex items-start gap-2.5 ${
                   isActive
-                    ? "bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-bold shadow-md shadow-purple-500/20"
+                    ? "bg-emerald-500 text-slate-950 font-bold shadow-md shadow-emerald-500/20"
                     : "text-slate-300 hover:bg-slate-900/80 hover:text-white"
                 }`}
               >
                 <span
                   className={`font-mono text-xs font-extrabold px-1.5 py-0.5 rounded shrink-0 ${
-                    isActive ? "bg-white text-purple-950" : "bg-slate-800 text-slate-400"
+                    isActive ? "bg-slate-950 text-emerald-400" : "bg-slate-800 text-slate-400"
                   }`}
                 >
                   {ch.number.toString().padStart(2, "0")}
@@ -198,7 +198,7 @@ export function WorkbookAnswersView({
                   </div>
                   <div
                     className={`text-[10px] font-mono mt-1 ${
-                      isActive ? "text-purple-200" : "text-slate-500"
+                      isActive ? "text-slate-900 font-semibold" : "text-slate-500"
                     }`}
                   >
                     {qCount} Review Questions
@@ -220,8 +220,8 @@ export function WorkbookAnswersView({
               className="space-y-6"
             >
               {/* Chapter Banner & Search Bar */}
-              <div className="glass-panel-glow p-6 md:p-8 rounded-2xl border-purple-500/30">
-                <div className="flex flex-wrap items-center justify-between gap-2 mb-2 font-mono text-xs text-purple-400 font-bold">
+              <div className="glass-panel-glow p-6 md:p-8 rounded-2xl border-emerald-500/30">
+                <div className="flex flex-wrap items-center justify-between gap-2 mb-2 font-mono text-xs text-emerald-400 font-bold">
                   <span>CHAPTER {activeChapter.chapter.toString().padStart(2, "0")}</span>
                   <span>•</span>
                   <span>TEXTBOOK PAGES {activeChapter.pages}</span>
@@ -243,7 +243,7 @@ export function WorkbookAnswersView({
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     placeholder={`Search within Chapter ${activeChapter.chapter} questions, blanks, or concepts...`}
-                    className="w-full bg-slate-900/90 border border-white/10 rounded-xl pl-10 pr-4 py-2.5 text-xs md:text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-purple-500 transition"
+                    className="w-full bg-slate-900/90 border border-white/10 rounded-xl pl-10 pr-4 py-2.5 text-xs md:text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-emerald-500 transition"
                   />
                   {searchQuery && (
                     <button
@@ -268,12 +268,12 @@ export function WorkbookAnswersView({
                         key={q.q_num}
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="glass-panel rounded-2xl p-5 md:p-6 space-y-3.5 hover:border-purple-500/30 transition shadow-sm"
+                        className="glass-panel rounded-2xl p-5 md:p-6 space-y-3.5 hover:border-emerald-500/30 transition shadow-sm"
                       >
                         {/* Question Header Pill */}
                         <div className="flex items-center justify-between gap-2 pb-2 border-b border-white/5">
                           <div className="flex items-center gap-2">
-                            <span className="w-7 h-7 rounded-lg bg-purple-500/20 text-purple-300 font-mono font-extrabold text-xs flex items-center justify-center shrink-0">
+                            <span className="w-7 h-7 rounded-lg bg-emerald-500/15 text-emerald-400 font-mono font-extrabold text-xs flex items-center justify-center shrink-0 border border-emerald-500/20">
                               {q.q_num}
                             </span>
                             <span className="text-xs font-mono font-bold text-slate-400 uppercase tracking-wide">
@@ -293,9 +293,9 @@ export function WorkbookAnswersView({
                         </p>
 
                         {/* Verified Official Answer Box */}
-                        <div className="bg-gradient-to-r from-purple-950/40 to-slate-900/90 border border-purple-500/40 rounded-xl p-3.5 md:p-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+                        <div className="bg-gradient-to-r from-emerald-950/30 to-slate-900/90 border border-emerald-500/30 rounded-xl p-3.5 md:p-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
                           <div className="flex-1">
-                            <span className="text-[10px] font-mono uppercase tracking-wider text-purple-400 block font-bold mb-1">
+                            <span className="text-[10px] font-mono uppercase tracking-wider text-emerald-400 block font-bold mb-1">
                               VERIFIED FILL-IN ANSWER
                             </span>
                             <div className="text-xs md:text-sm font-bold text-white font-mono leading-snug">
@@ -305,7 +305,7 @@ export function WorkbookAnswersView({
 
                           <button
                             onClick={() => handleCopySingle(q.answer, uniqueId)}
-                            className="shrink-0 bg-purple-500/20 hover:bg-purple-500/30 border border-purple-500/40 text-purple-200 hover:text-white px-3 py-1.5 rounded-lg text-xs font-semibold transition flex items-center gap-1.5 cursor-pointer self-end sm:self-auto"
+                            className="shrink-0 bg-emerald-500/15 hover:bg-emerald-500/25 border border-emerald-500/40 text-emerald-300 hover:text-white px-3 py-1.5 rounded-lg text-xs font-semibold transition flex items-center gap-1.5 cursor-pointer self-end sm:self-auto"
                             title="Copy answer to clipboard"
                           >
                             {isCopied ? (
@@ -342,7 +342,7 @@ export function WorkbookAnswersView({
                     </p>
                     <button
                       onClick={() => setSearchQuery("")}
-                      className="px-4 py-1.5 rounded-xl bg-purple-500/20 text-purple-300 text-xs font-bold hover:bg-purple-500/30 transition cursor-pointer"
+                      className="px-4 py-1.5 rounded-xl bg-emerald-500/20 text-emerald-300 text-xs font-bold hover:bg-emerald-500/30 transition cursor-pointer"
                     >
                       Reset Search Filter
                     </button>
@@ -358,7 +358,7 @@ export function WorkbookAnswersView({
                     className="bg-slate-900 hover:bg-slate-800 border border-white/10 text-white font-bold py-2.5 px-4 rounded-xl transition text-xs flex items-center gap-2 cursor-pointer shadow-md"
                   >
                     <span>Proceed to Chapter {activeChapterNum + 1} Answers</span>
-                    <ChevronRight size={16} className="text-purple-400" />
+                    <ChevronRight size={16} className="text-emerald-400" />
                   </button>
                 </div>
               )}

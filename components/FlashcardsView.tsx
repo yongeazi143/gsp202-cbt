@@ -134,7 +134,7 @@ export function FlashcardsView({ onBackToDashboard, initialChapter }: Flashcards
       case "case_study":
         return { label: "African Case Study", color: "bg-teal-500/15 text-teal-300 border-teal-500/30" };
       case "workbook_question":
-        return { label: "Workbook Review Q", color: "bg-purple-500/20 text-purple-300 border-purple-500/40" };
+        return { label: "Workbook Review Q", color: "bg-emerald-500/20 text-emerald-300 border-emerald-500/40" };
       default:
         return { label: "Core Concept", color: "bg-emerald-500/15 text-emerald-300 border-emerald-500/30" };
     }
@@ -206,12 +206,12 @@ export function FlashcardsView({ onBackToDashboard, initialChapter }: Flashcards
               onClick={() => setCardFilter("workbook")}
               className={`px-2.5 py-1 rounded-lg text-xs font-semibold transition cursor-pointer flex items-center gap-1.5 ${
                 cardFilter === "workbook"
-                  ? "bg-purple-500/20 text-purple-300 border border-purple-500/40 font-bold"
-                  : "text-purple-400/80 hover:text-purple-300"
+                  ? "bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 font-bold"
+                  : "text-slate-400 hover:text-white"
               }`}
             >
               <span>Workbook Questions</span>
-              <span className="text-[10px] bg-purple-500/30 text-purple-200 px-1.5 py-0.5 rounded font-mono font-bold">265 Qs</span>
+              <span className="text-[10px] bg-emerald-500/30 text-emerald-200 px-1.5 py-0.5 rounded font-mono font-bold">265 Qs</span>
             </button>
             <button
               onClick={() => setCardFilter("textbook")}

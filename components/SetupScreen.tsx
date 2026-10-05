@@ -266,12 +266,12 @@ export function SetupScreen({
           <div className="flex flex-wrap items-center gap-2 sm:gap-3 w-full sm:w-auto">
             <button
               onClick={onOpenWorkbookAnswers}
-              className="flex-1 sm:flex-none bg-purple-950/40 hover:bg-purple-900/60 border border-purple-500/30 hover:border-purple-500/50 text-purple-200 font-bold py-2.5 sm:py-3 px-3 sm:px-4 rounded-xl transition text-xs md:text-sm flex items-center justify-center gap-2 cursor-pointer shadow-md"
+              className="flex-1 sm:flex-none bg-emerald-950/40 hover:bg-emerald-900/60 border border-emerald-500/30 hover:border-emerald-500/50 text-emerald-200 font-bold py-2.5 sm:py-3 px-3 sm:px-4 rounded-xl transition text-xs md:text-sm flex items-center justify-center gap-2 cursor-pointer shadow-md"
               title="Verified CA Workbook Fill-in Solutions"
             >
-              <FileCheck2 size={16} className="text-purple-400" />
+              <FileCheck2 size={16} className="text-emerald-400" />
               <span className="hidden xs:inline">Workbook </span><span>Answers</span>
-              <span className="px-1.5 py-0.5 rounded text-[10px] bg-purple-500/20 text-purple-300 font-mono font-bold">13 Ch</span>
+              <span className="px-1.5 py-0.5 rounded text-[10px] bg-emerald-500/20 text-emerald-300 font-mono font-bold">13 Ch</span>
             </button>
 
             <button
