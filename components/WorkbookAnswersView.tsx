@@ -2,7 +2,19 @@
 
 import React, { useState, useEffect, useMemo } from "react";
 import { WorkbookChapter, WorkbookQuestion, CHAPTER_LIST } from "@/lib/types";
-import { ChevronLeft, BookOpen, Search, Copy, Check, Sparkles, BookMarked, Layers, FileCheck2, ArrowRight } from "lucide-react";
+import {
+  ChevronLeft,
+  Search,
+  Copy,
+  Check,
+  Sparkles,
+  FileCheck2,
+  BookOpen,
+  ArrowRight,
+  BookMarked,
+  Layers,
+  ChevronRight,
+} from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useToast } from "@/context/ToastContext";
 
@@ -19,8 +31,8 @@ export function WorkbookAnswersView({
 }: WorkbookAnswersViewProps) {
   const { showToast } = useToast();
   const [chapters, setChapters] = useState<WorkbookChapter[]>([]);
-  const [selectedChapter, setSelectedChapter] = useState<number | "all">(initialChapter);
-  const [searchQuery, setSearchQuery] = useState("");
+  const [activeChapterNum, setActiveChapterNum] = useState<number>(initialChapter);
+  const [searchQuery, setSearchQuery] = useState<string>("");
   const [copiedId, setCopiedId] = useState<string | null>(null);
 
   useEffect(() => {
@@ -34,49 +46,54 @@ export function WorkbookAnswersView({
       .catch((err) => console.error("Error loading workbook answers", err));
   }, []);
 
-  // Filter questions based on chapter and search query
-  const filteredChapters = useMemo(() => {
-    let result = chapters;
+  const activeChapter = chapters.find((c) => c.chapter === activeChapterNum) || chapters[0];
 
-    if (selectedChapter !== "all") {
-      result = result.filter((ch) => ch.chapter === selectedChapter);
-    }
-
-    if (!searchQuery.trim()) return result;
+  // Filter questions for active chapter based on search
+  const filteredQuestions = useMemo(() => {
+    if (!activeChapter) return [];
+    if (!searchQuery.trim()) return activeChapter.questions;
 
     const q = searchQuery.toLowerCase();
-    return result
-      .map((ch) => ({
-        ...ch,
-        questions: ch.questions.filter(
-          (item) =>
-            item.question.toLowerCase().includes(q) ||
-            item.answer.toLowerCase().includes(q) ||
-            (item.notes && item.notes.toLowerCase().includes(q))
-        ),
-      }))
-      .filter((ch) => ch.questions.length > 0);
-  }, [chapters, selectedChapter, searchQuery]);
+    return activeChapter.questions.filter(
+      (item) =>
+        item.question.toLowerCase().includes(q) ||
+        item.answer.toLowerCase().includes(q) ||
+        (item.notes && item.notes.toLowerCase().includes(q))
+    );
+  }, [activeChapter, searchQuery]);
 
-  const totalQuestionsInView = useMemo(() => {
-    return filteredChapters.reduce((acc, ch) => acc + ch.questions.length, 0);
-  }, [filteredChapters]);
-
-  const handleCopy = (text: string, id: string) => {
+  const handleCopySingle = (text: string, id: string) => {
     navigator.clipboard.writeText(text);
     setCopiedId(id);
-    showToast("Answer copied to clipboard!", "success", 1800);
+    showToast("Answer copied to clipboard!", "success", 1600);
     setTimeout(() => setCopiedId(null), 2000);
+  };
+
+  const handleCopyAllChapter = () => {
+    if (!activeChapter) return;
+    const text = activeChapter.questions
+      .map((q) => `Q${q.q_num}: ${q.question}\nANSWER: ${q.answer}\n[Ref: ${q.textbook_ref}]\n`)
+      .join("\n---\n\n");
+    navigator.clipboard.writeText(text);
+    showToast(`Copied all ${activeChapter.questions.length} answers for Chapter ${activeChapter.chapter}!`, "success", 2200);
+  };
+
+  const handleNextChapter = () => {
+    if (activeChapterNum < 13) {
+      setActiveChapterNum((prev) => prev + 1);
+      setSearchQuery("");
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
   };
 
   return (
     <div className="min-h-screen w-full bg-[#080c14] text-slate-100 flex flex-col justify-between p-3.5 sm:p-6 md:p-8 subtle-grid">
       {/* Top Header */}
-      <header className="max-w-6xl mx-auto w-full flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-white/10 mb-6">
+      <header className="max-w-7xl mx-auto w-full flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-white/10 mb-6">
         <div className="flex items-center gap-3">
           <button
             onClick={onBackToDashboard}
-            className="flex items-center gap-1.5 bg-slate-900 hover:bg-slate-800 border border-white/10 px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-semibold text-slate-300 hover:text-white transition cursor-pointer"
+            className="flex items-center gap-1.5 bg-slate-900 hover:bg-slate-800 border border-white/10 px-3.5 py-1.5 rounded-xl text-xs md:text-sm font-semibold text-slate-300 hover:text-white transition cursor-pointer"
           >
             <ChevronLeft size={16} />
             <span>Dashboard</span>
@@ -84,177 +101,275 @@ export function WorkbookAnswersView({
           <div>
             <div className="flex items-center gap-2">
               <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-emerald-400 font-bold">
-                CONTINUOUS ASSESSMENT
+                PHYSICAL CA WORKBOOK
               </span>
-              <span className="px-2 py-0.5 rounded-full bg-purple-500/10 border border-purple-500/30 text-[10px] text-purple-300 font-mono font-bold">
+              <span className="px-2 py-0.5 rounded-full bg-purple-500/15 border border-purple-500/30 text-[10px] text-purple-300 font-mono font-bold">
                 OFFICIAL SOLUTIONS
               </span>
             </div>
-            <h1 className="text-xl sm:text-2xl md:text-3xl font-black text-white flex items-center gap-2">
-              <FileCheck2 size={22} className="text-emerald-400" />
-              <span>CA Workbook Solutions & Fill-In Answers</span>
+            <h1 className="text-lg sm:text-xl md:text-2xl font-black text-white flex items-center gap-2">
+              <FileCheck2 size={20} className="text-purple-400" />
+              <span>CA Workbook Solutions & Fill-Ins</span>
             </h1>
           </div>
         </div>
 
-        {selectedChapter !== "all" && (
-          <button
-            onClick={() => onLaunchChapterDrill(Number(selectedChapter))}
-            className="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black text-xs sm:text-sm py-2 px-4 rounded-xl shadow-lg shadow-emerald-500/20 transition flex items-center gap-1.5 cursor-pointer active:scale-95"
-          >
-            <Sparkles size={14} />
-            <span>Practice Ch {selectedChapter} CBT</span>
-          </button>
+        {activeChapter && (
+          <div className="flex items-center gap-2">
+            <button
+              onClick={handleCopyAllChapter}
+              className="bg-purple-500/15 hover:bg-purple-500/25 border border-purple-500/30 text-purple-200 text-xs font-bold py-2 px-3.5 rounded-xl transition flex items-center gap-1.5 cursor-pointer shadow-md"
+              title="Copy all answers for this chapter"
+            >
+              <Copy size={14} />
+              <span className="hidden sm:inline">Copy Chapter Answers</span>
+              <span className="sm:hidden">Copy All</span>
+            </button>
+
+            <button
+              onClick={() => onLaunchChapterDrill(activeChapterNum)}
+              className="bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-xs font-black py-2 px-4 rounded-xl shadow-lg shadow-emerald-500/20 transition flex items-center gap-1.5 cursor-pointer active:scale-95"
+            >
+              <Sparkles size={14} />
+              <span>Practice Ch {activeChapterNum} CBT</span>
+            </button>
+          </div>
         )}
       </header>
 
-      {/* Main Container */}
-      <main className="max-w-6xl mx-auto w-full flex-1 space-y-6">
-        {/* Search & Stats Bar */}
-        <div className="glass-panel p-3 sm:p-4 rounded-2xl flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
-          {/* Search box */}
-          <div className="relative flex-1">
-            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400" size={16} />
-            <input
-              type="text"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Search by question, answer, scholar, or keyword..."
-              className="w-full bg-slate-900/90 border border-white/10 rounded-xl pl-10 pr-4 py-2 text-xs sm:text-sm text-white placeholder-slate-500 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition"
-            />
-          </div>
-
-          <div className="flex items-center justify-between sm:justify-end gap-2 text-xs font-mono text-slate-400 shrink-0">
-            <span>Showing:</span>
-            <span className="font-bold text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-lg border border-emerald-500/20">
-              {totalQuestionsInView} Question{totalQuestionsInView !== 1 ? "s" : ""}
-            </span>
-          </div>
-        </div>
-
-        {/* Chapter Selection Pills (Horizontally Scrollable) */}
-        <div className="flex overflow-x-auto no-scrollbar gap-2 p-1.5 bg-slate-900/80 rounded-xl border border-white/5 sticky top-2 z-20 backdrop-blur-md shadow-lg">
-          <button
-            onClick={() => setSelectedChapter("all")}
-            className={`px-3 py-1.5 rounded-lg text-xs font-mono font-bold transition whitespace-nowrap cursor-pointer shrink-0 ${
-              selectedChapter === "all"
-                ? "bg-emerald-500 text-slate-950 font-black shadow-md shadow-emerald-500/20"
-                : "bg-slate-800 text-slate-300 hover:text-white border border-white/5"
-            }`}
-          >
-            All 13 Chapters
-          </button>
+      {/* Main Grid: Left Chapter Selector + Right Questions Content (Identical to SummariesView layout) */}
+      <div className="max-w-7xl mx-auto w-full flex-1 grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+        {/* Mobile Horizontal Chapter Selector */}
+        <div className="lg:hidden w-full flex overflow-x-auto no-scrollbar gap-2 p-2 bg-slate-900/90 rounded-xl border border-white/10 sticky top-2 z-10 backdrop-blur-md shadow-lg">
           {CHAPTER_LIST.map((ch) => {
-            const isActive = ch.number === selectedChapter;
+            const isActive = ch.number === activeChapterNum;
+            const qCount = chapters.find((c) => c.chapter === ch.number)?.questions.length || 0;
             return (
               <button
                 key={ch.number}
-                onClick={() => setSelectedChapter(ch.number)}
+                onClick={() => {
+                  setActiveChapterNum(ch.number);
+                  setSearchQuery("");
+                }}
                 className={`px-3 py-1.5 rounded-lg text-xs font-mono font-bold transition whitespace-nowrap cursor-pointer shrink-0 ${
                   isActive
-                    ? "bg-emerald-500 text-slate-950 font-black shadow-md shadow-emerald-500/20"
+                    ? "bg-purple-600 text-white font-black shadow-md shadow-purple-500/30"
                     : "bg-slate-800 text-slate-300 hover:text-white border border-white/5"
                 }`}
               >
-                Ch {ch.number}
+                Ch {ch.number} ({qCount} Qs)
               </button>
             );
           })}
         </div>
 
-        {/* Questions List */}
-        {filteredChapters.length === 0 ? (
-          <div className="glass-panel p-16 text-center rounded-2xl border-white/10 text-slate-400">
-            No questions found matching your search query. Try another keyword!
+        {/* Desktop Left Chapter Selector (Sticky Sidebar) */}
+        <div className="hidden lg:block lg:col-span-3 glass-panel rounded-2xl p-3 max-h-[750px] overflow-y-auto custom-scrollbar space-y-1.5 sticky top-6">
+          <div className="px-3 py-2 text-[11px] font-mono font-bold uppercase tracking-wider text-slate-400 border-b border-white/5 mb-1 flex items-center justify-between">
+            <span>SELECT CHAPTER</span>
+            <span className="text-[10px] text-purple-400 font-mono">13 Chapters</span>
           </div>
-        ) : (
-          <div className="space-y-8">
-            {filteredChapters.map((ch) => (
-              <div key={ch.chapter} className="space-y-4">
-                {/* Chapter Banner */}
-                <div className="flex items-center justify-between pb-2 border-b border-white/10">
-                  <div className="flex items-center gap-2.5">
-                    <span className="font-mono text-xs font-black bg-emerald-500 text-slate-950 px-2 py-0.5 rounded">
-                      CH {ch.chapter}
-                    </span>
-                    <h2 className="text-base sm:text-lg font-bold text-white">
-                      {ch.chapter_title}
-                    </h2>
+          {CHAPTER_LIST.map((ch) => {
+            const isActive = ch.number === activeChapterNum;
+            const qCount = chapters.find((c) => c.chapter === ch.number)?.questions.length || 0;
+            return (
+              <button
+                key={ch.number}
+                onClick={() => {
+                  setActiveChapterNum(ch.number);
+                  setSearchQuery("");
+                }}
+                className={`w-full text-left p-3 rounded-xl transition cursor-pointer flex items-start gap-2.5 ${
+                  isActive
+                    ? "bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-bold shadow-md shadow-purple-500/20"
+                    : "text-slate-300 hover:bg-slate-900/80 hover:text-white"
+                }`}
+              >
+                <span
+                  className={`font-mono text-xs font-extrabold px-1.5 py-0.5 rounded shrink-0 ${
+                    isActive ? "bg-white text-purple-950" : "bg-slate-800 text-slate-400"
+                  }`}
+                >
+                  {ch.number.toString().padStart(2, "0")}
+                </span>
+                <div className="flex-1 min-w-0">
+                  <div className="text-xs line-clamp-2 leading-tight">
+                    {ch.title}
                   </div>
-                  <span className="text-xs text-slate-400 font-mono hidden sm:inline">
-                    Textbook Pages {ch.pages}
-                  </span>
+                  <div
+                    className={`text-[10px] font-mono mt-1 ${
+                      isActive ? "text-purple-200" : "text-slate-500"
+                    }`}
+                  >
+                    {qCount} Review Questions
+                  </div>
                 </div>
+              </button>
+            );
+          })}
+        </div>
 
-                {/* Questions Grid / Stack */}
-                <div className="grid grid-cols-1 gap-4">
-                  {ch.questions.map((q) => {
-                    const uniqueId = `ch${ch.chapter}_q${q.q_num}`;
+        {/* Right Active Chapter Questions Content */}
+        <div className="lg:col-span-9 space-y-6">
+          {activeChapter ? (
+            <motion.div
+              key={activeChapter.chapter}
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.25 }}
+              className="space-y-6"
+            >
+              {/* Chapter Banner & Search Bar */}
+              <div className="glass-panel-glow p-6 md:p-8 rounded-2xl border-purple-500/30">
+                <div className="flex flex-wrap items-center justify-between gap-2 mb-2 font-mono text-xs text-purple-400 font-bold">
+                  <span>CHAPTER {activeChapter.chapter.toString().padStart(2, "0")}</span>
+                  <span>•</span>
+                  <span>TEXTBOOK PAGES {activeChapter.pages}</span>
+                  <span>•</span>
+                  <span>{activeChapter.questions.length} WORKBOOK QUESTIONS</span>
+                </div>
+                <h2 className="text-xl md:text-2xl font-extrabold text-white mb-4 leading-tight">
+                  {activeChapter.chapter_title}
+                </h2>
+
+                {/* In-Chapter Real-time Search */}
+                <div className="relative mt-4">
+                  <Search
+                    size={16}
+                    className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400"
+                  />
+                  <input
+                    type="text"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    placeholder={`Search within Chapter ${activeChapter.chapter} questions, blanks, or concepts...`}
+                    className="w-full bg-slate-900/90 border border-white/10 rounded-xl pl-10 pr-4 py-2.5 text-xs md:text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-purple-500 transition"
+                  />
+                  {searchQuery && (
+                    <button
+                      onClick={() => setSearchQuery("")}
+                      className="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-slate-400 hover:text-white"
+                    >
+                      Clear
+                    </button>
+                  )}
+                </div>
+              </div>
+
+              {/* Questions Cards Stream */}
+              <div className="space-y-4">
+                {filteredQuestions.length > 0 ? (
+                  filteredQuestions.map((q) => {
+                    const uniqueId = `ch${activeChapter.chapter}_q${q.q_num}`;
                     const isCopied = copiedId === uniqueId;
 
                     return (
                       <motion.div
-                        key={uniqueId}
+                        key={q.q_num}
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="glass-panel p-4 sm:p-5 rounded-2xl border border-white/10 hover:border-emerald-500/40 transition space-y-3 relative group"
+                        className="glass-panel rounded-2xl p-5 md:p-6 space-y-3.5 hover:border-purple-500/30 transition shadow-sm"
                       >
-                        {/* Question Header */}
-                        <div className="flex items-start justify-between gap-3">
+                        {/* Question Header Pill */}
+                        <div className="flex items-center justify-between gap-2 pb-2 border-b border-white/5">
                           <div className="flex items-center gap-2">
-                            <span className="font-mono text-xs font-extrabold text-emerald-400 bg-emerald-500/10 border border-emerald-500/25 px-2 py-0.5 rounded-lg">
-                              Q{q.q_num}
+                            <span className="w-7 h-7 rounded-lg bg-purple-500/20 text-purple-300 font-mono font-extrabold text-xs flex items-center justify-center shrink-0">
+                              {q.q_num}
                             </span>
-                            <span className="text-[11px] font-mono text-slate-400">
-                              Ref: {q.textbook_ref}
+                            <span className="text-xs font-mono font-bold text-slate-400 uppercase tracking-wide">
+                              Workbook Question #{q.q_num}
                             </span>
                           </div>
-
-                          <button
-                            onClick={() => handleCopy(q.answer, uniqueId)}
-                            className={`flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-semibold transition cursor-pointer border ${
-                              isCopied
-                                ? "bg-emerald-500 text-slate-950 border-emerald-400 font-bold"
-                                : "bg-white/5 hover:bg-white/10 text-slate-300 border-white/10 hover:text-white"
-                            }`}
-                            title="Copy verified answer"
-                          >
-                            {isCopied ? <Check size={13} /> : <Copy size={13} />}
-                            <span>{isCopied ? "Copied!" : "Copy Answer"}</span>
-                          </button>
+                          {q.textbook_ref && (
+                            <span className="px-2 py-0.5 rounded bg-slate-800/80 border border-white/5 text-[11px] font-mono text-emerald-400">
+                              Ref: {q.textbook_ref}
+                            </span>
+                          )}
                         </div>
 
                         {/* Question Text */}
-                        <div className="text-xs sm:text-sm font-medium text-slate-200 leading-relaxed">
+                        <p className="text-sm md:text-base text-slate-100 font-medium leading-relaxed">
                           {q.question}
+                        </p>
+
+                        {/* Verified Official Answer Box */}
+                        <div className="bg-gradient-to-r from-purple-950/40 to-slate-900/90 border border-purple-500/40 rounded-xl p-3.5 md:p-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+                          <div className="flex-1">
+                            <span className="text-[10px] font-mono uppercase tracking-wider text-purple-400 block font-bold mb-1">
+                              VERIFIED FILL-IN ANSWER
+                            </span>
+                            <div className="text-xs md:text-sm font-bold text-white font-mono leading-snug">
+                              {q.answer}
+                            </div>
+                          </div>
+
+                          <button
+                            onClick={() => handleCopySingle(q.answer, uniqueId)}
+                            className="shrink-0 bg-purple-500/20 hover:bg-purple-500/30 border border-purple-500/40 text-purple-200 hover:text-white px-3 py-1.5 rounded-lg text-xs font-semibold transition flex items-center gap-1.5 cursor-pointer self-end sm:self-auto"
+                            title="Copy answer to clipboard"
+                          >
+                            {isCopied ? (
+                              <>
+                                <Check size={13} className="text-emerald-400" />
+                                <span className="text-emerald-400">Copied!</span>
+                              </>
+                            ) : (
+                              <>
+                                <Copy size={13} />
+                                <span>Copy Answer</span>
+                              </>
+                            )}
+                          </button>
                         </div>
 
-                        {/* Verified Fill-in Answer Box */}
-                        <div className="p-3 sm:p-3.5 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-200 text-xs sm:text-sm font-semibold flex items-start gap-2.5">
-                          <span className="text-emerald-400 font-mono text-xs font-black uppercase shrink-0 mt-0.5">
-                            Answer:
-                          </span>
-                          <span className="flex-1 text-white font-bold leading-relaxed selection:bg-emerald-400 selection:text-slate-950">
-                            {q.answer}
-                          </span>
-                        </div>
-
-                        {/* Context & Notes */}
+                        {/* Context / Notes */}
                         {q.notes && (
-                          <div className="text-[11px] sm:text-xs text-slate-400 leading-relaxed pl-2 border-l-2 border-emerald-500/30 pt-0.5">
-                            <span className="text-slate-300 font-semibold">Exam Context: </span>
-                            {q.notes}
+                          <div className="text-xs text-slate-400 flex items-start gap-2 pt-1">
+                            <BookMarked
+                              size={14}
+                              className="text-emerald-400/80 shrink-0 mt-0.5"
+                            />
+                            <span className="leading-relaxed">{q.notes}</span>
                           </div>
                         )}
                       </motion.div>
                     );
-                  })}
-                </div>
+                  })
+                ) : (
+                  <div className="text-center py-12 glass-panel rounded-2xl space-y-3">
+                    <p className="text-sm text-slate-400">
+                      No questions matched your search query "{searchQuery}" in Chapter {activeChapter.chapter}.
+                    </p>
+                    <button
+                      onClick={() => setSearchQuery("")}
+                      className="px-4 py-1.5 rounded-xl bg-purple-500/20 text-purple-300 text-xs font-bold hover:bg-purple-500/30 transition cursor-pointer"
+                    >
+                      Reset Search Filter
+                    </button>
+                  </div>
+                )}
               </div>
-            ))}
-          </div>
-        )}
-      </main>
+
+              {/* Bottom Pagination / Next Chapter */}
+              {activeChapterNum < 13 && (
+                <div className="flex justify-end pt-4">
+                  <button
+                    onClick={handleNextChapter}
+                    className="bg-slate-900 hover:bg-slate-800 border border-white/10 text-white font-bold py-2.5 px-4 rounded-xl transition text-xs flex items-center gap-2 cursor-pointer shadow-md"
+                  >
+                    <span>Proceed to Chapter {activeChapterNum + 1} Answers</span>
+                    <ChevronRight size={16} className="text-purple-400" />
+                  </button>
+                </div>
+              )}
+            </motion.div>
+          ) : (
+            <div className="flex items-center justify-center p-12 text-slate-500 font-mono">
+              Loading Official Workbook Solutions...
+            </div>
+          )}
+        </div>
+      </div>
     </div>
   );
 }

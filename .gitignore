@@ -40,6 +40,10 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# local processing & scratch
+scratch/
+scripts/
+
 # local python pipeline & generator scripts
 /scripts/
 __pycache__/
