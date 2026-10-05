@@ -29,7 +29,7 @@ export function QuestionCard({
   const hasAnswered = Boolean(selectedOption);
 
   return (
-    <div className="flex-1 flex flex-col overflow-y-auto p-3.5 sm:p-6 md:p-8 w-full max-w-5xl mx-auto custom-scrollbar">
+    <div className="flex-1 flex flex-col overflow-y-auto p-3.5 sm:p-6 md:p-8 pb-28 md:pb-8 w-full max-w-5xl mx-auto custom-scrollbar">
       <AnimatePresence mode="wait">
         <motion.div
           key={question.id}

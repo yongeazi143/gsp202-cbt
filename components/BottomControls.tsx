@@ -31,7 +31,7 @@ export function BottomControls({
   const isLast = currentIndex === totalQuestions - 1;
 
   return (
-    <footer className="bg-[#0b0f17]/95 backdrop-blur-md border-t border-white/10 px-3 sm:px-6 md:px-8 py-3 pb-safe sticky bottom-0 z-20 shadow-2xl">
+    <footer className="fixed md:sticky bottom-0 left-0 right-0 z-40 shrink-0 w-full bg-[#0b0f17]/95 backdrop-blur-lg border-t border-white/10 px-3 sm:px-6 md:px-8 py-2.5 sm:py-3 shadow-2xl pb-[max(0.75rem,env(safe-area-inset-bottom))]">
       <div className="max-w-5xl mx-auto flex items-center justify-between gap-2 sm:gap-3">
         {/* Previous Button */}
         <button

@@ -340,7 +340,7 @@ export default function Home() {
   const currentQ = sessionQuestions[currentIndex];
 
   return (
-    <div className="flex flex-col h-screen w-full bg-[#080c14] text-slate-100 overflow-hidden subtle-grid">
+    <div className="fixed inset-0 h-screen h-[100dvh] w-full bg-[#080c14] text-slate-100 flex flex-col overflow-hidden select-none subtle-grid">
       <CustomCursor />
       {/* Top Header */}
       <Header
@@ -356,9 +356,9 @@ export default function Home() {
       />
 
       {/* Main Full-Screen Layout: Left Question Navigator + Central Exam View */}
-      <div className="flex-1 flex overflow-hidden w-full">
+      <div className="flex-1 flex min-h-0 overflow-hidden w-full relative">
         {/* Left Question Navigator (Desktop) */}
-        <div className="hidden md:block h-full">
+        <div className="hidden md:block h-full shrink-0">
           <QuestionNavigator
             questions={sessionQuestions}
             currentIndex={currentIndex}
@@ -369,7 +369,7 @@ export default function Home() {
         </div>
 
         {/* Center Main Question View */}
-        <div className="flex-1 flex flex-col h-full overflow-hidden w-full">
+        <div className="flex-1 flex flex-col h-full min-h-0 overflow-hidden w-full relative">
           {currentQ ? (
             <QuestionCard
               question={currentQ}
