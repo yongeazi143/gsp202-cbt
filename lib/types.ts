@@ -53,7 +53,7 @@ export interface Flashcard {
   id: string;
   chapter: number;
   chapter_title: string;
-  category: "scholar_definition" | "date_treaty" | "acronym" | "core_concept" | "case_study";
+  category: "scholar_definition" | "date_treaty" | "acronym" | "core_concept" | "case_study" | "workbook_question";
   front: string;
   back: string;
   detail?: string;

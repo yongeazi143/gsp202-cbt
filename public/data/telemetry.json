@@ -1,11 +1,11 @@
 {
   "totalVisitors": 1,
-  "totalPageViews": 9,
+  "totalPageViews": 12,
   "totalExamsStarted": 0,
   "totalExamsCompleted": 0,
   "totalQuestionsAnswered": 0,
   "totalFlashcardsReviewed": 2,
-  "totalSummariesRead": 3,
+  "totalSummariesRead": 5,
   "visitorIds": [
     "vis_pdw2lgc3muvofvs8"
   ],
@@ -41,6 +41,18 @@
     {
       "type": "flashcard_reviewed",
       "timestamp": "2026-10-05T21:10:53.348Z"
+    },
+    {
+      "type": "summary_read",
+      "timestamp": "2026-10-05T21:14:55.619Z"
+    },
+    {
+      "type": "page_view",
+      "timestamp": "2026-10-05T21:15:01.648Z"
+    },
+    {
+      "type": "summary_read",
+      "timestamp": "2026-10-05T21:15:11.362Z"
     }
   ]
 }

@@ -16,6 +16,7 @@ export function FlashcardsView({ onBackToDashboard, initialChapter }: Flashcards
 
   const [flashcards, setFlashcards] = useState<Flashcard[]>([]);
   const [selectedChapter, setSelectedChapter] = useState<number | "all">(initialChapter || "all");
+  const [cardFilter, setCardFilter] = useState<"all" | "workbook" | "textbook">("all");
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [isFlipped, setIsFlipped] = useState<boolean>(false);
   const [masteredIds, setMasteredIds] = useState<string[]>([]);
@@ -40,15 +41,23 @@ export function FlashcardsView({ onBackToDashboard, initialChapter }: Flashcards
 
   // Filtered flashcards list
   const activeDeck = useMemo(() => {
-    if (selectedChapter === "all") return flashcards;
-    return flashcards.filter((fc) => fc.chapter === selectedChapter);
-  }, [flashcards, selectedChapter]);
+    let list = flashcards;
+    if (selectedChapter !== "all") {
+      list = list.filter((fc) => fc.chapter === selectedChapter);
+    }
+    if (cardFilter === "workbook") {
+      list = list.filter((fc) => fc.category === "workbook_question");
+    } else if (cardFilter === "textbook") {
+      list = list.filter((fc) => fc.category !== "workbook_question");
+    }
+    return list;
+  }, [flashcards, selectedChapter, cardFilter]);
 
-  // Reset index when changing chapter
+  // Reset index when changing chapter or filter
   useEffect(() => {
     setCurrentIndex(0);
     setIsFlipped(false);
-  }, [selectedChapter]);
+  }, [selectedChapter, cardFilter]);
 
   // Keyboard navigation listener (Space = flip, ArrowLeft = prev, ArrowRight = next, 1 = review, 2 = mastered)
   useEffect(() => {
@@ -124,6 +133,8 @@ export function FlashcardsView({ onBackToDashboard, initialChapter }: Flashcards
         return { label: "Vital Acronym", color: "bg-purple-500/15 text-purple-300 border-purple-500/30" };
       case "case_study":
         return { label: "African Case Study", color: "bg-teal-500/15 text-teal-300 border-teal-500/30" };
+      case "workbook_question":
+        return { label: "Workbook Review Q", color: "bg-purple-500/20 text-purple-300 border-purple-500/40" };
       default:
         return { label: "Core Concept", color: "bg-emerald-500/15 text-emerald-300 border-emerald-500/30" };
     }
@@ -147,7 +158,7 @@ export function FlashcardsView({ onBackToDashboard, initialChapter }: Flashcards
               <span>GSP 202 3D Flashcards</span>
             </h1>
             <span className="text-xs text-slate-400 font-mono">
-              Spaced Repetition Memory Accelerator
+              Spaced Repetition Memory Accelerator • 328 Total Flashcards (265 CA Workbook Qs)
             </span>
           </div>
         </div>
@@ -177,6 +188,44 @@ export function FlashcardsView({ onBackToDashboard, initialChapter }: Flashcards
 
       {/* Main Flashcard Arena */}
       <main className="max-w-3xl mx-auto w-full flex-1 flex flex-col justify-center py-6">
+        {/* Deck Type Filter Toggle */}
+        <div className="flex flex-wrap items-center justify-between gap-2 pb-2 mb-3 border-b border-white/5">
+          <div className="flex flex-wrap items-center gap-1.5 text-xs font-mono">
+            <span className="text-slate-400 font-bold uppercase text-[10px] mr-1">Deck:</span>
+            <button
+              onClick={() => setCardFilter("all")}
+              className={`px-2.5 py-1 rounded-lg text-xs font-semibold transition cursor-pointer ${
+                cardFilter === "all"
+                  ? "bg-slate-800 text-white border border-white/20"
+                  : "text-slate-400 hover:text-white"
+              }`}
+            >
+              All ({flashcards.length})
+            </button>
+            <button
+              onClick={() => setCardFilter("workbook")}
+              className={`px-2.5 py-1 rounded-lg text-xs font-semibold transition cursor-pointer flex items-center gap-1.5 ${
+                cardFilter === "workbook"
+                  ? "bg-purple-500/20 text-purple-300 border border-purple-500/40 font-bold"
+                  : "text-purple-400/80 hover:text-purple-300"
+              }`}
+            >
+              <span>Workbook Questions</span>
+              <span className="text-[10px] bg-purple-500/30 text-purple-200 px-1.5 py-0.5 rounded font-mono font-bold">265 Qs</span>
+            </button>
+            <button
+              onClick={() => setCardFilter("textbook")}
+              className={`px-2.5 py-1 rounded-lg text-xs font-semibold transition cursor-pointer ${
+                cardFilter === "textbook"
+                  ? "bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 font-bold"
+                  : "text-slate-400 hover:text-white"
+              }`}
+            >
+              Core Concepts (63)
+            </button>
+          </div>
+        </div>
+
         {/* Chapter Filter Pill Bar */}
         <div className="flex items-center gap-2 overflow-x-auto pb-3 mb-4 custom-scrollbar">
           <button
@@ -187,7 +236,7 @@ export function FlashcardsView({ onBackToDashboard, initialChapter }: Flashcards
                 : "bg-slate-900/80 text-slate-400 hover:text-white border border-white/5"
             }`}
           >
-            All 13 Chapters ({flashcards.length})
+            All 13 Chapters ({activeDeck.length})
           </button>
           {CHAPTER_LIST.map((ch) => {
             const count = flashcards.filter((f) => f.chapter === ch.number).length;
