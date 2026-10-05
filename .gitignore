@@ -39,3 +39,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local python pipeline & generator scripts
+/scripts/
+__pycache__/
+*.py[cod]
+architecture.json
+design.json
