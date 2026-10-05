@@ -117,11 +117,10 @@ export function Footer() {
                         key={item.key}
                         type="button"
                         onClick={() => setFeedbackType(item.key as any)}
-                        className={`py-1.5 px-2 rounded-lg text-xs font-semibold border transition cursor-pointer text-center ${
-                          feedbackType === item.key
+                        className={`py-1.5 px-2 rounded-lg text-xs font-semibold border transition cursor-pointer text-center ${feedbackType === item.key
                             ? "bg-emerald-500/20 border-emerald-500/60 text-emerald-300"
                             : "bg-slate-900 border-white/5 text-slate-400 hover:text-white"
-                        }`}
+                          }`}
                       >
                         {item.label}
                       </button>
@@ -217,18 +216,18 @@ export function Footer() {
                 <div className="p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30 space-y-2.5">
                   <div className="flex items-center justify-between">
                     <span className="text-[11px] font-mono uppercase text-slate-400">Bank Name</span>
-                    <span className="font-bold text-white text-xs">OPay / Moniepoint</span>
+                    <span className="font-bold text-white text-xs">Palmpay</span>
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-[11px] font-mono uppercase text-slate-400">Account Name</span>
-                    <span className="font-bold text-emerald-400 text-xs">ISRAEL EMMANUEL</span>
+                    <span className="font-bold text-emerald-400 text-xs">ISRAEL YAKASON JAMES</span>
                   </div>
                   <div className="flex items-center justify-between pt-1 border-t border-emerald-500/20">
                     <span className="text-[11px] font-mono uppercase text-slate-400">Account Number</span>
                     <div className="flex items-center gap-2">
-                      <span className="font-mono font-black text-sm text-white">8137351659</span>
+                      <span className="font-mono font-black text-sm text-white">9033831547</span>
                       <button
-                        onClick={() => copyAccountNumber("8137351659")}
+                        onClick={() => copyAccountNumber("9033831547")}
                         className="p-1 rounded bg-white/10 hover:bg-white/20 text-slate-200 transition cursor-pointer"
                         title="Copy Account Number"
                       >
