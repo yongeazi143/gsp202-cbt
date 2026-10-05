@@ -1,0 +1,784 @@
+[
+  {
+    "chapter": 1,
+    "title": "The State, Conflict Resolution, and Development in Africa",
+    "pages": "1-15",
+    "coreOverview": "Explores the philosophical and sociological origins of the state, contrasting Liberal (neutral arbiter, social contract) and Marxist (class domination tool) theories. Traces the evolution of modern state sovereignty from the 1648 Treaty of Westphalia through the arbitrary 1884-1885 Berlin Conference partition of Africa, analyzing why post-colonial African states emerged with fragile institutions and acute development dilemmas.",
+    "keyScholars": [
+      {
+        "name": "Aristotle (384–322 BC)",
+        "concept": "State as a union of families and villages aiming at a self-sufficient life",
+        "bookOrQuote": "Politics Book I"
+      },
+      {
+        "name": "Max Weber (1864–1920)",
+        "concept": "Monopoly of legitimate physical force within a territory",
+        "bookOrQuote": "Politics as a Vocation"
+      },
+      {
+        "name": "Niccolò Machiavelli (1469–1527)",
+        "concept": "The state as the power which has authority over men",
+        "bookOrQuote": "The Prince (1513)"
+      },
+      {
+        "name": "John Locke (1632–1704)",
+        "concept": "Liberalism and three fundamental natural rights: Life, Liberty, and Property",
+        "bookOrQuote": "Two Treatises of Government"
+      },
+      {
+        "name": "R. M. MacIver (1926)",
+        "concept": "State maintains social order through government speaking with voice of law",
+        "bookOrQuote": "The Modern State"
+      },
+      {
+        "name": "Harold J. Laski (1893–1950)",
+        "concept": "Territorial society divided into government and subjects claiming supremacy",
+        "bookOrQuote": "An Introduction to Politics"
+      },
+      {
+        "name": "Claude Ake",
+        "concept": "Post-colonial African state as an instrument of coercion without institutional autonomy",
+        "bookOrQuote": "Democracy and Development in Africa"
+      }
+    ],
+    "keyDatesAndTreaties": [
+      {
+        "year": "1648",
+        "event": "Peace of Westphalia",
+        "significance": "Inaugurated modern state sovereignty and territorial integrity"
+      },
+      {
+        "year": "1884–1885",
+        "event": "Berlin Conference",
+        "significance": "Scramble for Africa; drew artificial borders ignoring ethnic boundaries"
+      },
+      {
+        "year": "1994",
+        "event": "UNDP Human Development Report",
+        "significance": "Pioneered Human Security concept (freedom from fear and want)"
+      },
+      {
+        "year": "2015",
+        "event": "UN Sustainable Development Goals",
+        "significance": "SDG 16 formally establishes peace and justice as prerequisites for development"
+      }
+    ],
+    "vitalAcronyms": [
+      {
+        "acronym": "UNDP",
+        "full": "United Nations Development Programme",
+        "meaning": "Pioneered human security framework in 1994"
+      },
+      {
+        "acronym": "SDG",
+        "full": "Sustainable Development Goals",
+        "meaning": "Global 2030 development agenda (SDG 16 focuses on peace and justice)"
+      }
+    ],
+    "caseStudies": [
+      {
+        "name": "Post-Colonial African Borders",
+        "summary": "Colonial powers split homogeneous ethnic groups across 2-3 separate countries while forcing hostile historical groups into artificial state units, laying root causes for recurrent instability."
+      }
+    ],
+    "highYieldExamTips": [
+      "Examiners frequently test Aristotle vs Max Weber definitions—know Weber's keyword 'monopoly of legitimate physical force'.",
+      "Remember John Locke's three rights: Life, Liberty, and Property (Marx replaces property with collective ownership).",
+      "Westphalia = 1648; Berlin Conference = 1884–1885."
+    ]
+  },
+  {
+    "chapter": 2,
+    "title": "Ethnic and Communal Conflicts in Africa",
+    "pages": "16-33",
+    "coreOverview": "Deconstructs ethnic identity through Primordialist (innate biological/ancestral), Instrumentalist (elite political tool for resources), and Constructivist (socially constructed fluid identity) paradigms. Examines British colonial 'Divide and Rule' tactics, the Nigerian Civil War, the 1994 Rwandan Genocide, and institutional remedies like the Federal Character Principle and Consociationalism.",
+    "keyScholars": [
+      {
+        "name": "Arend Lijphart",
+        "concept": "Consociational Democracy (power sharing, grand coalition, mutual veto, federalism)",
+        "bookOrQuote": "Democracy in Plural Societies"
+      },
+      {
+        "name": "Archbishop Desmond Tutu",
+        "concept": "Restorative justice and truth-telling for national healing",
+        "bookOrQuote": "Chairman, South Africa TRC"
+      },
+      {
+        "name": "Lord Lugard",
+        "concept": "Indirect Rule administrative policy entrenching ethnic categorization",
+        "bookOrQuote": "Dual Mandate in British Tropical Africa"
+      }
+    ],
+    "keyDatesAndTreaties": [
+      {
+        "year": "July 6, 1967 – Jan 15, 1970",
+        "event": "Nigerian Civil War (Biafran War)",
+        "significance": "Major ethnic/regional conflict ending with 'No Victor, No Vanquished'"
+      },
+      {
+        "year": "April – July 1994",
+        "event": "Rwandan Genocide",
+        "significance": "Over 800,000 Tutsis and moderate Hutus slaughtered by Interahamwe in 100 days"
+      },
+      {
+        "year": "1995",
+        "event": "South Africa Truth and Reconciliation Commission",
+        "significance": "Restorative justice model overcoming apartheid animosity"
+      }
+    ],
+    "vitalAcronyms": [
+      {
+        "acronym": "TRC",
+        "full": "Truth and Reconciliation Commission",
+        "meaning": "Post-apartheid South African restorative justice body"
+      },
+      {
+        "acronym": "FCC",
+        "full": "Federal Character Commission",
+        "meaning": "Nigerian constitutional body implementing Section 14(3) quota balance"
+      }
+    ],
+    "caseStudies": [
+      {
+        "name": "Jos Indigene-Settler Dichotomy",
+        "summary": "Clashes in Plateau State between native ethnic groups (Berom, Anaguta, Afizere) and Hausa-Fulani over land ownership, political representation, and indigene certificates."
+      },
+      {
+        "name": "Tiv-Jukun Conflict",
+        "summary": "Benue and Taraba states dispute over land tenure, traditional authority, and political representation in Wukari."
+      },
+      {
+        "name": "Aguleri-Umuleri War",
+        "summary": "Intra-ethnic land boundary dispute in Anambra State centered around Otuocha floodplain."
+      }
+    ],
+    "highYieldExamTips": [
+      "Primordialism = biological/innate; Instrumentalism = elite tool for political manipulation; Constructivism = fluid social narrative.",
+      "Section 14(3) of 1999 CFRN = Federal Character Principle.",
+      "Rwandan Genocide = 1994, Hutu extremist militias called Interahamwe targeted Tutsis."
+    ]
+  },
+  {
+    "chapter": 3,
+    "title": "Climate Change, Resource Conflict and Environmental Security",
+    "pages": "34-50",
+    "coreOverview": "Analyzes how global warming and natural resource distribution drive violent conflict. Dissects Thomas Homer-Dixon's environmental scarcity framework, the Resource Curse paradox in mineral-rich African states, the ecological shrinkage of Lake Chad, the Ogoni struggle in the Niger Delta, and farmer-herder clashes accelerated by Sahelian desertification.",
+    "keyScholars": [
+      {
+        "name": "Thomas Homer-Dixon",
+        "concept": "Three types of environmental scarcity: Supply-induced, Demand-induced, and Structural scarcity",
+        "bookOrQuote": "Environment, Scarcity, and Violence"
+      },
+      {
+        "name": "Richard Auty (1993)",
+        "concept": "Coined 'Resource Curse' paradox (resource abundance leading to lower growth and instability)",
+        "bookOrQuote": "Sustaining Development in Mineral Economies"
+      },
+      {
+        "name": "Garrett Hardin (1968)",
+        "concept": "Tragedy of the Commons (rational self-interest depleting shared open resources)",
+        "bookOrQuote": "The Tragedy of the Commons"
+      },
+      {
+        "name": "Ken Saro-Wiwa",
+        "concept": "Environmental rights activism against oil pollution and minority marginalization",
+        "bookOrQuote": "MOSOP Leader (executed 1995)"
+      }
+    ],
+    "keyDatesAndTreaties": [
+      {
+        "year": "1990",
+        "event": "Ogoni Bill of Rights",
+        "significance": "Demanded political autonomy and environmental restoration in Niger Delta"
+      },
+      {
+        "year": "November 10, 1995",
+        "event": "Execution of the Ogoni 9",
+        "significance": "International sanctions and suspension of Nigeria from Commonwealth"
+      },
+      {
+        "year": "2015",
+        "event": "Paris Agreement (COP21)",
+        "significance": "Global target to limit temperature rise to well below 2°C"
+      }
+    ],
+    "vitalAcronyms": [
+      {
+        "acronym": "MOSOP",
+        "full": "Movement for the Survival of the Ogoni People",
+        "meaning": "Grassroots environmental rights movement founded by Ken Saro-Wiwa"
+      },
+      {
+        "acronym": "UNFCCC",
+        "full": "United Nations Framework Convention on Climate Change",
+        "meaning": "International treaty body governing COP summits"
+      }
+    ],
+    "caseStudies": [
+      {
+        "name": "Lake Chad Basin Shrinkage",
+        "summary": "Over 90% water loss since the 1960s displaced fishermen and pastoralists, fostering vulnerability to Boko Haram and cross-border resource clashes."
+      },
+      {
+        "name": "Niger Delta Militancy",
+        "summary": "Gas flaring, oil spills, and loss of artisanal fishing triggered militancy demanding fiscal derivation control."
+      }
+    ],
+    "highYieldExamTips": [
+      "Homer-Dixon's 3 scarcities: Supply-induced (depletion), Demand-induced (population surge), Structural (unequal sharing).",
+      "Derivation formula in 1999 Constitution: Section 162(2) guarantees not less than 13% to mineral producing states."
+    ]
+  },
+  {
+    "chapter": 4,
+    "title": "Technology and Digital Threats to Peace and Security",
+    "pages": "51-69",
+    "coreOverview": "Investigates emerging digital hazards including cyberwarfare, algorithmic bias, echo chambers, Lethal Autonomous Weapons Systems (LAWS), and synthetic deepfakes. Analyzes how violent extremist groups (Boko Haram, ISWAP) exploit social media for propaganda and recruitment, concluding with statutory and digital peacebuilding frameworks.",
+    "keyScholars": [
+      {
+        "name": "Stuart Russell & Peter Norvig (2020)",
+        "concept": "AI as the study of agents that receive percepts from the environment and perform actions",
+        "bookOrQuote": "Artificial Intelligence: A Modern Approach"
+      }
+    ],
+    "keyDatesAndTreaties": [
+      {
+        "year": "2015",
+        "event": "Cybercrimes (Prohibition, Prevention, etc.) Act",
+        "significance": "First Nigerian statutory framework penalizing cyberstalking, digital fraud, and critical infrastructure attacks"
+      }
+    ],
+    "vitalAcronyms": [
+      {
+        "acronym": "LAWS",
+        "full": "Lethal Autonomous Weapons Systems",
+        "meaning": "Weapons capable of selecting and engaging targets without human intervention ('killer robots')"
+      },
+      {
+        "acronym": "UAV",
+        "full": "Unmanned Aerial Vehicle",
+        "meaning": "Drones utilized for aerial surveillance and tactical strikes"
+      }
+    ],
+    "caseStudies": [
+      {
+        "name": "Boko Haram Digital Propaganda",
+        "summary": "Use of YouTube, Twitter/X, and Telegram for hostage ransom videos, youth recruitment, and psychological warfare."
+      }
+    ],
+    "highYieldExamTips": [
+      "Misinformation = false info spread without harmful intent; Disinformation = intentionally fabricated falsehood designed to deceive and destabilize.",
+      "LAWS acronym is very common in exam papers."
+    ]
+  },
+  {
+    "chapter": 5,
+    "title": "Gender, Peace and Conflict Resolution",
+    "pages": "70-87",
+    "coreOverview": "Explores the sociological distinction between sex (biological) and gender (socially constructed roles). Explores the gendered impacts of armed conflict (weaponized rape, displacement), examines UNSCR 1325 and the Women, Peace, and Security (WPS) agenda, and highlights Bandura's Social Learning Theory in explaining gender-based violence.",
+    "keyScholars": [
+      {
+        "name": "Albert Bandura (1977)",
+        "concept": "Social Learning Theory (GBV learned through observation, modeling, and cultural reinforcement)",
+        "bookOrQuote": "Social Learning Theory"
+      },
+      {
+        "name": "Leymah Gbowee",
+        "concept": "Grassroots women's mass mobilization for peace through non-violent resistance",
+        "bookOrQuote": "Nobel Peace Laureate 2011"
+      }
+    ],
+    "keyDatesAndTreaties": [
+      {
+        "year": "1979",
+        "event": "CEDAW Adoption",
+        "significance": "International Bill of Rights for Women"
+      },
+      {
+        "year": "October 31, 2000",
+        "event": "UNSCR 1325",
+        "significance": "Landmark UN resolution mandating women's full participation in peacebuilding"
+      },
+      {
+        "year": "April 14, 2014",
+        "event": "Chibok Girls Abduction",
+        "significance": "Boko Haram kidnapped 276 schoolgirls, sparking global #BringBackOurGirls campaign"
+      }
+    ],
+    "vitalAcronyms": [
+      {
+        "acronym": "UNSCR",
+        "full": "United Nations Security Council Resolution",
+        "meaning": "UNSCR 1325 on Women, Peace and Security"
+      },
+      {
+        "acronym": "CEDAW",
+        "full": "Convention on the Elimination of All Forms of Discrimination Against Women",
+        "meaning": "Adopted in 1979"
+      },
+      {
+        "acronym": "GBV",
+        "full": "Gender-Based Violence",
+        "meaning": "Violence directed against persons based on gender expectations"
+      },
+      {
+        "acronym": "OSAGI",
+        "full": "Office of the Special Adviser on Gender Issues",
+        "meaning": "UN body championing gender mainstreaming"
+      }
+    ],
+    "caseStudies": [
+      {
+        "name": "Women of Liberia Mass Action for Peace",
+        "summary": "Christian and Muslim women led by Leymah Gbowee held sit-ins, sex strikes, and prayer rallies in 2003, compelling Charles Taylor and rebel factions to sign the Accra Peace Agreement."
+      }
+    ],
+    "highYieldExamTips": [
+      "Four Pillars of UNSCR 1325: Participation, Protection, Prevention, and Relief & Recovery.",
+      "Sex = biology; Gender = socially constructed roles and expectations."
+    ]
+  },
+  {
+    "chapter": 6,
+    "title": "Health and Conflict",
+    "pages": "88-98",
+    "coreOverview": "Analyzes the bi-directional relationship between public health and warfare. Reviews WHO's multidimensional definition of health, Parsons' functionalist 'sick role', conflict impacts on healthcare infrastructure, and the innovative paradigm of 'Health as a Bridge for Peace' (HBP).",
+    "keyScholars": [
+      {
+        "name": "Talcott Parsons (1951)",
+        "concept": "Health as the state of optimum capacity for effective performance of social roles",
+        "bookOrQuote": "The Social System"
+      },
+      {
+        "name": "Dolfman (1973)",
+        "concept": "Health as adaptability to physical and social stress without undue impairment",
+        "bookOrQuote": "The Concept of Health"
+      }
+    ],
+    "keyDatesAndTreaties": [
+      {
+        "year": "1946",
+        "event": "World Health Organization Constitution",
+        "significance": "Defined health as complete physical, mental, and social well-being"
+      },
+      {
+        "year": "1949",
+        "event": "Geneva Conventions",
+        "significance": "Confers protected immunity on civilian medical personnel and hospital facilities"
+      }
+    ],
+    "vitalAcronyms": [
+      {
+        "acronym": "WHO",
+        "full": "World Health Organization",
+        "meaning": "UN specialized agency for international public health"
+      },
+      {
+        "acronym": "HBP",
+        "full": "Health as a Bridge for Peace",
+        "meaning": "WHO framework using healthcare interventions to build trust between conflict parties"
+      },
+      {
+        "acronym": "ICRC",
+        "full": "International Committee of the Red Cross",
+        "meaning": "Neutral humanitarian agency protecting war victims"
+      }
+    ],
+    "caseStudies": [
+      {
+        "name": "Days of Tranquility in Civil Wars",
+        "summary": "Ceasefires negotiated in El Salvador, Sudan, and Afghanistan specifically to allow healthcare workers to vaccinate children against polio and measles."
+      }
+    ],
+    "highYieldExamTips": [
+      "WHO 1946 definition keyword: 'complete physical, mental and social well-being, not merely the absence of disease'.",
+      "Attacking hospitals displaying the Red Cross/Red Crescent is a war crime under the Geneva Conventions."
+    ]
+  },
+  {
+    "chapter": 7,
+    "title": "Conflict Analysis and Framework Assessment",
+    "pages": "99-115",
+    "coreOverview": "Presents analytical tools essential for diagnosing conflict systems. Details Galtung's ABC Triangle (Attitudes, Behavior, Contradiction), the Conflict Tree (Roots, Trunk, Leaves), Stakeholder Mapping, the Conflict Onion (Positions, Interests, Needs), and Lewin's Force Field Analysis.",
+    "keyScholars": [
+      {
+        "name": "Johan Galtung",
+        "concept": "ABC Conflict Triangle (Attitudes, Behavior, Contradiction)",
+        "bookOrQuote": "Conflict Transformation by Peaceful Means"
+      },
+      {
+        "name": "John Paul Lederach",
+        "concept": "Conflict Transformation (transforming destructive social structures and relationships)",
+        "bookOrQuote": "Building Peace: Sustainable Reconciliation"
+      },
+      {
+        "name": "Stephen Stedman",
+        "concept": "Spoilers in peace processes (actors who perceive peace as threatening their power)",
+        "bookOrQuote": "Spoiler Problems in Peace Processes"
+      }
+    ],
+    "keyDatesAndTreaties": [
+      {
+        "year": "1992",
+        "event": "An Agenda for Peace (Boutros Boutros-Ghali)",
+        "significance": "Classified UN interventions into Preventive Diplomacy, Peacemaking, Peacekeeping, and Peacebuilding"
+      }
+    ],
+    "vitalAcronyms": [
+      {
+        "acronym": "ABC",
+        "full": "Attitudes, Behavior, Contradiction",
+        "meaning": "Johan Galtung's 3-way conflict diagnosis model"
+      }
+    ],
+    "caseStudies": [
+      {
+        "name": "Conflict Onion in Land Disputes",
+        "summary": "Position: 'We will never give up this border.' Interest: 'We need safe access to water for cattle.' Need: 'Physical survival and dignity for our clan.'"
+      }
+    ],
+    "highYieldExamTips": [
+      "Conflict Tree: Roots = Root causes; Trunk = Core manifest problem; Branches/Leaves = Visible symptoms and effects.",
+      "Conflict Onion: Outer = Positions; Middle = Interests; Core = Fundamental Human Needs."
+    ]
+  },
+  {
+    "chapter": 8,
+    "title": "Peace Education and Peace Practice",
+    "pages": "116-134",
+    "coreOverview": "Contrasts Negative Peace (mere absence of war) with Positive Peace (presence of structural justice). Analyzes Paulo Freire's critical pedagogy against the oppressive 'banking' concept of education, and examines practical intervention tools like Track II diplomacy and Disarmament, Demobilization, and Reintegration (DDR).",
+    "keyScholars": [
+      {
+        "name": "Johan Galtung",
+        "concept": "Negative Peace vs Positive Peace; Direct, Structural, and Cultural violence",
+        "bookOrQuote": "Violence, Peace, and Peace Research (1969)"
+      },
+      {
+        "name": "Paulo Freire (1921–1997)",
+        "concept": "Dialogical problem-posing education vs oppressive banking education",
+        "bookOrQuote": "Pedagogy of the Oppressed (1970)"
+      }
+    ],
+    "keyDatesAndTreaties": [
+      {
+        "year": "1970",
+        "event": "Publication of Pedagogy of the Oppressed",
+        "significance": "Laid foundation for transformative peace pedagogy"
+      },
+      {
+        "year": "2009",
+        "event": "Niger Delta Presidential Amnesty Programme (PAP)",
+        "significance": "Landmark Nigerian DDR program disarming over 30,000 militants"
+      }
+    ],
+    "vitalAcronyms": [
+      {
+        "acronym": "DDR",
+        "full": "Disarmament, Demobilization, and Reintegration",
+        "meaning": "Post-conflict framework for transition of combatants to civilian life"
+      },
+      {
+        "acronym": "UNESCO",
+        "full": "United Nations Educational, Scientific and Cultural Organization",
+        "meaning": "'Since wars begin in the minds of men, defences of peace must be constructed there'"
+      }
+    ],
+    "caseStudies": [
+      {
+        "name": "Presidential Amnesty Programme 2009",
+        "summary": "President Umaru Musa Yar'Adua granted unconditional pardon to Niger Delta militants who surrendered arms, funding vocational and higher education scholarships."
+      }
+    ],
+    "highYieldExamTips": [
+      "Negative Peace = absence of direct physical violence; Positive Peace = presence of social justice and absence of structural violence.",
+      "Paulo Freire opposed the 'Banking Concept' where students are treated as passive empty containers."
+    ]
+  },
+  {
+    "chapter": 9,
+    "title": "Conflict Handling Style and Non-Violent Resistance",
+    "pages": "135-150",
+    "coreOverview": "Explores the 5 Thomas-Kilmann conflict handling modes mapped along Assertiveness and Cooperativeness: Competing, Collaborating, Compromising, Avoiding, and Accommodating. Details the philosophy and strategic efficacy of non-violent resistance pioneered by Gandhi, Martin Luther King Jr., and Gene Sharp.",
+    "keyScholars": [
+      {
+        "name": "Kenneth Thomas & Ralph Kilmann (1974)",
+        "concept": "5 Conflict Handling Modes (Competing, Collaborating, Compromising, Avoiding, Accommodating)",
+        "bookOrQuote": "Thomas-Kilmann Conflict Mode Instrument"
+      },
+      {
+        "name": "Mahatma Gandhi",
+        "concept": "Satyagraha (truth-force) and Ahimsa (non-violence in thought and deed)",
+        "bookOrQuote": "Leader of Indian Independence Movement"
+      },
+      {
+        "name": "Gene Sharp",
+        "concept": "198 methods of non-violent action categorized into protest, non-cooperation, and intervention",
+        "bookOrQuote": "The Politics of Nonviolent Action"
+      },
+      {
+        "name": "Erica Chenoweth & Maria Stephan",
+        "concept": "Non-violent campaigns are twice as effective as armed violent struggles",
+        "bookOrQuote": "Why Civil Resistance Works (2011)"
+      }
+    ],
+    "keyDatesAndTreaties": [
+      {
+        "year": "1929",
+        "event": "Aba Women's War (Eastern Nigeria)",
+        "significance": "Anti-colonial non-violent civil resistance against warrant chief taxation"
+      },
+      {
+        "year": "1930",
+        "event": "Salt March (Dandi March)",
+        "significance": "Gandhi walked 240 miles defying British salt tax monopoly"
+      },
+      {
+        "year": "1963",
+        "event": "Letter from Birmingham Jail (MLK)",
+        "significance": "Distinction between just moral laws and unjust discriminatory laws"
+      }
+    ],
+    "vitalAcronyms": [
+      {
+        "acronym": "TKI",
+        "full": "Thomas-Kilmann Conflict Mode Instrument",
+        "meaning": "Standard psychological metric for assessing conflict response styles"
+      }
+    ],
+    "caseStudies": [
+      {
+        "name": "1929 Aba Women's Riots",
+        "summary": "Igbo women used traditional collective non-violent sanctions ('sitting on a man', boycotts, mass singing) to compel the British colonial administration to drop direct taxation."
+      }
+    ],
+    "highYieldExamTips": [
+      "Thomas-Kilmann: Collaborating is High Assertiveness + High Cooperativeness (Win-Win).",
+      "Competing is High Assertiveness + Low Cooperativeness (Win-Lose).",
+      "Accommodating is Low Assertiveness + High Cooperativeness (Lose-Win)."
+    ]
+  },
+  {
+    "chapter": 10,
+    "title": "Peace Psychology",
+    "pages": "151-161",
+    "coreOverview": "Applies psychological science to understand aggression, prejudice, and reconciliation. Examines Festinger's Cognitive Dissonance, Bandura's Moral Disengagement, Gordon Allport's Contact Hypothesis, Muzafer Sherif's Superordinate Goals, and intergenerational transmission of collective trauma.",
+    "keyScholars": [
+      {
+        "name": "Daniel J. Christie et al. (2001)",
+        "concept": "Definition of peace psychology aimed at mitigating direct and structural violence",
+        "bookOrQuote": "Peace, Conflict, and Violence: Peace Psychology for the 21st Century"
+      },
+      {
+        "name": "Gordon Allport (1954)",
+        "concept": "Contact Hypothesis (prejudice reduces under equal status, shared goals, cooperation)",
+        "bookOrQuote": "The Nature of Prejudice"
+      },
+      {
+        "name": "Muzafer Sherif (1954)",
+        "concept": "Superordinate Goals in resolving intergroup hostility",
+        "bookOrQuote": "Robbers Cave Experiment"
+      },
+      {
+        "name": "Leon Festinger (1957)",
+        "concept": "Cognitive Dissonance (mental distress driving rationalization of prejudice)",
+        "bookOrQuote": "A Theory of Cognitive Dissonance"
+      }
+    ],
+    "keyDatesAndTreaties": [
+      {
+        "year": "1954",
+        "event": "Publication of The Nature of Prejudice & Robbers Cave Experiment",
+        "significance": "Pioneered empirical study of intergroup contact and hostility"
+      }
+    ],
+    "vitalAcronyms": [
+      {
+        "acronym": "PTSD",
+        "full": "Post-Traumatic Stress Disorder",
+        "meaning": "Severe psychological reaction to traumatic violent events"
+      },
+      {
+        "acronym": "MHPSS",
+        "full": "Mental Health and Psychosocial Support",
+        "meaning": "Essential intervention in post-conflict recovery"
+      }
+    ],
+    "caseStudies": [
+      {
+        "name": "Robbers Cave Experiment",
+        "summary": "Hostile boy scout groups only overcame enmity when forced to cooperate on superordinate challenges (repairing broken camp water pipe and pulling the food truck)."
+      }
+    ],
+    "highYieldExamTips": [
+      "Allport's Contact Hypothesis conditions: Equal status, common goals, intergroup cooperation, institutional support.",
+      "Dehumanization neutralizes empathy, paving the psychological path for mass atrocities."
+    ]
+  },
+  {
+    "chapter": 11,
+    "title": "Legal Framework for Social Justice and Conflict Resolution",
+    "pages": "162-179",
+    "coreOverview": "Analyzes the judicial architecture for justice in Nigeria. Examines Chapter IV (justiciable Fundamental Rights) vs Chapter II (non-justiciable Directive Principles under Section 6(6)(c)), Alternative Dispute Resolution (ADR), the Multi-Door Courthouse concept, and restorative vs retributive justice.",
+    "keyScholars": [
+      {
+        "name": "Frank Sander (1976)",
+        "concept": "Multi-Door Courthouse concept (matching dispute to the appropriate resolution door)",
+        "bookOrQuote": "Pound Conference Presentation"
+      }
+    ],
+    "keyDatesAndTreaties": [
+      {
+        "year": "1981",
+        "event": "African Charter on Human and Peoples' Rights (Banjul Charter)",
+        "significance": "Uniquely combined individual rights with collective peoples' rights and duties"
+      },
+      {
+        "year": "1999",
+        "event": "Constitution of the Federal Republic of Nigeria (CFRN)",
+        "significance": "Supreme legal law (Chapter IV = Fundamental Rights; Section 36 = Fair Hearing)"
+      }
+    ],
+    "vitalAcronyms": [
+      {
+        "acronym": "ADR",
+        "full": "Alternative Dispute Resolution",
+        "meaning": "Non-litigation processes: negotiation, mediation, conciliation, arbitration"
+      },
+      {
+        "acronym": "NICN",
+        "full": "National Industrial Court of Nigeria",
+        "meaning": "Exclusive jurisdiction over labor and trade union disputes"
+      },
+      {
+        "acronym": "LMDC",
+        "full": "Lagos Multi-Door Courthouse",
+        "meaning": "Pioneering court-connected ADR center in Africa"
+      }
+    ],
+    "caseStudies": [
+      {
+        "name": "Traditional Customary Dispute Resolution",
+        "summary": "Indigenous Igbo/Yoruba/Hausa community dispute resolution led by village elders and title-holders focusing on restorative social harmony rather than punitive court fines."
+      }
+    ],
+    "highYieldExamTips": [
+      "Chapter IV of 1999 CFRN = Justiciable Fundamental Rights; Chapter II = Non-justiciable under Section 6(6)(c).",
+      "Twin pillars of Natural Justice: Audi Alteram Partem (hear both sides) and Nemo Judex In Causa Sua (rule against bias).",
+      "Arbitration award is legally binding; mediation outcome is consensual and non-binding until formalized."
+    ]
+  },
+  {
+    "chapter": 12,
+    "title": "Community Policing",
+    "pages": "180-185",
+    "coreOverview": "Examines the transition from reactive militarized policing to proactive community problem-solving. Explores Sir Robert Peel's 9 founding principles, Wilson & Kelling's Broken Windows Theory, the SARA problem-solving model, and the emergence of regional security networks like Amotekun in Nigeria.",
+    "keyScholars": [
+      {
+        "name": "Sir Robert Peel (1829)",
+        "concept": "'The police are the public and the public are the police'",
+        "bookOrQuote": "Metropolitan Police Act Principles"
+      },
+      {
+        "name": "James Q. Wilson & George Kelling (1982)",
+        "concept": "Broken Windows Theory (unrepaired minor disorder fosters serious criminal syndicates)",
+        "bookOrQuote": "Broken Windows: The Police and Neighborhood Safety"
+      }
+    ],
+    "keyDatesAndTreaties": [
+      {
+        "year": "1829",
+        "event": "Founding of the London Metropolitan Police",
+        "significance": "Established democratic Peelian principles of policing by public consent"
+      },
+      {
+        "year": "2020",
+        "event": "Establishment of Operation Amotekun",
+        "significance": "South-West Nigerian governors established the Western Nigeria Security Network (WNSN)"
+      }
+    ],
+    "vitalAcronyms": [
+      {
+        "acronym": "SARA",
+        "full": "Scanning, Analysis, Response, Assessment",
+        "meaning": "Core four-stage community problem-solving framework"
+      },
+      {
+        "acronym": "PCRC",
+        "full": "Police Community Relations Committee",
+        "meaning": "Grassroots collaborative bridge between Nigerian police divisions and residents"
+      },
+      {
+        "acronym": "WNSN",
+        "full": "Western Nigeria Security Network",
+        "meaning": "Official title of Operation Amotekun"
+      }
+    ],
+    "caseStudies": [
+      {
+        "name": "Operation Amotekun (South-West Nigeria)",
+        "summary": "Created in response to rural highway kidnappings, armed banditry, and farmer-herder clashes to complement centralized federal police with local intelligence."
+      }
+    ],
+    "highYieldExamTips": [
+      "Peel's primary principle: Prevention of crime is the core duty of police, superior to military repression.",
+      "SARA problem solving steps: Scan -> Analyze -> Respond -> Assess."
+    ]
+  },
+  {
+    "chapter": 13,
+    "title": "Conflict Early Warning and Early Response Systems",
+    "pages": "186-209",
+    "coreOverview": "Surveys the mechanics of Early Warning and Early Response (EWER). Classifies indicators into Structural, Accelerators, and Triggers. Analyzes the warning-response gap that hinders African conflict prevention, examining the AU's Continental Early Warning System (CEWS) and ECOWAS's ECOWARN network.",
+    "keyScholars": [
+      {
+        "name": "Howard Adelman & Susanne Schmeidl",
+        "concept": "Pioneered methodology for early warning indicators and field monitoring networks",
+        "bookOrQuote": "Early Warning and Conflict Prevention"
+      }
+    ],
+    "keyDatesAndTreaties": [
+      {
+        "year": "1999",
+        "event": "ECOWAS Protocol Relating to the Mechanism for Conflict Prevention",
+        "significance": "Established legal basis for ECOWARN and regional peacekeeping"
+      }
+    ],
+    "vitalAcronyms": [
+      {
+        "acronym": "EWER",
+        "full": "Early Warning and Early Response",
+        "meaning": "Integrated system anticipating and preempting violent conflict"
+      },
+      {
+        "acronym": "ECOWARN",
+        "full": "ECOWAS Early Warning and Response Network",
+        "meaning": "West African regional monitoring hub partnered with WANEP"
+      },
+      {
+        "acronym": "WANEP",
+        "full": "West Africa Network for Peacebuilding",
+        "meaning": "Civil society operational network feeding grassroots data into ECOWARN"
+      },
+      {
+        "acronym": "CEWS",
+        "full": "Continental Early Warning System",
+        "meaning": "Core pillar of the African Union Peace and Security Architecture (APSA)"
+      },
+      {
+        "acronym": "APSA",
+        "full": "African Peace and Security Architecture",
+        "meaning": "Overarching AU continental security framework"
+      }
+    ],
+    "caseStudies": [
+      {
+        "name": "Ushahidi Platform (Kenya 2008)",
+        "summary": "Open-source crowdsourced crisis mapping using mobile SMS to monitor outbreaks of violence during post-election unrest."
+      }
+    ],
+    "highYieldExamTips": [
+      "Difference between Accelerators and Triggers: Accelerators increase escalation velocity; Triggers are the sudden spark event detonating the crisis.",
+      "The Warning-Response Gap is the failure of decision-makers to act on verified early warning intelligence."
+    ]
+  }
+]

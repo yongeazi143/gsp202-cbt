@@ -14,11 +14,14 @@ import { ReviewScreen } from "@/components/ReviewScreen";
 import { CalculatorModal } from "@/components/CalculatorModal";
 import { IntroAnimation } from "@/components/IntroAnimation";
 import { CustomCursor } from "@/components/CustomCursor";
+import { FlashcardsView } from "@/components/FlashcardsView";
+import { SummariesView } from "@/components/SummariesView";
 
-type AppPhase = "intro" | "setup" | "test" | "results" | "review";
+type AppPhase = "intro" | "setup" | "test" | "results" | "review" | "flashcards" | "summaries";
 
 export default function Home() {
   const [phase, setPhase] = useState<AppPhase>("intro");
+  const [studyChapter, setStudyChapter] = useState<number>(1);
   const [allQuestions, setAllQuestions] = useState<Question[]>([]);
   const [sessionQuestions, setSessionQuestions] = useState<Question[]>([]);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
@@ -193,6 +196,46 @@ export default function Home() {
             saveStoredUser(name);
           }}
           onStartExam={handleStartExam}
+          onOpenFlashcards={() => setPhase("flashcards")}
+          onOpenSummaries={() => setPhase("summaries")}
+        />
+      </>
+    );
+  }
+
+  // Render 3D Flashcards View
+  if (phase === "flashcards") {
+    return (
+      <>
+        <CustomCursor />
+        <FlashcardsView
+          initialChapter={studyChapter}
+          onBackToDashboard={() => setPhase("setup")}
+        />
+      </>
+    );
+  }
+
+  // Render Executive Chapter Summaries View
+  if (phase === "summaries") {
+    return (
+      <>
+        <CustomCursor />
+        <SummariesView
+          initialChapter={studyChapter}
+          onBackToDashboard={() => setPhase("setup")}
+          onLaunchChapterDrill={(chNum) => {
+            handleStartExam({
+              mode: "study",
+              selectedChapters: [chNum],
+              questionCount: 20,
+              timeLimitMinutes: 25,
+            });
+          }}
+          onOpenFlashcardsForChapter={(chNum) => {
+            setStudyChapter(chNum);
+            setPhase("flashcards");
+          }}
         />
       </>
     );

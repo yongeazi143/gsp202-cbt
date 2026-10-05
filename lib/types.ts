@@ -15,6 +15,7 @@ export interface Question {
   difficulty?: "easy" | "medium" | "hard";
   type?: string;
   prediction_weight?: "high" | "medium" | "low";
+  is_workbook?: boolean;
 }
 
 export type TestMode = "study" | "exam";
@@ -23,7 +24,7 @@ export interface ExamSessionConfig {
   mode: TestMode;
   selectedChapters: number[];
   questionCount: number;
-  timeLimitMinutes: number; // 0 for unlimited in study mode, 90 for full exam, or custom
+  timeLimitMinutes: number;
 }
 
 export interface UserExamResult {
@@ -46,6 +47,29 @@ export interface ChapterMeta {
   title: string;
   pages: string;
   questionCount?: number;
+}
+
+export interface Flashcard {
+  id: string;
+  chapter: number;
+  chapter_title: string;
+  category: "scholar_definition" | "date_treaty" | "acronym" | "core_concept" | "case_study";
+  front: string;
+  back: string;
+  detail?: string;
+  source_pages?: string;
+}
+
+export interface ChapterSummary {
+  chapter: number;
+  title: string;
+  pages: string;
+  coreOverview: string;
+  keyScholars: Array<{ name: string; concept: string; bookOrQuote?: string }>;
+  keyDatesAndTreaties: Array<{ year: string; event: string; significance: string }>;
+  vitalAcronyms: Array<{ acronym: string; full: string; meaning: string }>;
+  caseStudies: Array<{ name: string; summary: string }>;
+  highYieldExamTips: string[];
 }
 
 export const CHAPTER_LIST: ChapterMeta[] = [

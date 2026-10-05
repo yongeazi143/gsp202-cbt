@@ -10,6 +10,8 @@ interface SetupScreenProps {
   allQuestions: Question[];
   onUpdateUserName: (name: string) => void;
   onStartExam: (config: ExamSessionConfig) => void;
+  onOpenFlashcards: () => void;
+  onOpenSummaries: () => void;
 }
 
 export function SetupScreen({
@@ -17,6 +19,8 @@ export function SetupScreen({
   allQuestions,
   onUpdateUserName,
   onStartExam,
+  onOpenFlashcards,
+  onOpenSummaries,
 }: SetupScreenProps) {
   const [mode, setMode] = useState<TestMode>("exam");
   const [selectedChapters, setSelectedChapters] = useState<number[]>(
@@ -235,10 +239,26 @@ export function SetupScreen({
             </p>
           </div>
 
-          <div className="flex items-center gap-3">
+          <div className="flex flex-wrap items-center gap-3">
+            <button
+              onClick={onOpenSummaries}
+              className="bg-slate-900/90 hover:bg-slate-800 border border-white/10 text-white font-bold py-3 px-5 rounded-xl transition text-xs md:text-sm flex items-center gap-2 cursor-pointer shadow-md"
+            >
+              <BookOpen size={16} className="text-emerald-400" />
+              <span>Chapter Summaries</span>
+            </button>
+
+            <button
+              onClick={onOpenFlashcards}
+              className="bg-slate-900/90 hover:bg-slate-800 border border-white/10 text-white font-bold py-3 px-5 rounded-xl transition text-xs md:text-sm flex items-center gap-2 cursor-pointer shadow-md"
+            >
+              <Sparkles size={16} className="text-blue-400" />
+              <span>3D Flashcards</span>
+            </button>
+
             <button
               onClick={() => setShowInstructions(true)}
-              className="bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-black py-3.5 px-8 rounded-xl shadow-xl shadow-emerald-500/25 transition text-sm flex items-center gap-2 cursor-pointer transform active:scale-95"
+              className="bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-black py-3 px-7 rounded-xl shadow-xl shadow-emerald-500/25 transition text-xs md:text-sm flex items-center gap-2 cursor-pointer transform active:scale-95"
             >
               <span>Launch Test ({effectiveCount} Qs)</span>
               <ChevronRight size={18} />
