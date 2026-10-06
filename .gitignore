@@ -50,3 +50,5 @@ __pycache__/
 *.py[cod]
 architecture.json
 design.json
+test_mobile_screenshots/
+

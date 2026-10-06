@@ -36,48 +36,51 @@ export function SummariesView({
   return (
     <div className="min-h-screen w-full bg-[#080c14] text-slate-100 flex flex-col justify-between p-3.5 sm:p-6 md:p-8 subtle-grid">
       {/* Top Header */}
-      <header className="max-w-7xl mx-auto w-full flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-white/10 mb-6">
-        <div className="flex items-center gap-2 sm:gap-3">
-          {/* Mobile Menu Button for Left Sidebar Drawer */}
-          <button
-            onClick={() => setIsDrawerOpen(true)}
-            className="lg:hidden flex items-center gap-1.5 bg-emerald-500/15 hover:bg-emerald-500/25 border border-emerald-500/30 text-emerald-300 px-2.5 py-1.5 rounded-xl text-xs font-bold transition cursor-pointer active:scale-95"
-            title="Open Chapter Selection Sidebar"
-          >
-            <Menu size={16} />
-            <span className="font-mono">Chapters</span>
-          </button>
+      <header className="max-w-7xl mx-auto w-full flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3 pb-4 border-b border-white/10 mb-6">
+        <div className="flex items-center justify-between gap-2 sm:gap-3">
+          <div className="flex items-center gap-2">
+            {/* Mobile Menu Button for Left Sidebar Drawer */}
+            <button
+              onClick={() => setIsDrawerOpen(true)}
+              className="lg:hidden flex items-center gap-1.5 bg-emerald-500/15 hover:bg-emerald-500/25 border border-emerald-500/30 text-emerald-300 px-2.5 py-1.5 rounded-xl text-xs font-bold transition cursor-pointer active:scale-95"
+              title="Open Chapter Selection Sidebar"
+            >
+              <Menu size={16} />
+              <span className="font-mono">Chapters</span>
+            </button>
 
-          <button
-            onClick={onBackToDashboard}
-            className="flex items-center gap-1.5 bg-slate-900 hover:bg-slate-800 border border-white/10 px-3 py-1.5 rounded-xl text-xs md:text-sm font-semibold text-slate-300 hover:text-white transition cursor-pointer"
-          >
-            <ChevronLeft size={16} />
-            <span>Dashboard</span>
-          </button>
-          <div>
-            <h1 className="text-base sm:text-xl md:text-2xl font-black text-white flex items-center gap-2">
-              <BookOpen size={18} className="text-emerald-400 shrink-0" />
-              <span>Executive Cram Summaries</span>
+            <button
+              onClick={onBackToDashboard}
+              className="flex items-center gap-1.5 bg-slate-900 hover:bg-slate-800 border border-white/10 px-3 py-1.5 rounded-xl text-xs md:text-sm font-semibold text-slate-300 hover:text-white transition cursor-pointer"
+            >
+              <ChevronLeft size={16} />
+              <span>Dashboard</span>
+            </button>
+          </div>
+
+          <div className="text-right md:text-left">
+            <h1 className="text-sm sm:text-lg md:text-xl font-black text-white flex items-center gap-1.5 justify-end md:justify-start">
+              <BookOpen size={16} className="text-emerald-400 shrink-0" />
+              <span>Chapter Summaries</span>
             </h1>
-            <span className="text-[10px] sm:text-xs text-slate-400 font-mono">
-              High-Yield Revision Notes across all 13 Chapters
+            <span className="text-[10px] text-slate-400 font-mono block">
+              13 High-Yield Chapters
             </span>
           </div>
         </div>
 
         {activeSummary && (
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 w-full md:w-auto">
             <button
               onClick={() => onOpenFlashcardsForChapter(activeChapterNum)}
-              className="bg-blue-500/15 hover:bg-blue-500/25 border border-blue-500/30 text-blue-300 text-xs font-bold py-2 px-3.5 rounded-xl transition flex items-center gap-1.5 cursor-pointer"
+              className="flex-1 md:flex-none justify-center bg-blue-500/15 hover:bg-blue-500/25 border border-blue-500/30 text-blue-300 text-xs font-bold py-2 px-3 sm:px-3.5 rounded-xl transition flex items-center gap-1.5 cursor-pointer"
             >
               <Layers size={14} />
-              <span>Ch {activeChapterNum} Flashcards</span>
+              <span>Flashcards</span>
             </button>
             <button
               onClick={() => onLaunchChapterDrill(activeChapterNum)}
-              className="bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-xs font-black py-2 px-4 rounded-xl shadow-lg shadow-emerald-500/20 transition flex items-center gap-1.5 cursor-pointer active:scale-95"
+              className="flex-1 md:flex-none justify-center bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-xs font-black py-2 px-3 sm:px-4 rounded-xl shadow-lg shadow-emerald-500/20 transition flex items-center gap-1.5 cursor-pointer active:scale-95"
             >
               <Sparkles size={14} />
               <span>Practice Ch {activeChapterNum}</span>

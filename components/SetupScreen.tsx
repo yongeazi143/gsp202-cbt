@@ -258,7 +258,7 @@ export function SetupScreen({
                 <span>GSP 202 CBT</span>
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
               </h1>
-              <span className="text-[10px] text-slate-400 font-mono">493 Qs • 13 Chapters</span>
+              <span className="text-[10px] text-slate-400 font-mono">252 Verified Qs • 13 Chapters</span>
             </div>
           </div>
 
@@ -282,7 +282,7 @@ export function SetupScreen({
               GSP 202: Peace & Conflict
             </h1>
             <p className="text-xs md:text-sm text-slate-400 pt-1 font-medium">
-              Textbook & CA Workbook Questions Integrated (493 Questions)
+              High-Yield Exam & Textbook Questions (252 Verified Questions)
             </p>
           </div>
 

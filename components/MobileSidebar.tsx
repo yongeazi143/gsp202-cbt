@@ -247,8 +247,8 @@ export function MobileSidebar({
         {/* Footer info & CTA */}
         <div className="p-4 border-t border-white/10 bg-slate-950/80 space-y-3">
           <div className="flex items-center justify-between text-[11px] font-mono text-slate-400">
-            <span>Question Bank: <strong className="text-white font-bold">493 Qs</strong></span>
-            <span className="text-emerald-400 font-bold">v2.0 Clean</span>
+            <span>Question Bank: <strong className="text-white font-bold">252 Qs</strong></span>
+            <span className="text-emerald-400 font-bold">Verified</span>
           </div>
 
           <button

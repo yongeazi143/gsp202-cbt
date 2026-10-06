@@ -143,42 +143,42 @@ export function FlashcardsView({ onBackToDashboard, initialChapter }: Flashcards
   return (
     <div className="min-h-screen w-full bg-[#080c14] text-slate-100 flex flex-col justify-between p-4 md:p-8 subtle-grid">
       {/* Top Header */}
-      <header className="max-w-5xl mx-auto w-full flex flex-wrap items-center justify-between gap-4 pb-4 border-b border-white/10">
-        <div className="flex items-center gap-3">
+      <header className="max-w-5xl mx-auto w-full flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3 pb-3.5 border-b border-white/10">
+        <div className="flex items-center justify-between gap-2 sm:gap-3">
           <button
             onClick={onBackToDashboard}
-            className="flex items-center gap-1.5 bg-slate-900 hover:bg-slate-800 border border-white/10 px-3.5 py-1.5 rounded-xl text-xs md:text-sm font-semibold text-slate-300 hover:text-white transition cursor-pointer"
+            className="flex items-center gap-1.5 bg-slate-900 hover:bg-slate-800 border border-white/10 px-3 py-1.5 rounded-xl text-xs md:text-sm font-semibold text-slate-300 hover:text-white transition cursor-pointer"
           >
             <ChevronLeft size={16} />
             <span>Dashboard</span>
           </button>
-          <div>
-            <h1 className="text-xl md:text-2xl font-black text-white flex items-center gap-2">
-              <Sparkles size={20} className="text-emerald-400" />
-              <span>GSP 202 3D Flashcards</span>
+          <div className="text-right md:text-left">
+            <h1 className="text-sm sm:text-lg md:text-xl font-black text-white flex items-center gap-1.5 justify-end md:justify-start">
+              <Sparkles size={16} className="text-emerald-400 shrink-0" />
+              <span>3D Flashcards</span>
             </h1>
-            <span className="text-xs text-slate-400 font-mono">
-              Spaced Repetition Memory Accelerator • 328 Total Flashcards (265 CA Workbook Qs)
+            <span className="text-[10px] text-slate-400 font-mono block">
+              328 Spaced Repetition Cards
             </span>
           </div>
         </div>
 
         {/* Mastered Counter & Actions */}
-        <div className="flex items-center gap-3">
-          <div className="bg-slate-900/90 border border-white/10 px-3 py-1.5 rounded-xl flex items-center gap-3 text-xs font-mono">
+        <div className="flex items-center justify-between md:justify-end gap-2 sm:gap-3">
+          <div className="flex-1 md:flex-none justify-center bg-slate-900/90 border border-white/10 px-3 py-1.5 rounded-xl flex items-center justify-center gap-3 text-xs font-mono">
             <span className="text-emerald-400 font-bold flex items-center gap-1">
-              <CheckCircle2 size={14} />
+              <CheckCircle2 size={13} />
               <span>{masteredIds.length} Mastered</span>
             </span>
             <span className="text-slate-600">|</span>
             <span className="text-amber-400 font-bold">
-              {needsReviewIds.length} Need Review
+              {needsReviewIds.length} Review
             </span>
           </div>
 
           <button
             onClick={handleShuffle}
-            className="p-2 rounded-xl bg-slate-900 hover:bg-slate-800 border border-white/10 text-slate-300 hover:text-white transition cursor-pointer"
+            className="p-2 rounded-xl bg-slate-900 hover:bg-slate-800 border border-white/10 text-slate-300 hover:text-white transition cursor-pointer shrink-0"
             title="Shuffle Flashcards"
           >
             <Shuffle size={16} />
