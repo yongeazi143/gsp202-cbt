@@ -1,6 +1,6 @@
 {
   "totalVisitors": 17,
-  "totalPageViews": 149,
+  "totalPageViews": 151,
   "totalExamsStarted": 10,
   "totalExamsCompleted": 3,
   "totalQuestionsAnswered": 185,
@@ -26,14 +26,6 @@
     "vis_wiveecdqmuwozaj9"
   ],
   "recentEvents": [
-    {
-      "type": "page_view",
-      "timestamp": "2026-10-06T13:54:17.522Z"
-    },
-    {
-      "type": "page_view",
-      "timestamp": "2026-10-06T13:54:18.305Z"
-    },
     {
       "type": "page_view",
       "timestamp": "2026-10-06T14:00:36.454Z"
@@ -225,6 +217,14 @@
     {
       "type": "page_view",
       "timestamp": "2026-10-06T14:17:25.289Z"
+    },
+    {
+      "type": "page_view",
+      "timestamp": "2026-10-06T20:17:03.760Z"
+    },
+    {
+      "type": "page_view",
+      "timestamp": "2026-10-06T20:17:03.959Z"
     }
   ]
 }
