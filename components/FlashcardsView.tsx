@@ -338,7 +338,7 @@ export function FlashcardsView({ onBackToDashboard, initialChapter }: Flashcards
                       : currentCard.chapter_title}
                   </span>
                   <span className="flex items-center gap-1.5 text-emerald-400">
-                    <RotateCw size={13} className="animate-spin-slow" />
+                    <RotateCw size={13} />
                     <span>Click or Press [Space] to Flip</span>
                   </span>
                 </div>

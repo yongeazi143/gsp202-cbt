@@ -42,11 +42,11 @@ export function SummariesView({
             {/* Mobile Menu Button for Left Sidebar Drawer */}
             <button
               onClick={() => setIsDrawerOpen(true)}
-              className="lg:hidden flex items-center gap-1.5 bg-emerald-500/15 hover:bg-emerald-500/25 border border-emerald-500/30 text-emerald-300 px-2.5 py-1.5 rounded-xl text-xs font-bold transition cursor-pointer active:scale-95"
+              className="lg:hidden p-2 rounded-xl bg-emerald-500/15 hover:bg-emerald-500/25 border border-emerald-500/30 text-emerald-300 transition cursor-pointer active:scale-95"
               title="Open Chapter Selection Sidebar"
+              aria-label="Open Chapter Selection Sidebar"
             >
-              <Menu size={16} />
-              <span className="font-mono">Chapters</span>
+              <Menu size={18} />
             </button>
 
             <button
@@ -173,7 +173,7 @@ export function SummariesView({
                 <div className="glass-panel p-6 rounded-2xl border-white/10 space-y-4">
                   <h3 className="text-sm font-bold uppercase tracking-wider text-emerald-400 flex items-center gap-2 font-mono">
                     <User size={16} />
-                    <span>Key Scholars & Definitions (High Exam Probability)</span>
+                    <span>Key Scholars & Definitions</span>
                   </h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                     {activeSummary.keyScholars.map((sc, i) => (

@@ -11,7 +11,6 @@ import { BottomControls } from "@/components/BottomControls";
 import { SetupScreen } from "@/components/SetupScreen";
 import { ResultsScreen } from "@/components/ResultsScreen";
 import { ReviewScreen } from "@/components/ReviewScreen";
-import { CalculatorModal } from "@/components/CalculatorModal";
 import { IntroAnimation } from "@/components/IntroAnimation";
 import { CustomCursor } from "@/components/CustomCursor";
 import { FlashcardsView } from "@/components/FlashcardsView";
@@ -33,7 +32,6 @@ export default function Home() {
   const [userAnswers, setUserAnswers] = useState<Record<string, "A" | "B" | "C" | "D">>({});
   const [flaggedIds, setFlaggedIds] = useState<string[]>([]);
   const [showExplanation, setShowExplanation] = useState<boolean>(true);
-  const [isCalcOpen, setIsCalcOpen] = useState<boolean>(false);
   const [isExitConfirmOpen, setIsExitConfirmOpen] = useState<boolean>(false);
   const [isMobileNavOpen, setIsMobileNavOpen] = useState<boolean>(false);
   const [config, setConfig] = useState<ExamSessionConfig>({
@@ -351,7 +349,6 @@ export default function Home() {
         isFlagged={currentQ ? flaggedIds.includes(currentQ.id) : false}
         onToggleFlag={() => currentQ && toggleFlag(currentQ.id)}
         onExit={handleExit}
-        onOpenCalc={() => setIsCalcOpen(true)}
         onOpenNavigator={() => setIsMobileNavOpen(true)}
       />
 
@@ -437,9 +434,6 @@ export default function Home() {
         onConfirm={confirmExitSession}
         onCancel={() => setIsExitConfirmOpen(false)}
       />
-
-      {/* Calculator modal */}
-      <CalculatorModal isOpen={isCalcOpen} onClose={() => setIsCalcOpen(false)} />
     </div>
   );
 }

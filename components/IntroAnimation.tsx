@@ -15,7 +15,7 @@ export function IntroAnimation({ onComplete }: IntroAnimationProps) {
     const timer = setTimeout(() => {
       setIsVisible(false);
       setTimeout(onComplete, 500); // smooth exit
-    }, 1800);
+    }, 2500);
     return () => clearTimeout(timer);
   }, [onComplete]);
 
@@ -45,7 +45,7 @@ export function IntroAnimation({ onComplete }: IntroAnimationProps) {
               className="w-20 h-20 rounded-2xl bg-gradient-to-tr from-emerald-600 via-emerald-500 to-teal-400 p-[2px] shadow-2xl shadow-emerald-500/30 mb-6 flex items-center justify-center"
             >
               <div className="w-full h-full bg-[#0b0f17] rounded-[14px] flex items-center justify-center text-emerald-400">
-                <ShieldCheck size={40} className="animate-pulse" />
+                <ShieldCheck size={40} />
               </div>
             </motion.div>
 
@@ -57,13 +57,13 @@ export function IntroAnimation({ onComplete }: IntroAnimationProps) {
               className="space-y-1.5"
             >
               <span className="text-xs font-mono uppercase tracking-[0.3em] text-emerald-400 font-bold">
-                UNIVERSITY CBT PORTAL
+                UNIVERSITY OF NIGERIA, NSUKKA
               </span>
               <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-white via-slate-100 to-slate-400 bg-clip-text text-transparent">
-                GSP 202 EXAM ARENA
+                GSP 202 CBT PORTAL
               </h1>
               <p className="text-xs md:text-sm text-slate-400 max-w-sm mx-auto font-medium pt-1">
-                Peace & Conflict Resolution • 196 Textbook-Sourced MCQs
+                Peace & Conflict Resolution
               </p>
             </motion.div>
 
@@ -81,7 +81,7 @@ export function IntroAnimation({ onComplete }: IntroAnimationProps) {
               transition={{ delay: 0.7 }}
               className="text-[11px] font-mono text-slate-500 mt-3 uppercase tracking-wider"
             >
-              Loading High-Speed Engine...
+              Loading Question...
             </motion.span>
           </motion.div>
         </motion.div>

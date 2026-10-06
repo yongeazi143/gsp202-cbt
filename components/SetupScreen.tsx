@@ -247,16 +247,15 @@ export function SetupScreen({
           <div className="flex items-center gap-2.5">
             <button
               onClick={() => setIsMobileNavOpen(true)}
-              className="p-2 sm:p-2.5 rounded-xl bg-slate-900 border border-white/10 text-emerald-400 hover:bg-slate-800 transition cursor-pointer flex items-center gap-1.5 shadow-sm active:scale-95"
+              className="p-2 sm:p-2.5 rounded-xl bg-slate-900 border border-white/10 text-emerald-400 hover:bg-slate-800 transition cursor-pointer flex items-center justify-center shadow-sm active:scale-95"
               title="Open Navigation Menu"
+              aria-label="Navigation Menu"
             >
               <Menu size={18} />
-              <span className="text-xs font-mono font-bold">Menu</span>
             </button>
             <div>
-              <h1 className="text-sm sm:text-base font-extrabold text-white tracking-tight flex items-center gap-1.5">
-                <span>GSP 202 CBT</span>
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+              <h1 className="text-sm sm:text-base font-extrabold text-white tracking-tight">
+                GSP 202 CBT
               </h1>
               <span className="text-[10px] text-slate-400 font-mono">252 Verified Qs • 13 Chapters</span>
             </div>

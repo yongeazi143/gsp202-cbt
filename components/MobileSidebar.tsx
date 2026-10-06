@@ -61,9 +61,8 @@ export function MobileSidebar({
               <GraduationCap size={20} className="text-slate-950" />
             </div>
             <div>
-              <div className="text-sm font-extrabold text-white tracking-tight flex items-center gap-1.5">
-                <span>GSP 202 CBT</span>
-                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+              <div className="text-sm font-extrabold text-white tracking-tight">
+                GSP 202 CBT
               </div>
               <div className="text-[11px] text-slate-400 font-mono">
                 Candidate: <strong className="text-emerald-300 font-bold uppercase">{userName || "STUDENT"}</strong>

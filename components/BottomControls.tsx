@@ -37,16 +37,15 @@ export function BottomControls({
         <button
           onClick={onPrevious}
           disabled={isFirst}
-          className={`flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition cursor-pointer shrink-0 ${
+          className={`flex items-center gap-1.5 px-3.5 sm:px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition cursor-pointer shrink-0 ${
             isFirst
               ? "bg-slate-900 border border-white/5 text-slate-600 cursor-not-allowed"
               : "bg-slate-900 hover:bg-slate-800 border border-white/10 text-white hover:border-white/20 active:scale-95"
           }`}
+          title="Previous question"
         >
           <ChevronLeft size={16} />
-          <span className="hidden xs:inline">Prev</span>
-          <span className="hidden sm:inline">ious</span>
-          <kbd className="hidden md:inline px-1 bg-black/40 rounded text-[10px] text-slate-400 font-mono">P</kbd>
+          <span>Prev</span>
         </button>
 
         {/* Center Button (Submit or Toggle Explanation) */}
@@ -55,26 +54,26 @@ export function BottomControls({
             <button
               onClick={onToggleExplanation}
               disabled={!hasAnsweredCurrent}
-              className={`flex items-center gap-1.5 sm:gap-2 px-3 sm:px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition cursor-pointer border ${
+              className={`flex items-center gap-1.5 px-3.5 sm:px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition cursor-pointer border ${
                 !hasAnsweredCurrent
                   ? "bg-slate-900 border-white/5 text-slate-600 cursor-not-allowed"
                   : showExplanation
                   ? "bg-amber-500/10 border-amber-500/30 text-amber-300 hover:bg-amber-500/20"
                   : "bg-emerald-500/10 border-emerald-500/30 text-emerald-300 hover:bg-emerald-500/20"
               }`}
+              title={showExplanation ? "Hide solution rationale" : "Show solution rationale"}
             >
               {showExplanation ? <EyeOff size={15} /> : <Eye size={15} />}
-              <span className="hidden sm:inline">{showExplanation ? "Hide Explanation" : "Reveal Explanation"}</span>
-              <span className="sm:hidden text-xs">{showExplanation ? "Hide Info" : "Explain"}</span>
+              <span>{showExplanation ? "Hide Info" : "Explain"}</span>
             </button>
           ) : (
             <button
               onClick={onSubmit}
-              className="flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-6 py-2.5 rounded-xl font-black text-xs sm:text-sm text-slate-950 bg-gradient-to-r from-red-500 via-rose-500 to-red-600 hover:from-red-400 hover:to-rose-400 shadow-lg shadow-red-500/20 transition cursor-pointer active:scale-95 uppercase tracking-wider"
+              className="flex items-center gap-1.5 px-3.5 sm:px-6 py-2.5 rounded-xl font-black text-xs sm:text-sm text-slate-950 bg-red-500 hover:bg-red-400 shadow-md shadow-red-500/20 transition cursor-pointer active:scale-95 uppercase tracking-wider"
+              title="Submit examination"
             >
               <CheckSquare size={15} />
-              <span className="hidden sm:inline">Submit Examination</span>
-              <span className="sm:hidden">Submit</span>
+              <span>Submit</span>
             </button>
           )}
         </div>
@@ -83,7 +82,8 @@ export function BottomControls({
         {mode === "study" && isLast ? (
           <button
             onClick={onSubmit}
-            className="flex items-center gap-1.5 sm:gap-2 px-4 sm:px-6 py-2.5 rounded-xl font-black text-xs sm:text-sm text-slate-950 bg-gradient-to-r from-emerald-400 to-teal-400 hover:from-emerald-300 hover:to-teal-300 shadow-lg shadow-emerald-500/20 transition cursor-pointer active:scale-95 uppercase tracking-wide shrink-0"
+            className="flex items-center gap-1.5 px-4 sm:px-6 py-2.5 rounded-xl font-black text-xs sm:text-sm text-slate-950 bg-emerald-500 hover:bg-emerald-400 shadow-md shadow-emerald-500/20 transition cursor-pointer active:scale-95 uppercase tracking-wide shrink-0"
+            title="Finish study session"
           >
             <span>Finish</span>
             <CheckSquare size={15} />
@@ -92,14 +92,14 @@ export function BottomControls({
           <button
             onClick={onNext}
             disabled={isLast}
-            className={`flex items-center gap-1.5 sm:gap-2 px-4 sm:px-6 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition cursor-pointer shrink-0 ${
+            className={`flex items-center gap-1.5 px-4 sm:px-6 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition cursor-pointer shrink-0 ${
               isLast
                 ? "bg-slate-900 border border-white/5 text-slate-600 cursor-not-allowed"
-                : "bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black shadow-lg shadow-emerald-500/20 active:scale-95"
+                : "bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black shadow-md shadow-emerald-500/20 active:scale-95"
             }`}
+            title="Next question"
           >
             <span className="font-black">Next</span>
-            <kbd className="hidden md:inline px-1 bg-black/30 rounded text-[10px] text-slate-900 font-mono">N</kbd>
             <ChevronRight size={16} />
           </button>
         )}

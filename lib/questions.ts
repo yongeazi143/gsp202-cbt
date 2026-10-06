@@ -14,6 +14,39 @@ export async function fetchQuestions(): Promise<Question[]> {
   }
 }
 
+/**
+ * Randomizes option ordering (A, B, C, D) for a question while strictly maintaining
+ * 100% synchronization with the correct answer key. Prevents any positional predictability.
+ */
+function randomizeQuestionOptions(q: Question): Question {
+  const letters = ["A", "B", "C", "D"] as const;
+  const correctText = q.options[q.answer as keyof typeof q.options];
+  if (!correctText) return q;
+
+  const optionTexts = [q.options.A, q.options.B, q.options.C, q.options.D];
+
+  // Fisher-Yates shuffle
+  for (let i = optionTexts.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [optionTexts[i], optionTexts[j]] = [optionTexts[j], optionTexts[i]];
+  }
+
+  const newOptions = {
+    A: optionTexts[0],
+    B: optionTexts[1],
+    C: optionTexts[2],
+    D: optionTexts[3],
+  };
+
+  const newAnswer = letters.find((l) => newOptions[l] === correctText) || "A";
+
+  return {
+    ...q,
+    options: newOptions,
+    answer: newAnswer,
+  };
+}
+
 export function prepareSessionQuestions(
   allQuestions: Question[],
   config: ExamSessionConfig
@@ -27,7 +60,9 @@ export function prepareSessionQuestions(
   const pool = allQuestions.filter((q) => validChapters.includes(q.chapter));
 
   if (pool.length === 0) {
-    return allQuestions.slice(0, config.questionCount || 20);
+    return allQuestions
+      .slice(0, config.questionCount || 20)
+      .map(randomizeQuestionOptions);
   }
 
   const desiredCount = config.questionCount || pool.length;
@@ -35,7 +70,9 @@ export function prepareSessionQuestions(
   if (config.mode === "study") {
     // In study mode, shuffle the filtered pool and slice
     const shuffled = [...pool].sort(() => Math.random() - 0.5);
-    return shuffled.slice(0, Math.min(desiredCount, pool.length));
+    return shuffled
+      .slice(0, Math.min(desiredCount, pool.length))
+      .map(randomizeQuestionOptions);
   } else {
     // In exam mode, distribute questions fairly across the selected chapters
     const chaptersMap: Record<number, Question[]> = {};
@@ -59,6 +96,8 @@ export function prepareSessionQuestions(
 
     // Shuffle combined and clamp to desiredCount
     const finalSet = [...selected].sort(() => Math.random() - 0.5);
-    return finalSet.slice(0, Math.min(desiredCount, pool.length));
+    return finalSet
+      .slice(0, Math.min(desiredCount, pool.length))
+      .map(randomizeQuestionOptions);
   }
 }

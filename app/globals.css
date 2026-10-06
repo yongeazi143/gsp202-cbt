@@ -31,11 +31,11 @@ body {
   fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
   article, aside, canvas, details, embed, figure, figcaption, footer, header,
   hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-    cursor: url('/cursors/default.svg') 3 2, default;
+    cursor: url('/cursors/default.svg') 2 1, default;
   }
 
   a, button, [role="button"], .cursor-pointer, input[type="button"], input[type="submit"], input[type="checkbox"], input[type="radio"], select, [tabindex="0"] {
-    cursor: url('/cursors/pointer.svg') 4 2, pointer !important;
+    cursor: url('/cursors/pointer.svg') 2 1, pointer !important;
   }
 
   input[type="text"], input[type="search"], input[type="password"], textarea {

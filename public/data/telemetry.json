@@ -1,169 +1,230 @@
 {
-  "totalVisitors": 2,
-  "totalPageViews": 34,
-  "totalExamsStarted": 2,
-  "totalExamsCompleted": 2,
-  "totalQuestionsAnswered": 115,
-  "totalFlashcardsReviewed": 4,
-  "totalSummariesRead": 6,
+  "totalVisitors": 17,
+  "totalPageViews": 149,
+  "totalExamsStarted": 10,
+  "totalExamsCompleted": 3,
+  "totalQuestionsAnswered": 185,
+  "totalFlashcardsReviewed": 6,
+  "totalSummariesRead": 16,
   "visitorIds": [
     "vis_pdw2lgc3muvofvs8",
-    "vis_jf3stt0amuvs8tza"
+    "vis_jf3stt0amuvs8tza",
+    "vis_ozneq4cpmuvuq3dg",
+    "vis_2kayr2humuvus3tw",
+    "vis_x5f4iuczmuvutjha",
+    "vis_gitlik0bmuw8o7xe",
+    "vis_2u5q27s0muwfg5zo",
+    "vis_3fu0zktwmuwiy7oa",
+    "vis_vc3mrexwmuwj7p69",
+    "vis_seq9y204muwj8szp",
+    "vis_4d4pti0rmuwjaoos",
+    "vis_rc8e1plsmuwjd52q",
+    "vis_gozhg581muwjewb5",
+    "vis_ds76t5vimuwjjtdr",
+    "vis_khdyrrekmuwjljds",
+    "vis_kteyft24muwjmx9u",
+    "vis_wiveecdqmuwozaj9"
   ],
   "recentEvents": [
     {
       "type": "page_view",
-      "timestamp": "2026-10-05T20:03:03.491Z"
-    },
-    {
-      "type": "flashcard_reviewed",
-      "timestamp": "2026-10-05T20:10:21.729Z"
+      "timestamp": "2026-10-06T13:54:17.522Z"
     },
     {
       "type": "page_view",
-      "timestamp": "2026-10-05T20:51:11.033Z"
-    },
-    {
-      "type": "summary_read",
-      "timestamp": "2026-10-05T20:53:59.748Z"
-    },
-    {
-      "type": "summary_read",
-      "timestamp": "2026-10-05T20:54:10.780Z"
-    },
-    {
-      "type": "summary_read",
-      "timestamp": "2026-10-05T20:55:55.185Z"
+      "timestamp": "2026-10-06T13:54:18.305Z"
     },
     {
       "type": "page_view",
-      "timestamp": "2026-10-05T20:59:50.732Z"
-    },
-    {
-      "type": "flashcard_reviewed",
-      "timestamp": "2026-10-05T21:10:53.348Z"
-    },
-    {
-      "type": "summary_read",
-      "timestamp": "2026-10-05T21:14:55.619Z"
+      "timestamp": "2026-10-06T14:00:36.454Z"
     },
     {
       "type": "page_view",
-      "timestamp": "2026-10-05T21:15:01.648Z"
-    },
-    {
-      "type": "summary_read",
-      "timestamp": "2026-10-05T21:15:11.362Z"
-    },
-    {
-      "type": "flashcard_reviewed",
-      "timestamp": "2026-10-05T21:24:30.809Z"
+      "timestamp": "2026-10-06T14:00:36.528Z"
     },
     {
       "type": "page_view",
-      "timestamp": "2026-10-05T21:24:34.163Z"
-    },
-    {
-      "type": "flashcard_reviewed",
-      "timestamp": "2026-10-05T21:24:39.320Z"
-    },
-    {
-      "type": "summary_read",
-      "timestamp": "2026-10-05T21:27:03.875Z"
+      "timestamp": "2026-10-06T14:02:10.015Z"
     },
     {
       "type": "page_view",
-      "timestamp": "2026-10-05T21:49:35.357Z"
+      "timestamp": "2026-10-06T14:02:10.154Z"
     },
     {
       "type": "page_view",
-      "timestamp": "2026-10-05T21:49:35.458Z"
+      "timestamp": "2026-10-06T14:02:14.937Z"
     },
     {
       "type": "page_view",
-      "timestamp": "2026-10-05T21:55:46.302Z"
+      "timestamp": "2026-10-06T14:02:15.042Z"
     },
     {
       "type": "page_view",
-      "timestamp": "2026-10-05T21:55:46.496Z"
+      "timestamp": "2026-10-06T14:02:27.795Z"
     },
     {
       "type": "page_view",
-      "timestamp": "2026-10-05T21:56:24.247Z"
+      "timestamp": "2026-10-06T14:02:27.920Z"
     },
     {
       "type": "page_view",
-      "timestamp": "2026-10-05T21:56:24.364Z"
+      "timestamp": "2026-10-06T14:02:31.899Z"
     },
     {
       "type": "page_view",
-      "timestamp": "2026-10-05T21:56:51.748Z"
+      "timestamp": "2026-10-06T14:02:32.022Z"
     },
     {
       "type": "page_view",
-      "timestamp": "2026-10-05T21:56:51.914Z"
+      "timestamp": "2026-10-06T14:02:35.876Z"
     },
     {
       "type": "page_view",
-      "timestamp": "2026-10-05T21:57:01.888Z"
+      "timestamp": "2026-10-06T14:02:36.001Z"
     },
     {
       "type": "page_view",
-      "timestamp": "2026-10-05T21:57:02.000Z"
-    },
-    {
-      "type": "exam_started",
-      "timestamp": "2026-10-05T21:59:40.222Z",
-      "details": {
-        "mode": "study",
-        "questionCount": 45,
-        "chaptersCount": 1
-      }
-    },
-    {
-      "type": "exam_completed",
-      "timestamp": "2026-10-05T22:02:31.914Z",
-      "details": {
-        "mode": "study",
-        "scorePercentage": 4,
-        "questionsCount": 45,
-        "timeSpentSeconds": 155
-      }
+      "timestamp": "2026-10-06T14:03:02.032Z"
     },
     {
       "type": "page_view",
-      "timestamp": "2026-10-05T22:04:38.510Z"
+      "timestamp": "2026-10-06T14:03:02.194Z"
     },
     {
       "type": "page_view",
-      "timestamp": "2026-10-05T22:04:38.584Z"
-    },
-    {
-      "type": "exam_started",
-      "timestamp": "2026-10-05T22:05:12.910Z",
-      "details": {
-        "mode": "exam",
-        "questionCount": 70,
-        "chaptersCount": 13
-      }
-    },
-    {
-      "type": "exam_completed",
-      "timestamp": "2026-10-05T22:05:36.785Z",
-      "details": {
-        "mode": "exam",
-        "scorePercentage": 1,
-        "questionsCount": 70,
-        "timeSpentSeconds": 21
-      }
+      "timestamp": "2026-10-06T14:05:06.211Z"
     },
     {
       "type": "page_view",
-      "timestamp": "2026-10-05T22:30:43.038Z"
+      "timestamp": "2026-10-06T14:05:06.346Z"
     },
     {
       "type": "page_view",
-      "timestamp": "2026-10-05T22:30:43.596Z"
+      "timestamp": "2026-10-06T14:05:14.050Z"
+    },
+    {
+      "type": "page_view",
+      "timestamp": "2026-10-06T14:05:14.153Z"
+    },
+    {
+      "type": "page_view",
+      "timestamp": "2026-10-06T14:05:21.638Z"
+    },
+    {
+      "type": "page_view",
+      "timestamp": "2026-10-06T14:05:21.707Z"
+    },
+    {
+      "type": "page_view",
+      "timestamp": "2026-10-06T14:05:52.765Z"
+    },
+    {
+      "type": "page_view",
+      "timestamp": "2026-10-06T14:05:52.921Z"
+    },
+    {
+      "type": "page_view",
+      "timestamp": "2026-10-06T14:07:14.397Z"
+    },
+    {
+      "type": "page_view",
+      "timestamp": "2026-10-06T14:07:14.500Z"
+    },
+    {
+      "type": "page_view",
+      "timestamp": "2026-10-06T14:08:02.044Z"
+    },
+    {
+      "type": "page_view",
+      "timestamp": "2026-10-06T14:08:02.407Z"
+    },
+    {
+      "type": "page_view",
+      "timestamp": "2026-10-06T14:08:08.080Z"
+    },
+    {
+      "type": "page_view",
+      "timestamp": "2026-10-06T14:08:08.462Z"
+    },
+    {
+      "type": "page_view",
+      "timestamp": "2026-10-06T14:08:14.875Z"
+    },
+    {
+      "type": "page_view",
+      "timestamp": "2026-10-06T14:08:14.936Z"
+    },
+    {
+      "type": "page_view",
+      "timestamp": "2026-10-06T14:08:19.881Z"
+    },
+    {
+      "type": "page_view",
+      "timestamp": "2026-10-06T14:08:19.978Z"
+    },
+    {
+      "type": "page_view",
+      "timestamp": "2026-10-06T14:09:22.799Z"
+    },
+    {
+      "type": "page_view",
+      "timestamp": "2026-10-06T14:09:22.882Z"
+    },
+    {
+      "type": "page_view",
+      "timestamp": "2026-10-06T14:09:47.694Z"
+    },
+    {
+      "type": "page_view",
+      "timestamp": "2026-10-06T14:09:47.833Z"
+    },
+    {
+      "type": "page_view",
+      "timestamp": "2026-10-06T14:10:21.816Z"
+    },
+    {
+      "type": "page_view",
+      "timestamp": "2026-10-06T14:10:21.883Z"
+    },
+    {
+      "type": "page_view",
+      "timestamp": "2026-10-06T14:17:15.920Z"
+    },
+    {
+      "type": "page_view",
+      "timestamp": "2026-10-06T14:17:16.011Z"
+    },
+    {
+      "type": "page_view",
+      "timestamp": "2026-10-06T14:17:20.824Z"
+    },
+    {
+      "type": "page_view",
+      "timestamp": "2026-10-06T14:17:20.976Z"
+    },
+    {
+      "type": "page_view",
+      "timestamp": "2026-10-06T14:17:22.796Z"
+    },
+    {
+      "type": "page_view",
+      "timestamp": "2026-10-06T14:17:23.027Z"
+    },
+    {
+      "type": "page_view",
+      "timestamp": "2026-10-06T14:17:24.160Z"
+    },
+    {
+      "type": "page_view",
+      "timestamp": "2026-10-06T14:17:24.243Z"
+    },
+    {
+      "type": "page_view",
+      "timestamp": "2026-10-06T14:17:25.162Z"
+    },
+    {
+      "type": "page_view",
+      "timestamp": "2026-10-06T14:17:25.289Z"
     }
   ]
 }

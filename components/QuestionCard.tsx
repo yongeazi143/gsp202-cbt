@@ -29,7 +29,7 @@ export function QuestionCard({
   const hasAnswered = Boolean(selectedOption);
 
   return (
-    <div className="flex-1 flex flex-col overflow-y-auto p-3.5 sm:p-6 md:p-8 pb-28 md:pb-8 w-full max-w-5xl mx-auto custom-scrollbar">
+    <div className="flex-1 flex flex-col overflow-y-auto p-3.5 sm:p-6 md:p-8 pb-48 sm:pb-40 md:pb-12 w-full max-w-5xl mx-auto custom-scrollbar">
       <AnimatePresence mode="wait">
         <motion.div
           key={question.id}
@@ -50,26 +50,11 @@ export function QuestionCard({
                   Chapter {question.chapter}
                 </span>
                 {(question.type === "workbook_ca" || (question as any).is_workbook) && (
-                  <span className="text-xs bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 font-bold px-2.5 py-0.5 rounded-lg flex items-center gap-1">
-                    <span>📝 CA Workbook</span>
+                  <span className="text-xs bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 font-mono font-semibold px-2 py-0.5 rounded-lg">
+                    CA Workbook
                   </span>
                 )}
               </div>
-
-              {question.prediction_weight && (
-                <div
-                  className={`flex items-center gap-1.5 text-xs px-2.5 py-0.5 rounded-full font-semibold border ${
-                    question.prediction_weight === "high"
-                      ? "bg-amber-500/10 text-amber-300 border-amber-500/30"
-                      : "bg-blue-500/10 text-blue-300 border-blue-500/30"
-                  }`}
-                >
-                  <Sparkles size={13} className={question.prediction_weight === "high" ? "text-amber-400" : "text-blue-400"} />
-                  <span className="text-[11px] sm:text-xs">
-                    {question.prediction_weight === "high" ? "High Exam Frequency" : "Core Concept"}
-                  </span>
-                </div>
-              )}
             </div>
 
             {/* Question Text */}
@@ -161,11 +146,11 @@ export function QuestionCard({
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              className="mt-2 p-6 rounded-2xl border border-emerald-500/30 glass-panel-glow text-slate-200"
+              className="mt-4 mb-2 p-5 sm:p-6 rounded-2xl border border-emerald-500/30 bg-slate-900/90 text-slate-200 shadow-xl"
             >
-              <div className="flex items-center gap-2 mb-3 text-emerald-400 font-bold text-base">
-                <Lightbulb size={20} className="text-emerald-400" />
-                <span>Textbook Solution & Academic Rationale</span>
+              <div className="flex items-center gap-2 mb-3 text-emerald-400 font-bold text-sm sm:text-base">
+                <Lightbulb size={18} className="text-emerald-400 shrink-0" />
+                <span>Textbook Solution & Explanation</span>
               </div>
 
               <div className="text-xs font-semibold text-slate-300 mb-3 space-y-1">
@@ -180,11 +165,14 @@ export function QuestionCard({
                 )}
               </div>
 
-              <div className="text-sm md:text-base text-slate-200 leading-relaxed border-t border-white/10 pt-3">
+              <div className="text-xs sm:text-sm md:text-base text-slate-200 leading-relaxed border-t border-white/10 pt-3">
                 {question.explanation}
               </div>
             </motion.div>
           )}
+
+          {/* Dedicated bottom clearance spacer so entire explanation scrolls cleanly above fixed footer */}
+          <div className="h-28 md:h-8 shrink-0 w-full" aria-hidden="true" />
         </motion.div>
       </AnimatePresence>
     </div>

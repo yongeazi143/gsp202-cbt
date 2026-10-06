@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { LogOut, Bookmark, User, Clock, Calculator as CalcIcon, BookOpen, ShieldAlert, LayoutGrid, Menu } from "lucide-react";
+import { LogOut, Bookmark, Clock, BookOpen, Menu } from "lucide-react";
 import { TestMode } from "@/lib/types";
 
 interface HeaderProps {
@@ -12,7 +12,6 @@ interface HeaderProps {
   isFlagged: boolean;
   onToggleFlag: () => void;
   onExit: () => void;
-  onOpenCalc?: () => void;
   onOpenNavigator?: () => void;
 }
 
@@ -24,7 +23,6 @@ export function Header({
   isFlagged,
   onExit,
   onToggleFlag,
-  onOpenCalc,
   onOpenNavigator,
 }: HeaderProps) {
 
@@ -38,52 +36,43 @@ export function Header({
   const isLowTime = mode === "exam" && timeRemainingSeconds < 300; // < 5 mins
 
   return (
-    <header className="bg-[#0b0f17]/90 backdrop-blur-md border-b border-white/10 text-white px-4 md:px-8 py-3 flex items-center justify-between shadow-lg select-none sticky top-0 z-30">
-      {/* Left controls */}
-      <div className="flex items-center gap-1.5 sm:gap-2.5">
+    <header className="bg-[#0b0f17]/90 backdrop-blur-md border-b border-white/10 text-white px-3 sm:px-6 md:px-8 py-2.5 sm:py-3 flex items-center justify-between shadow-lg select-none sticky top-0 z-30">
+      {/* Left controls - Clean Icon Buttons without text */}
+      <div className="flex items-center gap-1.5 sm:gap-2">
         {/* Mobile Left Sidebar Menu Button */}
         {onOpenNavigator && (
           <button
             onClick={onOpenNavigator}
-            className="md:hidden flex items-center gap-1 text-xs font-bold bg-emerald-500/15 hover:bg-emerald-500/25 border border-emerald-500/30 text-emerald-300 px-2.5 py-1.5 rounded-lg transition cursor-pointer active:scale-95"
-            title="Open Navigation Menu"
+            className="md:hidden p-2 rounded-xl bg-emerald-500/15 hover:bg-emerald-500/25 border border-emerald-500/30 text-emerald-300 transition cursor-pointer active:scale-95"
+            title="Navigation Menu"
+            aria-label="Navigation Menu"
           >
-            <Menu size={16} />
-            <span className="font-mono">Menu</span>
+            <Menu size={18} />
           </button>
         )}
 
+        {/* Exit Button */}
         <button
           onClick={onExit}
-          className="flex items-center gap-1.5 text-xs font-semibold bg-white/5 hover:bg-white/10 border border-white/10 px-2.5 sm:px-3 py-1.5 rounded-lg transition cursor-pointer text-slate-300 hover:text-white"
-          title="Exit to Setup"
+          className="p-2 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 transition cursor-pointer text-slate-300 hover:text-white active:scale-95"
+          title="Exit Session"
+          aria-label="Exit Session"
         >
-          <LogOut size={15} />
-          <span className="hidden sm:inline">Exit Exam</span>
+          <LogOut size={16} />
         </button>
 
-        {onOpenCalc && (
-          <button
-            onClick={onOpenCalc}
-            className="flex items-center gap-1.5 text-xs font-semibold bg-white/5 hover:bg-white/10 border border-white/10 px-2 sm:px-3 py-1.5 rounded-lg transition cursor-pointer text-slate-300 hover:text-white"
-            title="Calculator"
-          >
-            <CalcIcon size={15} />
-            <span className="hidden sm:inline">Calculator</span>
-          </button>
-        )}
-
+        {/* Flag Button */}
         <button
           onClick={onToggleFlag}
-          className={`flex items-center gap-1.5 text-xs font-semibold px-2 sm:px-3 py-1.5 rounded-lg transition cursor-pointer border ${
+          className={`p-2 rounded-xl transition cursor-pointer border active:scale-95 ${
             isFlagged
               ? "bg-amber-500/20 border-amber-500/50 text-amber-300"
               : "bg-white/5 hover:bg-white/10 border-white/10 text-slate-300 hover:text-white"
           }`}
-          title="Flag question for review"
+          title={isFlagged ? "Question flagged" : "Flag question"}
+          aria-label={isFlagged ? "Question flagged" : "Flag question"}
         >
-          <Bookmark size={15} className={isFlagged ? "fill-amber-400" : ""} />
-          <span className="hidden xs:inline">{isFlagged ? "Flagged" : "Flag"}</span>
+          <Bookmark size={16} className={isFlagged ? "fill-amber-400" : ""} />
         </button>
       </div>
 
@@ -115,13 +104,13 @@ export function Header({
 
         {mode === "exam" && (
           <div
-            className={`flex items-center gap-2 px-3.5 py-1.5 rounded-xl font-mono text-sm md:text-base font-extrabold shadow-lg transition-all ${
+            className={`flex items-center gap-2 px-3 sm:px-3.5 py-1.5 rounded-xl font-mono text-sm md:text-base font-extrabold shadow-md transition-all ${
               isLowTime
-                ? "bg-red-600/30 border border-red-500 text-red-200 animate-pulse"
+                ? "bg-red-600/30 border border-red-500 text-red-200"
                 : "bg-emerald-500/20 border border-emerald-500/40 text-emerald-300"
             }`}
           >
-            <Clock size={16} className={isLowTime ? "text-red-400 animate-spin" : "text-emerald-400"} />
+            <Clock size={16} className={isLowTime ? "text-red-400" : "text-emerald-400"} />
             <span>{formatTime(timeRemainingSeconds)}</span>
           </div>
         )}
