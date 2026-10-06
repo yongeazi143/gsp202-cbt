@@ -581,7 +581,7 @@
     {
       "chapter": 5,
       "chapter_title": "Gender, Peace and Conflict Resolution",
-      "pages": "70-88",
+      "pages": "70-87",
       "questions": [
         {
           "q_num": 1,
@@ -783,28 +783,28 @@
           "q_num": 29,
           "question": "United Nations Security Council Resolution 1325 emphasizes the distinct impact of armed conflict on women and girls, and the necessity of their participation in ________.",
           "answer": "Peace negotiations, conflict prevention, peacekeeping, and post-conflict decision-making",
-          "textbook_ref": "Pages 87-88",
+          "textbook_ref": "Page 81",
           "notes": "Four WPS pillars: Prevention, Participation, Protection, and Relief & Recovery."
         },
         {
           "q_num": 30,
           "question": "United Nations Security Council Resolution 1325 urges international bodies and member states to integrate gender considerations into ________.",
           "answer": "All peacekeeping operations, peace missions, and security sector reform programs",
-          "textbook_ref": "Page 88",
+          "textbook_ref": "Page 81",
           "notes": "Mandates deployment of gender advisers in international stabilization forces."
         },
         {
           "q_num": 31,
           "question": "________ approaches to GBV as an alternative to punitive legal strategies entail accountability, repair, and community reintegration.",
           "answer": "Restorative Justice",
-          "textbook_ref": "Page 88",
+          "textbook_ref": "Page 84",
           "notes": "Focuses on healing victim harm and transforming community relationships rather than mere retributive punishment."
         },
         {
           "q_num": 32,
           "question": "________ approaches to GBV resolution acknowledge that violence occurs within specific social contexts and advocate that sustainable solutions must engage community structures, norms, and leaders.",
           "answer": "Community-Based and Transformative",
-          "textbook_ref": "Page 88",
+          "textbook_ref": "Page 71",
           "notes": "Involves traditional rulers, religious clergy, and youth assemblies in shifting harmful norms."
         },
         {
@@ -819,7 +819,7 @@
     {
       "chapter": 6,
       "chapter_title": "Health and Conflict",
-      "pages": "89-106",
+      "pages": "88-98",
       "questions": [
         {
           "q_num": 1,
@@ -923,56 +923,56 @@
           "q_num": 15,
           "question": "Some healthcare issues that require ethical governance in Nigeria are ________.",
           "answer": "Equitable access to essential medicines, patient informed consent, clinical trial ethics, brain drain (emigration of doctors/nurses), and end-of-life care",
-          "textbook_ref": "Pages 98-99",
+          "textbook_ref": "Page 91",
           "notes": "Bioethical challenges in developing healthcare systems."
         },
         {
           "q_num": 16,
           "question": "The four principles of ethics in healthcare provision are ________, ________, ________, and ________.",
           "answer": "Autonomy, Beneficence, Non-maleficence, and Justice (Beauchamp & Childress)",
-          "textbook_ref": "Pages 99-100",
+          "textbook_ref": "Page 91",
           "notes": "Foundational pillar of modern medical bioethics."
         },
         {
           "q_num": 17,
           "question": "Why did members of the Hausa-Fulani ethnic group oppose the Federal Government of Nigeria's decision to vaccinate children in a global polio eradication drive in 2003?",
           "answer": "Rumors and religious-political suspicions arose that the oral polio vaccines were contaminated with anti-fertility agents and HIV virus by Western powers to depopulate Muslim communities.",
-          "textbook_ref": "Pages 100-101",
+          "textbook_ref": "Page 91",
           "notes": "Led to an 11-month boycott across Kano, Kaduna, and Zamfara States until independent local testing verified safety."
         },
         {
           "q_num": 18,
           "question": "Three examples of the United Nations framework for preventing conflicts in health ethical governance are ________, ________, and ________.",
           "answer": "The International Health Regulations (IHR, 2005), the Universal Declaration on Bioethics and Human Rights (UNESCO, 2005), and the UN Guiding Principles on Health in Fragile States",
-          "textbook_ref": "Pages 101-102",
+          "textbook_ref": "Page 92",
           "notes": "Global governance mechanisms establishing standards during public health emergencies."
         },
         {
           "q_num": 19,
           "question": "What is gene therapy?",
           "answer": "A medical experimental technique that modifies or alters a person's genes to treat or prevent genetic disorders and hereditary diseases.",
-          "textbook_ref": "Pages 102-103",
+          "textbook_ref": "Page 90",
           "notes": "Promising clinical advances alongside contentious ethical issues surrounding germline modification and genetic enhancement."
         },
         {
           "q_num": 20,
           "question": "What is healthcare delivery conflict?",
           "answer": "Disputes, disagreements, and systemic friction arising among healthcare professionals, management, government authorities, and patients regarding resource distribution, wages, working conditions, or clinical negligence.",
-          "textbook_ref": "Pages 103-104",
+          "textbook_ref": "Page 93",
           "notes": "Frequently manifests in recurrent strikes by medical doctors (NARD) and health workers (JOHESU)."
         },
         {
           "q_num": 21,
           "question": "What are the possible consequences of healthcare delivery conflicts?",
           "answer": "Preventable patient deaths, disruption of emergency medical services, erosion of public trust in healthcare systems, and economic losses.",
-          "textbook_ref": "Pages 104-105",
+          "textbook_ref": "Page 95",
           "notes": "Paralyzes public hospital operations and exacerbates medical poverty."
         },
         {
           "q_num": 22,
           "question": "In what forms can healthcare delivery conflicts manifest? Name and briefly explain each: (i), (ii).",
           "answer": "(i) Inter-professional rivalry conflict: Disputes between medical doctors and other allied healthcare professionals (pharmacists, nurses, laboratory scientists) over hospital leadership and salary disparities. (ii) Industrial/Labor disputes: Strike actions between healthcare worker unions and the government over unpaid hazard allowances, dilapidated equipment, and welfare conditions.",
-          "textbook_ref": "Pages 105-106",
+          "textbook_ref": "Page 92",
           "notes": "Structural friction crippling the Nigerian tertiary health sector."
         }
       ]
@@ -980,7 +980,7 @@
     {
       "chapter": 7,
       "chapter_title": "Conflict Analysis and Framework Assessment",
-      "pages": "107-124",
+      "pages": "99-115",
       "questions": [
         {
           "q_num": 1,
@@ -1119,98 +1119,98 @@
           "q_num": 20,
           "question": "The height or peak of conflict situations is known as the ________ stage.",
           "answer": "Crisis (Peak / Climax / Acute)",
-          "textbook_ref": "Pages 115-116",
+          "textbook_ref": "Page 107",
           "notes": "Open warfare, casualties, and maximum hostility."
         },
         {
           "q_num": 21,
           "question": "The ________ stage of conflict explains conflict de-escalation.",
           "answer": "De-escalation (Stalemate / Hurting Stalemate / Negotiation)",
-          "textbook_ref": "Page 116",
+          "textbook_ref": "Page 106",
           "notes": "Parties realize mutually hurting stalemate and seek mediation."
         },
         {
           "q_num": 22,
           "question": "What stage of conflict is largely characterized by two levels of activities: improvement and transformation?",
           "answer": "Post-conflict (Resolution / Outcome / Transformation)",
-          "textbook_ref": "Pages 116-117",
+          "textbook_ref": "Page 108",
           "notes": "Rebuilding relationships and reforming underlying social structures."
         },
         {
           "q_num": 23,
           "question": "In the onion-doughnut analysis, the outer layer of the onion represents the ________ the actors express publicly.",
           "answer": "Positions (what they say they want)",
-          "textbook_ref": "Pages 117-118",
+          "textbook_ref": "Page 109",
           "notes": "Public posturing masking underlying motives."
         },
         {
           "q_num": 24,
           "question": "Also, the onion-doughnut analysis holds that while interests can often be negotiated, ________ are non-negotiable.",
           "answer": "Basic Human Needs (identity, security, survival, dignity)",
-          "textbook_ref": "Page 118",
+          "textbook_ref": "Page 109",
           "notes": "John Burton's Basic Human Needs Theory."
         },
         {
           "q_num": 25,
           "question": "The ABC Triangle of conflict analysis is also known as the ________.",
           "answer": "Conflict Triangle (Johan Galtung's Model)",
-          "textbook_ref": "Pages 118-119",
+          "textbook_ref": "Page 108",
           "notes": "Connects Attitude, Behaviour, and Contradiction (Context)."
         },
         {
           "q_num": 26,
           "question": "The ABC Triangle of conflict analysis was created by peace researcher ________.",
           "answer": "Johan Galtung (1969, 1996)",
-          "textbook_ref": "Page 119",
+          "textbook_ref": "Page 108",
           "notes": "Pioneer of modern peace studies."
         },
         {
           "q_num": 27,
           "question": "The ________ method of conflict analysis is best situated in tracking intergroup conflicts.",
           "answer": "Conflict Tree (Root, Trunk, Leaves) / Conflict Mapping",
-          "textbook_ref": "Pages 119-120",
+          "textbook_ref": "Page 114",
           "notes": "Roots: structural causes; Trunk: manifest problem; Leaves: observable effects."
         },
         {
           "q_num": 28,
           "question": "The ________ analytical procedure creates two analogous islands extending from the ocean in a pyramidal shape.",
           "answer": "Pillars of Conflict / Pyramid Model",
-          "textbook_ref": "Pages 120-121",
+          "textbook_ref": "Page 114",
           "notes": "Demonstrates structural pillars upholding war or peace systems."
         },
         {
           "q_num": 29,
           "question": "A ________ is defined as 'a venue where knowledge is exchanged, and consensus is achieved regarding the nature of the situation, its current state, and its desired future.'",
           "answer": "Conflict Analysis Workshop / Dialogue Forum",
-          "textbook_ref": "Pages 121-122",
+          "textbook_ref": "Page 99",
           "notes": "Facilitated problem-solving session for stakeholders."
         },
         {
           "q_num": 30,
           "question": "________ aim to investigate and ascertain the principal facts pertinent to comprehending a specific conflict or dispute.",
           "answer": "Fact-Finding Missions (Inquiries / Commissions)",
-          "textbook_ref": "Page 122",
+          "textbook_ref": "Page 101",
           "notes": "Neutral investigative teams gathering empirical evidence."
         },
         {
           "q_num": 31,
           "question": "What are the paramount tasks in the issue analysis of a conflict?",
           "answer": "Identifying the root/underlying causes, immediate triggers, systemic catalysts, and distinguishing tangible issues (land, money) from intangible issues (honor, identity).",
-          "textbook_ref": "Pages 122-123",
+          "textbook_ref": "Page 102",
           "notes": "Clarifies the core contention points driving the dispute."
         },
         {
           "q_num": 32,
           "question": "Briefly explain the following sources for conflict analysis information: (i) Case study, (ii) Analysis Meetings/Workshops, (iii) Fact-finding missions.",
           "answer": "(i) Case study: In-depth historical and sociological examination of past similar conflicts to derive insights. (ii) Analysis Workshops: Interactive forums where conflicting parties and experts map dynamics collaboratively. (iii) Fact-finding missions: On-the-ground investigative deployments by independent observers to gather verifiable evidence.",
-          "textbook_ref": "Pages 121-123",
+          "textbook_ref": "Page 115",
           "notes": "Primary intelligence gathering tools for conflict mediators."
         },
         {
           "q_num": 33,
           "question": "Briefly explain the following frameworks for analysis: (i) Onion-Doughnut model, (ii) ABC Triangle.",
           "answer": "(i) Onion-Doughnut Model: Peels conflict like an onion through three layers: Outer Layer = Positions (what parties say publicly); Middle Layer = Interests (what they truly want); Core Layer = Needs (fundamental, non-negotiable human requirements for survival, identity, and security). (ii) ABC Triangle: Galtung's model examining: A = Attitudes (prejudices, stereotypes, perceptions); B = Behaviours (threats, verbal attacks, violent coercion); C = Contradiction/Context (the underlying structural dispute or incompatibility of goals).",
-          "textbook_ref": "Pages 117-120",
+          "textbook_ref": "Page 109",
           "notes": "Foundational diagnostic frameworks taught across peace studies."
         }
       ]
@@ -1218,7 +1218,7 @@
     {
       "chapter": 8,
       "chapter_title": "Peace Education and Peace Practice",
-      "pages": "125-141",
+      "pages": "116-134",
       "questions": [
         {
           "q_num": 1,
@@ -1301,21 +1301,21 @@
           "q_num": 12,
           "question": "What is the relevance of moral education?",
           "answer": "It instills ethical values, moral reasoning, social conscience, integrity, and respect for the dignity of every human being, thereby discouraging predatory behaviour and corruption.",
-          "textbook_ref": "Pages 134-135",
+          "textbook_ref": "Page 121",
           "notes": "Moral compass essential for civic responsibility."
         },
         {
           "q_num": 13,
           "question": "What is Interpersonal peace education and what is its scope?",
           "answer": "Education focused on constructive communication, conflict handling skills, empathy, active listening, and cooperation in one-on-one and family relationships.",
-          "textbook_ref": "Pages 135-136",
+          "textbook_ref": "Page 121",
           "notes": "Scope covers resolving peer bullying, marital discord, and neighborly disputes without violence."
         },
         {
           "q_num": 14,
           "question": "What are peacebuilding activities in peace education?",
           "answer": "Practical experiential initiatives such as peer mediation clubs, inter-ethnic youth camps, community service, peace drama/arts festivals, and grassroots reconciliation workshops.",
-          "textbook_ref": "Pages 136-138",
+          "textbook_ref": "Page 129",
           "notes": "Translating classroom theory into real community impact."
         }
       ]
@@ -1323,7 +1323,7 @@
     {
       "chapter": 9,
       "chapter_title": "Conflict Handling Style and Non-Violent Resistance",
-      "pages": "142-160",
+      "pages": "135-150",
       "questions": [
         {
           "q_num": 1,
@@ -1441,35 +1441,35 @@
           "q_num": 17,
           "question": "________ is a conflict-handling style in which one person puts the other party's needs, interests, or concerns ahead of their own in order to maintain harmony or preserve a relationship.",
           "answer": "Accommodating (Obliging / Smoothing)",
-          "textbook_ref": "Pages 150-151",
+          "textbook_ref": "Page 137",
           "notes": "Low assertiveness and high cooperativeness ('You win, I lose')."
         },
         {
           "q_num": 18,
           "question": "The major feature of accommodating is that it essentially prioritizes ________.",
           "answer": "Preserving the relationship and communal peace over winning one's personal substantive agenda",
-          "textbook_ref": "Page 151",
+          "textbook_ref": "Page 136",
           "notes": "Relationship maintenance strategy."
         },
         {
           "q_num": 19,
           "question": "What is self-sacrifice in accommodating and what is its major advantage?",
           "answer": "Self-sacrifice means willingly conceding one's position to satisfy another; its major advantage is that it restores harmony, builds social capital, and demonstrates goodwill.",
-          "textbook_ref": "Pages 151-152",
+          "textbook_ref": "Page 137",
           "notes": "Generates reciprocity and de-escalates explosive hostility."
         },
         {
           "q_num": 20,
           "question": "What conflict handling style happens when one or both parties refuse to compromise or let go of certain interests but decide to deal decisively with the other party?",
           "answer": "Confrontation (Fighting / Coercive Contention)",
-          "textbook_ref": "Pages 152-153",
+          "textbook_ref": "Page 137",
           "notes": "Escalation into adversarial battle of wills."
         },
         {
           "q_num": 21,
           "question": "What is emotional intelligence in conflict handling and explain: (i) Emotions as information, (ii) Emotional arousal and cognitive functioning.",
           "answer": "Emotional intelligence is the ability to recognize, understand, manage, and constructively influence emotions during disputes. (i) Emotions as information: Emotions signal unmet needs and underlying values. (ii) Emotional arousal and cognitive functioning: Extreme anger or fear triggers amygdala hijack, reducing rational cognitive processing and escalating destructive reactions.",
-          "textbook_ref": "Pages 155-158",
+          "textbook_ref": "Page 138",
           "notes": "Emotional self-regulation is critical for de-escalating confrontations."
         }
       ]
@@ -1477,7 +1477,7 @@
     {
       "chapter": 10,
       "chapter_title": "Peace Psychology: Understanding the Human Mind in Conflict and Reconciliation",
-      "pages": "161-178",
+      "pages": "151-161",
       "questions": [
         {
           "q_num": 1,
@@ -1497,112 +1497,112 @@
           "q_num": 3,
           "question": "According to Galtung (1969), peace psychology aims to create theories and practices for the prevention and control of ________.",
           "answer": "Violence (Direct, Structural, and Cultural violence)",
-          "textbook_ref": "Pages 161-162",
+          "textbook_ref": "Page 151",
           "notes": "Holistic violence framework of peace research."
         },
         {
           "q_num": 4,
           "question": "________ builds on the concepts of mental processes and behaviour of war and peace.",
           "answer": "Peace Psychology",
-          "textbook_ref": "Page 162",
+          "textbook_ref": "Page 151",
           "notes": "Applies cognitive, emotional, and social psychology to conflict transformation."
         },
         {
           "q_num": 5,
           "question": "The tendency of individuals and groups to be involved in violent episodes or its prevention and mitigation is found in their patterns of ________.",
           "answer": "Psychological socialization, cognitive schemas, and perceptions of threat/injustice",
-          "textbook_ref": "Pages 162-163",
+          "textbook_ref": "Page 151",
           "notes": "Human behavior is mediated by internal cognitive and affective filters."
         },
         {
           "q_num": 6,
           "question": "According to Eze (2017), ________ is the maintenance of minimal conditions that enable efficient social processes in human society.",
           "answer": "Peace (Social Order)",
-          "textbook_ref": "Page 163",
+          "textbook_ref": "Page 151",
           "notes": "Operational definition of societal stability."
         },
         {
           "q_num": 7,
           "question": "A human action that wards off violence and facilitates nonviolent management of conflict is referred to as ________.",
           "answer": "Peacemaking / Nonviolent Action",
-          "textbook_ref": "Pages 163-164",
+          "textbook_ref": "Page 152",
           "notes": "Proactive constructive interventions stopping kinetic aggression."
         },
         {
           "q_num": 8,
           "question": "Actions that promote the conditions that ensure social justice and minimize conflict are regarded as ________.",
           "answer": "Peacebuilding",
-          "textbook_ref": "Page 164",
+          "textbook_ref": "Page 151",
           "notes": "Constructing durable structural conditions for long-term equity."
         },
         {
           "q_num": 9,
           "question": "According to Christie et al. (2001), peace psychology seeks to develop theories and practices aimed at ________ and mitigating ________ and ________ violence.",
           "answer": "preventing; direct (episodic); structural",
-          "textbook_ref": "Pages 164-165",
+          "textbook_ref": "Page 151",
           "notes": "Standard definition adopted by APA Division 48 (Society for the Study of Peace, Conflict, and Violence)."
         },
         {
           "q_num": 10,
           "question": "Interpersonal or social conflict is defined as the perception of ________, while ________ refers to coercive actions carried out with the intention of harming others.",
           "answer": "incompatible goals or scarce resources; violence",
-          "textbook_ref": "Pages 165-166",
+          "textbook_ref": "Page 151",
           "notes": "Distinction between conflict (cognitive incompatibility) and violence (harmful behavioral act)."
         },
         {
           "q_num": 11,
           "question": "What is Episodic violence?",
           "answer": "Discrete, acute, and manifest acts of physical harm, assault, armed combat, or riots occurring at a specific time and place.",
-          "textbook_ref": "Page 166",
+          "textbook_ref": "Page 153",
           "notes": "Direct, visible violence with easily identifiable perpetrators and victims."
         },
         {
           "q_num": 12,
           "question": "What is structural violence?",
           "answer": "Systemic and institutional mechanisms (poverty, discriminatory laws, caste systems, apartheid) that prevent individuals and groups from meeting their basic needs and realizing their full human potential.",
-          "textbook_ref": "Pages 166-167",
+          "textbook_ref": "Page 154",
           "notes": "Coined by Johan Galtung: violence built into social structures without an explicit individual assailant."
         },
         {
           "q_num": 13,
           "question": "According to the Society for the Study of Peace, Conflict, and Violence (2006), the goals of Peace Psychology are ________.",
           "answer": "To understand psychological causes of conflict, apply psychological knowledge to reduce violence, and promote social justice and sustainable peace",
-          "textbook_ref": "Pages 167-168",
+          "textbook_ref": "Page 152",
           "notes": "Official mandate of APA Division 48."
         },
         {
           "q_num": 14,
           "question": "The vision of peace psychologists is ________.",
           "answer": "A world where human disputes are addressed through non-violent dialogue, empathy, reconciliation, and structural justice",
-          "textbook_ref": "Page 168",
+          "textbook_ref": "Page 152",
           "notes": "Transforming adversarial dynamics into collaborative co-existence."
         },
         {
           "q_num": 15,
           "question": "Briefly outline the aims of Peace Psychology: (i), (ii), (iii), (iv), (v), (vi).",
           "answer": "(i) Analyzing psychological roots of hatred, dehumanization, and intergroup bias. (ii) Mitigating trauma and PTSD in post-war populations. (iii) Fostering intergroup contact and empathy across historical divides. (iv) Promoting non-violent conflict resolution skills in schools and communities. (v) Challenging structural and cultural violence. (vi) Supporting truth, healing, and reconciliation processes.",
-          "textbook_ref": "Pages 168-170",
+          "textbook_ref": "Page 157",
           "notes": "Comprehensive clinical and social peace psychology agenda."
         },
         {
           "q_num": 16,
           "question": "Who proposed the concepts of positive peace and negative peace?",
           "answer": "Johan Galtung (1964, 1969)",
-          "textbook_ref": "Page 170",
+          "textbook_ref": "Page 152",
           "notes": "Foundational dichotomy of international peace research."
         },
         {
           "q_num": 17,
           "question": "What is positive peace?",
           "answer": "The presence of social justice, equality, institutional fairness, human rights, and the total absence of both direct and structural violence.",
-          "textbook_ref": "Pages 170-171",
+          "textbook_ref": "Page 152",
           "notes": "Sustainable flourishing of society."
         },
         {
           "q_num": 18,
           "question": "What is negative peace?",
           "answer": "The mere absence of direct, active physical violence or war, even while underlying injustices, oppression, and fear persist.",
-          "textbook_ref": "Pages 171-172",
+          "textbook_ref": "Page 153",
           "notes": "Unstable ceasefires without systemic justice."
         }
       ]
@@ -1610,7 +1610,7 @@
     {
       "chapter": 11,
       "chapter_title": "Legal Framework for Social Justice and Conflict Resolution in Nigeria",
-      "pages": "179-198",
+      "pages": "162-179",
       "questions": [
         {
           "q_num": 1,
@@ -1623,56 +1623,56 @@
           "q_num": 2,
           "question": "The Universal Declaration of Human Rights to which Nigeria is a signatory is an example of a ________.",
           "answer": "Multilateral International Human Rights Treaty / Global Normative Instrument",
-          "textbook_ref": "Pages 179-180",
+          "textbook_ref": "Page 162",
           "notes": "Adopted by the United Nations General Assembly in Paris on 10 December 1948."
         },
         {
           "q_num": 3,
           "question": "________ establishes the legal framework and other mechanisms to hold government accountable in the event they violate human rights.",
           "answer": "Constitutionalism (The Rule of Law and Judicial Review)",
-          "textbook_ref": "Page 180",
+          "textbook_ref": "Page 162",
           "notes": "Limits arbitrary government power through independent courts."
         },
         {
           "q_num": 4,
           "question": "Legal framework can be viewed from ________ and ________ dimensions.",
           "answer": "Substantive (statutory laws, rights, doctrines) and Procedural / Institutional (courts, enforcement agencies, rules of litigation)",
-          "textbook_ref": "Pages 180-181",
+          "textbook_ref": "Page 162",
           "notes": "Two interdependent pillars of any jurisprudence system."
         },
         {
           "q_num": 5,
           "question": "________ provides a basis for enforcing law and policies that promote order, justice and fairness.",
           "answer": "The Legal Framework / The Constitution",
-          "textbook_ref": "Page 181",
+          "textbook_ref": "Page 162",
           "notes": "Supreme law of the land from which all institutional legitimacy derives (Section 1(1) & 1(3))."
         },
         {
           "q_num": 6,
           "question": "Legal framework can best be conceptualized as ________.",
           "answer": "A coherent system of interrelated laws, judicial precedents, constitutional principles, and regulatory institutions that govern societal behavior and arbitrate disputes",
-          "textbook_ref": "Pages 181-182",
+          "textbook_ref": "Page 162",
           "notes": "The bedrock of modern democratic governance."
         },
         {
           "q_num": 7,
           "question": "According to FasterCapital (2024), a legal framework provides ________.",
           "answer": "Legal predictability, contractual certainty, protection of property rights, and institutional checks and balances",
-          "textbook_ref": "Page 182",
+          "textbook_ref": "Page 162",
           "notes": "Essential for conflict resolution and socio-economic investment."
         },
         {
           "q_num": 8,
           "question": "The growth of Nigeria's legal system has been linked to ________.",
           "answer": "English Common Law tradition, Islamic (Sharia) Law, and Indigenous Customary Law (the tripartite legal heritage)",
-          "textbook_ref": "Pages 182-184",
+          "textbook_ref": "Page 167",
           "notes": "Pluralistic nature of Nigerian jurisprudence."
         },
         {
           "q_num": 9,
           "question": "Human rights issues have been a subject for debate in ________ and ________ circles since the ________ and ________ until the present democratic government.",
           "answer": "academic and civil society / political; colonial era and military regimes",
-          "textbook_ref": "Pages 184-186",
+          "textbook_ref": "Page 162",
           "notes": "Long struggles against authoritarian decrees to achieve constitutional democracy."
         }
       ]
@@ -1680,181 +1680,181 @@
     {
       "chapter": 12,
       "chapter_title": "Community Policing: Evolution and Imperatives for Conflict Resolution",
-      "pages": "199-216",
+      "pages": "180-185",
       "questions": [
         {
           "q_num": 1,
           "question": "Community policing differs significantly from conventional policing approaches that stress coercive authority, ________, and ________.",
           "answer": "Reactive incident response, state-centric hierarchy, and bureaucratic isolation",
-          "textbook_ref": "Pages 199-200",
+          "textbook_ref": "Page 180",
           "notes": "Shift from authoritarian policing to democratic, service-oriented problem-solving."
         },
         {
           "q_num": 2,
           "question": "________ encourages cooperation between law enforcement officers and the communities they serve.",
           "answer": "Community Policing",
-          "textbook_ref": "Page 200",
+          "textbook_ref": "Page 180",
           "notes": "Pioneered by Sir Robert Peel: 'The police are the public and the public are the police.'"
         },
         {
           "q_num": 3,
           "question": "The notion of community policing holds that security is a shared duty of the state, residents, community leaders, civil society groups, and ________.",
           "answer": "Traditional institutions / Local vigilante formations / Private business sector",
-          "textbook_ref": "Pages 200-201",
+          "textbook_ref": "Page 180",
           "notes": "Multi-stakeholder security governance model."
         },
         {
           "q_num": 4,
           "question": "Community policing seeks to identify and address the root causes of crime and social unrest via ________.",
           "answer": "Proactive problem-solving, intelligence-led collaboration, and grassroots dialogue",
-          "textbook_ref": "Pages 201-202",
+          "textbook_ref": "Page 180",
           "notes": "Addressing underlying socio-economic drivers rather than only reacting after crimes occur."
         },
         {
           "q_num": 5,
           "question": "Nigeria's diverse ________ and ________ backgrounds can lead to ________ tensions and localized conflicts that traditional enforcement techniques struggle to address effectively.",
           "answer": "ethnic and religious; sectarian / communal",
-          "textbook_ref": "Pages 202-203",
+          "textbook_ref": "Page 180",
           "notes": "Cultural diversity requires culturally nuanced dispute resolution."
         },
         {
           "q_num": 6,
           "question": "Traditional enforcement is particularly problematic in ________ and ________ where distrust in government institutions endures.",
           "answer": "Rural agrarian communities and informal urban slums / marginalized settlements",
-          "textbook_ref": "Page 203",
+          "textbook_ref": "Page 180",
           "notes": "Deep historical suspicion of armed police tactical units."
         },
         {
           "q_num": 7,
           "question": "Community policing is increasingly recognised as a strategic technique for connecting institutions with the ________ they serve.",
           "answer": "Grassroots citizens (local communities)",
-          "textbook_ref": "Pages 203-204",
+          "textbook_ref": "Page 180",
           "notes": "Bridges the legitimacy gap between law enforcement and citizens."
         },
         {
           "q_num": 8,
           "question": "Kenku and Umar (2025) argue that ________.",
           "answer": "Community policing provides the vital architecture for rebuilding public confidence in Nigeria's internal security apparatus",
-          "textbook_ref": "Pages 204-205",
+          "textbook_ref": "Page 180",
           "notes": "Recent academic verification of policing reforms."
         },
         {
           "q_num": 9,
           "question": "According to Aremu et al. (2024), constant involvement between police officers and community people improved ________, ________, and ________, and aided in the resolution of communal conflicts in urban environments.",
           "answer": "Mutual trust, actionable intelligence sharing, and timely dispute mediation",
-          "textbook_ref": "Pages 205-206",
+          "textbook_ref": "Page 180",
           "notes": "Empirical study on urban community policing in Nigeria."
         },
         {
           "q_num": 10,
           "question": "According to Aremu et al. (2024), community policing can improve security governance by encouraging ________ and ________ for maintaining peace and order.",
           "answer": "Shared ownership and civic co-responsibility",
-          "textbook_ref": "Page 206",
+          "textbook_ref": "Page 182",
           "notes": "Citizens shift from passive observers to active security partners."
         },
         {
           "q_num": 11,
           "question": "Community policing projects help to create ________.",
           "answer": "Safe spaces and structured community-police consultative forums",
-          "textbook_ref": "Pages 206-207",
+          "textbook_ref": "Page 180",
           "notes": "Regular platforms for joint safety planning."
         },
         {
           "q_num": 12,
           "question": "Community policing creates platforms for conversation and collaboration, allowing ________, ________, and ________ to actively participate in identifying potential conflict.",
           "answer": "Youth leaders, women groups, and traditional elders / religious figures",
-          "textbook_ref": "Page 207",
+          "textbook_ref": "Page 180",
           "notes": "Inclusive community representation."
         },
         {
           "q_num": 13,
           "question": "In restive environments, collaborative community policing initiatives can serve as ________ and prevent disagreements from escalating into ________.",
           "answer": "Early warning and de-escalation buffers; violent communal warfare / bloodshed",
-          "textbook_ref": "Pages 207-208",
+          "textbook_ref": "Page 181",
           "notes": "Preventing skirmishes from turning into full-scale communal clashes."
         },
         {
           "q_num": 14,
           "question": "In Kogi State, cooperative community-based security measures including ________, ________, and ________ have improved public safety and strengthened local responses to criminal activity.",
           "answer": "Joint community vigilante patrols, hunter associations integration, and local intelligence taskforces",
-          "textbook_ref": "Pages 208-209",
+          "textbook_ref": "Page 180",
           "notes": "Case study of hybrid sub-national security collaboration."
         },
         {
           "q_num": 15,
           "question": "In Anambra State, community policing measures were found to have ________ in ________ and resulted in improved local safety.",
           "answer": "curbed armed robbery and kidnapping; commercial trading hubs and transit towns",
-          "textbook_ref": "Pages 209-210",
+          "textbook_ref": "Page 180",
           "notes": "Anambra Vigilante Group (AVG) and neighborhood watch partnership."
         },
         {
           "q_num": 16,
           "question": "Community policing in Nigeria faces two types of challenges namely ________ and ________.",
           "answer": "Internal/Structural challenges and External/Societal challenges",
-          "textbook_ref": "Pages 210-211",
+          "textbook_ref": "Page 181",
           "notes": "Systemic institutional and socio-political impediments."
         },
         {
           "q_num": 17,
           "question": "Some of the major challenges of community policing in Nigeria are ________.",
           "answer": "Inadequate funding and modern logistics, deep historical public distrust from police brutality, political interference by state governors, and poor welfare of personnel",
-          "textbook_ref": "Pages 211-212",
+          "textbook_ref": "Page 180",
           "notes": "Cripples implementation fidelity across state commands."
         },
         {
           "q_num": 18,
           "question": "What is a community?",
           "answer": "A social unit or group of people living within a shared geographical area or bound by common interests, traditions, cultural identity, and mutual interdependence.",
-          "textbook_ref": "Page 212",
+          "textbook_ref": "Page 180",
           "notes": "Sociological definition combining geography, shared values, and mutual ties."
         },
         {
           "q_num": 19,
           "question": "Communities are more than just physical locations; they are complex social systems marked by ________.",
           "answer": "Interconnected kinship networks, shared values, historical memories, and social norms",
-          "textbook_ref": "Pages 212-213",
+          "textbook_ref": "Page 180",
           "notes": "Relational understanding of community."
         },
         {
           "q_num": 20,
           "question": "Communities are critical forums for ________ and ________, where collective norms impact conduct and disagreements are typically addressed using culturally established procedures such as ________ and ________.",
           "answer": "Socialization and collective identity; elder conciliation and traditional customary arbitration",
-          "textbook_ref": "Pages 213-214",
+          "textbook_ref": "Page 182",
           "notes": "Endogenous African conflict resolution mechanisms."
         },
         {
           "q_num": 21,
           "question": "What is policing?",
           "answer": "The organized social function of maintaining public order, enforcing laws, preventing and detecting crime, and protecting lives and property in a society.",
-          "textbook_ref": "Page 214",
+          "textbook_ref": "Page 182",
           "notes": "Distinction between the police as an institution and policing as a broad societal function."
         },
         {
           "q_num": 22,
           "question": "The primary responsibilities of the police include the following: ________, ________, and ________.",
           "answer": "Protection of life and property, preservation of public law and order, and apprehension and prosecution of offenders",
-          "textbook_ref": "Pages 214-215",
+          "textbook_ref": "Page 182",
           "notes": "Statutory duties under Section 4 of the Nigeria Police Act."
         },
         {
           "q_num": 23,
           "question": "Contemporary policing and maintaining order necessitates the involvement of a wide range of stakeholders, including ________.",
           "answer": "Community elders, youth councils, vigilante networks, civil society organizations, and private security companies",
-          "textbook_ref": "Page 215",
+          "textbook_ref": "Page 182",
           "notes": "Pluralization of contemporary security architecture."
         },
         {
           "q_num": 24,
           "question": "Adeyemi and Bamidele (2024) posit that contemporary policing ________.",
           "answer": "Must transition from an antagonistic military-era force into a transparent, rights-respecting civilian service accountable to the people",
-          "textbook_ref": "Pages 215-216",
+          "textbook_ref": "Page 182",
           "notes": "Democratization of policing imperatives."
         },
         {
           "q_num": 25,
           "question": "What is community policing?",
           "answer": "A philosophy and organizational strategy that promotes proactive partnership between law enforcement and citizens to solve crime, fear of crime, and neighborhood social disorders.",
-          "textbook_ref": "Page 216",
+          "textbook_ref": "Page 184",
           "notes": "Standard criminological definition."
         }
       ]
@@ -1862,91 +1862,91 @@
     {
       "chapter": 13,
       "chapter_title": "Conflict Early Warning and Early Response Systems",
-      "pages": "217-234",
+      "pages": "186-209",
       "questions": [
         {
           "q_num": 1,
           "question": "________ were originally created as crucial frameworks for conflict prevention.",
           "answer": "Conflict Early Warning Systems (CEWS)",
-          "textbook_ref": "Page 217",
+          "textbook_ref": "Page 204",
           "notes": "Designed to detect tensions before violence erupts."
         },
         {
           "q_num": 2,
           "question": "________ is a structured approach that entails gathering and examining data to recognize possible threats prior to their emergence.",
           "answer": "Early Warning",
-          "textbook_ref": "Pages 217-218",
+          "textbook_ref": "Page 194",
           "notes": "Information-driven preventive mechanism."
         },
         {
           "q_num": 3,
           "question": "________ defines early warning as a tool that alerts decision makers to the potential outbreak, escalation and resurgence of violent conflict.",
           "answer": "The Organization for Security and Co-operation in Europe (OSCE) / United Nations",
-          "textbook_ref": "Page 218",
+          "textbook_ref": "Page 194",
           "notes": "International diplomatic definition."
         },
         {
           "q_num": 4,
           "question": "________ involves actions taken immediately after a threat is recognized, focused on managing, resolving, or preventing violence or disaster.",
           "answer": "Early Response",
-          "textbook_ref": "Pages 218-219",
+          "textbook_ref": "Page 194",
           "notes": "Connecting warning data to proactive interventions."
         },
         {
           "q_num": 5,
           "question": "Early response measures might include ________.",
           "answer": "Preventive diplomacy, mediation deployment, police peace patrols, public dialogue, and humanitarian pre-positioning",
-          "textbook_ref": "Pages 219-220",
+          "textbook_ref": "Page 186",
           "notes": "Diverse political, judicial, and tactical response actions."
         },
         {
           "q_num": 6,
           "question": "What is risk knowledge?",
           "answer": "The comprehensive understanding of hazards, vulnerabilities, and community exposure to conflict or disaster dynamics within a given territory.",
-          "textbook_ref": "Page 220",
+          "textbook_ref": "Page 194",
           "notes": "Baseline empirical foundation for warning systems."
         },
         {
           "q_num": 7,
           "question": "What are the components of risk knowledge?",
           "answer": "Hazard identification, vulnerability assessment, capacity analysis, and exposure mapping",
-          "textbook_ref": "Pages 220-221",
+          "textbook_ref": "Page 194",
           "notes": "The 4 core elements of risk assessment."
         },
         {
           "q_num": 8,
           "question": "________ entails systematic observation to detect early signs of emerging threats and the generation of warnings when predefined thresholds are approached or exceeded.",
           "answer": "Monitoring and Warning Service (Threat Surveillance)",
-          "textbook_ref": "Pages 221-222",
+          "textbook_ref": "Page 194",
           "notes": "Second pillar of early warning systems."
         },
         {
           "q_num": 9,
           "question": "________ ensures that warnings reach decision-makers, response actors, and at-risk populations in time for action to be taken.",
           "answer": "Dissemination and Communication",
-          "textbook_ref": "Pages 222-223",
+          "textbook_ref": "Page 204",
           "notes": "Effective channels including SMS alerts, radios, and secure policy briefs."
         },
         {
           "q_num": 10,
           "question": "________ encompasses preparedness measures, contingency plans, resources, and institutional arrangements enabling timely and effective action once a warning is received.",
           "answer": "Response Capability",
-          "textbook_ref": "Pages 223-224",
+          "textbook_ref": "Page 195",
           "notes": "Closing the critical 'Warning-Response Gap'."
         },
         {
           "q_num": 11,
-          "question": "What are the challenges to response capability?",
-          "answer": "Lack of political will by leaders, bureaucratic bottlenecks, poor funding, logistical deficits, and skepticism regarding intelligence accuracy",
-          "textbook_ref": "Pages 224-225",
-          "notes": "Why warnings often fail to prevent atrocities."
+          "question": "What are the challenges to response capability? Briefly explain the following Operational Levels of early warning and early response systems: (i) Top-down systems, (ii) Bottom-up or community-based systems, (iii) Hybrid approaches.",
+          "answer": "• Challenges to Response Capability: Lack of political will by leaders, bureaucratic bottlenecks, inadequate funding, logistical deficits, skepticism regarding intelligence accuracy, and fragmented coordination mechanisms between warning and response actors (the warning-response gap).\n• Operational Levels of Early Warning & Response:\n(i) Top-down systems: State-centric, intelligence-driven mechanisms managed by national governments and regional security bodies (e.g., African Union CEWS, IGAD CEWARN).\n(ii) Bottom-up or community-based systems: Grassroots-driven monitoring led by local communities, peace committees, and civil society, capturing high-resolution local context at low cost.\n(iii) Hybrid approaches: Synergistic architectures that systematically combine grassroots observation with national/regional analytical resources (e.g., WANEP/ECOWARN, WHO EWARS deployable kits).",
+          "textbook_ref": "Page 195",
+          "notes": "Addresses the warning-response gap and multi-level early warning architectures."
         },
         {
           "q_num": 12,
-          "question": "Briefly explain the following Operational Levels of early warning systems: (i) Top-down systems, (ii) Bottom-up systems, (iii) Hybrid approaches; and the following Methodologies: (iv) Indicator-based, (v) Predictive machine learning, (vi) Event-based surveillance.",
-          "answer": "(i) Top-down: State-centric, intelligence-driven, and managed by national security agencies. (ii) Bottom-up: Grassroots, community-based monitoring by citizens and local NGOs. (iii) Hybrid: Blends satellite/state data with grassroots reporting (e.g. WANEP/ECOWARN). (iv) Indicator-based: Tracks structured qualitative/quantitative indices (hate speech index, arms prices). (v) Predictive ML: Uses big data and machine learning to forecast conflict probability. (vi) Event-based: Monitors sudden trigger incidents in real time.",
-          "textbook_ref": "Pages 225-230",
-          "notes": "Comprehensive typology of modern early warning architectures."
+          "question": "Explain the following methodologies in early warning and early response systems:\n(i) Indicator-based methodologies\n(ii) Statistical and machine learning predictive methodologies\n(iii) Event-based and syndromic surveillance methodologies\n(iv) Anomaly detection methodologies\n(v) Participatory and community-based methodologies\n(vi) Integrated multi-hazard methodologies",
+          "answer": "(i) Indicator-based methodologies: Structured tracking of pre-established qualitative and quantitative indicators (e.g., hate speech frequency, staple food prices, small arms proliferation).\n(ii) Statistical and machine learning predictive methodologies: Quantitative computational modeling using historical big data, probabilistic algorithms (e.g., VIEWS system), and deep learning to forecast conflict likelihood.\n(iii) Event-based and syndromic surveillance methodologies: Rapid detection and verification of unconfirmed trigger events, rumours, and public health or unrest symptoms through informal channels.\n(iv) Anomaly detection methodologies: Identifying abrupt deviations from established behavioural baselines to detect novel or evolving threats not captured by predefined indicator lists.\n(v) Participatory and community-based methodologies: Direct engagement of local populations in threat reporting, crowdsourcing, and local contextual verification.\n(vi) Integrated multi-hazard methodologies: Holistic systems that synthesize compounding risks across geopolitical, climatic/environmental, socio-economic, and health domains (e.g., IGAD's climate-conflict integration).",
+          "textbook_ref": "Page 196",
+          "notes": "Comprehensive typology of modern technological and community early warning methodologies."
         }
       ]
     }
