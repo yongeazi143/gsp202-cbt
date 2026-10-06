@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <defs>
+    <filter id="glow" x="0" y="0" width="24" height="24" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="1" dy="1.5" stdDeviation="1.5" flood-color="#10B981" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+  <g filter="url(#glow)">
+    <!-- Aerodynamic Precision Interactive Pointer (no bulky cartoon hand) -->
+    <path d="M4 2L19.5 11L12.5 12.8L16 19.8L13 21.2L9.5 14.2L4.5 17.5L4 2Z" fill="#10B981" stroke="#FFFFFF" stroke-width="1.3" stroke-linejoin="round"/>
+    <!-- Central optic pip for pinpoint accuracy -->
+    <circle cx="7.5" cy="6.5" r="1.5" fill="#FFFFFF"/>
+  </g>
+</svg>

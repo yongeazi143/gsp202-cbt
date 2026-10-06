@@ -1,75 +1,63 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
 
+interface ClickRipple {
+  id: number;
+  x: number;
+  y: number;
+}
+
+/**
+ * CustomCursor
+ * Replaces intrusive floating cursor followers with an ultra-clean,
+ * professional tactile click ripple that complements the custom SVG cursor.
+ */
 export function CustomCursor() {
-  const [mousePosition, setMousePosition] = useState({ x: -100, y: -100 });
-  const [isPointer, setIsPointer] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
+  const [ripples, setRipples] = useState<ClickRipple[]>([]);
 
   useEffect(() => {
     // Only run on non-touch devices
     if (window.matchMedia("(pointer: coarse)").matches) return;
 
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-      if (!isVisible) setIsVisible(true);
+    const handleClick = (e: MouseEvent) => {
+      const newRipple = {
+        id: Date.now() + Math.random(),
+        x: e.clientX,
+        y: e.clientY,
+      };
 
-      const target = e.target as HTMLElement | null;
-      if (target) {
-        const isClickable =
-          target.closest("button") ||
-          target.closest("a") ||
-          target.closest("input") ||
-          target.closest("[role='button']") ||
-          target.classList.contains("cursor-pointer");
-        setIsPointer(Boolean(isClickable));
-      }
+      setRipples((prev) => [...prev.slice(-4), newRipple]);
+
+      setTimeout(() => {
+        setRipples((prev) => prev.filter((r) => r.id !== newRipple.id));
+      }, 300);
     };
 
-    const handleMouseLeave = () => setIsVisible(false);
-    const handleMouseEnter = () => setIsVisible(true);
-
-    window.addEventListener("mousemove", handleMouseMove);
-    document.addEventListener("mouseleave", handleMouseLeave);
-    document.addEventListener("mouseenter", handleMouseEnter);
-
+    window.addEventListener("mousedown", handleClick);
     return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-      document.removeEventListener("mouseleave", handleMouseLeave);
-      document.removeEventListener("mouseenter", handleMouseEnter);
+      window.removeEventListener("mousedown", handleClick);
     };
-  }, [isVisible]);
+  }, []);
 
-  if (!isVisible) return null;
+  if (ripples.length === 0) return null;
 
   return (
-    <>
-      {/* Inner glowing dot */}
-      <motion.div
-        className="fixed top-0 left-0 w-2.5 h-2.5 bg-emerald-400 rounded-full pointer-events-none z-50 shadow-md shadow-emerald-400/80"
-        animate={{
-          x: mousePosition.x - 5,
-          y: mousePosition.y - 5,
-          scale: isPointer ? 1.5 : 1,
-        }}
-        transition={{ type: "spring", stiffness: 1000, damping: 50, mass: 0.1 }}
-      />
-
-      {/* Outer subtle ring */}
-      <motion.div
-        className="fixed top-0 left-0 rounded-full pointer-events-none z-50 border border-emerald-400/40"
-        animate={{
-          x: mousePosition.x - 16,
-          y: mousePosition.y - 16,
-          width: 32,
-          height: 32,
-          scale: isPointer ? 1.4 : 1,
-          borderColor: isPointer ? "rgba(52, 211, 153, 0.8)" : "rgba(52, 211, 153, 0.25)",
-        }}
-        transition={{ type: "spring", stiffness: 400, damping: 28, mass: 0.2 }}
-      />
-    </>
+    <div className="fixed inset-0 pointer-events-none z-50 overflow-hidden">
+      {ripples.map((r) => (
+        <span
+          key={r.id}
+          className="absolute rounded-full border border-emerald-400/70 bg-emerald-400/20 animate-ping"
+          style={{
+            left: r.x - 8,
+            top: r.y - 8,
+            width: 16,
+            height: 16,
+            animationDuration: "300ms",
+            animationIterationCount: 1,
+          }}
+        />
+      ))}
+    </div>
   );
 }
